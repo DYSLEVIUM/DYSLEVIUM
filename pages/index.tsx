@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 
-export default function Home() {
+import { motion } from 'framer-motion';
+
+export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,9 +13,15 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <motion.h1
+          drag="x"
+          dragConstraints={{ left: -10, right: 10 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={styles.title}
+        >
           Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        </motion.h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
