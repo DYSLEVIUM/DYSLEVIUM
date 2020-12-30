@@ -16,7 +16,7 @@
 
 <img alt="Angular" style="margin:10px" width="30px" height="30px" align="left" title="Angular" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"/>
 
-<img alt="React" style="margin:10px" width="30px" height="30px" style="align:left;" title="React" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"/>
+<img alt="React" style="margin:10px" width="30px" height="30px" align="left" title="React" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"/>
 
 <img alt="Node Js" style="margin:10px" width="30px" height="30px" align="left" title="Node Js" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"/>
 
