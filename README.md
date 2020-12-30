@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi"> Hi there
 
-## Getting Started
+- 🔭 I’m currently working on Competitive Programming and Problem Solving.
+- 🌱 I’m currently learning React.
+- 📫 Contact me: pushpakantbehera@hotmail.com.
+- 🤔 I’m looking for help with Data Structures and Algorithms.
+- ⚡ Fun fact: I like to play basketball.
 
-First, run the development server:
+# Github Stats
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+[![Pushpakant's github stats](https://github-readme-stats.vercel.app/api?username=pushpakant&theme=radical&show_icons=true)](https://github.com/pushpakant/github-readme-stats)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 🛠 Languages and Tools familiar with
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<img alt="C++" style="margin:10px" width="30px" height="30px" style="align:left;" title="C++" src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"/>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<img alt="Angular" style="margin:10px" width="30px" height="30px" style="align:left;" title="Angular" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"/>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<img alt="React" style="margin:10px" width="30px" height="30px" style="align:left;" title="React" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"/>
 
-## Learn More
+<img alt="Node Js" style="margin:10px" width="30px" height="30px" style="align:left;" title="Node Js" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"/>
 
-To learn more about Next.js, take a look at the following resources:
+<img alt="TypeScript" style="margin:10px" width="30px" height="30px" style="align:left;" title="TypeScript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img alt="SASS" style="margin:10px" width="30px" height="30px" style="align:left;" title="SASS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png"/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img alt="CSS" style="margin:10px" width="30px" height="30px" style="align:left;" title="CSS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img alt="HTML" style="margin:10px" width="30px" height="30px" style="align:left;" title="HTML" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>

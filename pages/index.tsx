@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.scss';
 
 import { motion } from 'framer-motion';
 
-export default function Home(props) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
