@@ -51,6 +51,8 @@ export default class GlobalDocument extends Document {
 
           {/* instructs search engine crawler to index the current page and follow any links on it*/}
           <meta name="robots" content="index, follow" />
+
+          <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <body>
