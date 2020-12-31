@@ -21,15 +21,6 @@ export default class GlobalDocument extends Document {
 
           <meta name="description" content={this.metaDescription} />
 
-          {/* Twitter */}
-
-          <meta name="twitter:card" content={`${this.siteUrl}/profile.png`} />
-          <meta name="twitter:domain" content={this.domain} />
-          <meta name="twitter:url" content={this.siteUrl} />
-          <meta name="twitter:title" content={this.metaTitle} />
-          <meta name="twitter:description" content={this.metaDescription} />
-          <meta name="twitter:image" content={`${this.siteUrl}/profile.png`} />
-
           {/* Open Graph */}
           <meta property="og:title" content={this.metaTitle} key="ogtitle" />
           <meta
