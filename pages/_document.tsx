@@ -4,12 +4,14 @@ export default class GlobalDocument extends Document {
   metaDescription: string;
   metaTitle: string;
   siteUrl: string;
+  domain: string;
 
   constructor(props: any) {
     super(props);
     this.metaDescription = 'This is my portfolio website.'; //! change or remove description later
     this.metaTitle = 'Pushpakant Behera Portfolio'; //! change or remove title later
     this.siteUrl = 'https://portfolio.pushpakant.vercel.app'; //! change or remove name later
+    this.siteUrl = 'portfolio.pushpakant.vercel.app'; //! change or remove name later
   }
   render() {
     return (
@@ -20,8 +22,13 @@ export default class GlobalDocument extends Document {
           <meta name="description" content={this.metaDescription} />
 
           {/* Twitter */}
-          <meta name="twitter:card" content="summary" key="twcard" />
-          {/* <meta name="twitter:creator" content={twitterHandle} key="twhandle" /> */}
+
+          <meta name="twitter:card" content={`${this.siteUrl}/profile.png`} />
+          <meta name="twitter:domain" content={this.domain} />
+          <meta name="twitter:url" content={this.siteUrl} />
+          <meta name="twitter:title" content={this.metaTitle} />
+          <meta name="twitter:description" content={this.metaDescription} />
+          <meta name="twitter:image" content={`${this.siteUrl}/profile.png`} />
 
           {/* Open Graph */}
           <meta property="og:title" content={this.metaTitle} key="ogtitle" />
