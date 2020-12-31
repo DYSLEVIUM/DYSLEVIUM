@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 
+import Image from 'next/image';
+
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -13,11 +15,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Image
+          src="/profile.png"
+          alt="Pushpakant Behera Profile"
+          width={(500 * 16) / 9}
+          height={500}
+        />
         <motion.h1
           drag="x"
           dragConstraints={{ left: -10, right: 10 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          // whileHover={{ scale: 1.05 }}
+          // whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, translateY: 25 }}
+          animate={{ opacity: 1, translateY: 0 }}
           className={styles.title}
         >
           Welcome to <a href="https://nextjs.org">Next.js!</a>
