@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Home() {
+  console.log('hello');
   return (
     <div className={styles.container}>
       <Head>
