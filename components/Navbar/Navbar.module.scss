@@ -1,0 +1,28 @@
+.navContainer {
+  position: fixed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 1rem;
+
+  width: 100%;
+
+  backdrop-filter: blur(15px);
+
+  .listContainer {
+    .list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      list-style: none;
+      .listItem {
+        a {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ export default function App() {
     <div>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Pushpakant Behera - Portfolio</title>
       </Head>
 
       {/* header */}
