@@ -38,7 +38,7 @@ export default function Navbar() {
         style={
           showMenu
             ? { backdropFilter: 'blur(10px)' }
-            : { backdropFilter: 'blur(0px)' }
+            : { backdropFilter: 'blur(0px)', pointerEvents: 'none' }
         }
       ></div>
 
