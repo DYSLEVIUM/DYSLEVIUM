@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
 
@@ -17,7 +17,7 @@ export default function Navbar() {
         className={styles.hamburgerMenuContainer}
         onClick={() => {
           setshowMenu(!showMenu);
-          document.body.style.overflow = 'hidden'; //  disabling scroll when menu is open
+          document.body.style.overflow = showMenu ? 'visible' : 'hidden'; //  disabling scroll when menu is open
         }}
       >
         <div className={showMenu ? styles.close : styles.hamburgerMenu}></div>
@@ -34,12 +34,11 @@ export default function Navbar() {
 
       <div
         className={styles.listContainer}
-        style={
-          showMenu
-            ? { transform: 'translateX(0)' }
-            : { transform: 'translateX(100%)' }
-        }
-        onClick={() => setshowMenu(false)} //  closing navbar when the blurred container is clicked
+        style={showMenu ? { transform: 'translateX(0)' } : {}}
+        onClick={() => {
+          setshowMenu(false);
+          document.body.style.overflow = showMenu ? 'visible' : 'hidden'; //  disabling scroll when menu is open
+        }} //  closing navbar when the blurred container is clicked
       >
         <ul
           className={styles.list}
