@@ -26,11 +26,15 @@
 
     cursor: pointer;
 
-    .hamburgerMenu {
-      display: none;
+    display: none;
 
+    transition: all 0.25s ease-in-out;
+
+    @media (max-width: $mobileSize) {
+      display: flex;
+    }
+    .hamburgerMenu {
       @media (max-width: $mobileSize) {
-        display: block;
         width: 65%;
         height: 20%;
 
@@ -73,8 +77,8 @@
         &::after {
           content: '';
           position: absolute;
-          width: 100%;
-          height: 20%;
+          width: 100% * 1.414;
+          height: 10%;
 
           background-color: black;
           border-radius: 1000px;
@@ -83,24 +87,24 @@
 
         &::before {
           bottom: 0;
-          transform-origin: 100% 100%;
-          transform: rotateZ(30deg);
+          transform-origin: 0% 50%;
+          transform: rotateZ(-45deg) translateY(20%) translateX(-5%);
         }
 
         &::after {
           top: 0;
-          transform-origin: 100% 0%;
-          transform: rotateZ(-30deg);
+          transform-origin: 0% 50%;
+          transform: rotateZ(45deg) translateY(-20%) translateX(-5%);
         }
       }
     }
   }
 
   .blurContainer {
+    position: fixed;
     display: none;
 
     @media (max-width: $mobileSize) {
-      position: fixed;
       display: block;
       top: 0;
       left: 0;
@@ -112,6 +116,7 @@
   }
 
   .listContainer {
+    display: block;
     .list {
       display: flex;
       flex-direction: row;
@@ -123,18 +128,36 @@
         margin-left: 2rem;
       }
     }
+    @media (max-width: $mobileSize) {
+      display: none;
+    }
+  }
+
+  .listContainerAside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    .listAside {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      list-style: none;
+      .listItemAside {
+        margin-left: 2rem;
+      }
+    }
 
     @media (max-width: $mobileSize) {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       transform: translateX(100%);
-      .list {
+      .listAside {
         z-index: 2;
         background-color: rgba(0, 255, 0, 0.3);
         position: relative;
@@ -144,7 +167,7 @@
         height: 100%;
         width: 50%;
 
-        .listItem {
+        .listItemAside {
           padding: 0 3rem;
           margin: 1rem 0;
         }
