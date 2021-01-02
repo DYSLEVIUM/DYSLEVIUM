@@ -36,7 +36,7 @@
     .hamburgerMenu {
       @media (max-width: $mobileSize) {
         width: 65%;
-        height: 20%;
+        height: 10%;
 
         background-color: black;
         border-radius: 1000px;
@@ -46,10 +46,11 @@
           content: '';
           position: absolute;
           width: 100%;
-          height: 20%;
+          height: 10%;
 
           background-color: black;
           border-radius: 1000px;
+          transition: all 0.25s ease-in-out;
         }
 
         &::before {
@@ -68,7 +69,7 @@
       @media (max-width: $mobileSize) {
         display: block;
         width: 65%;
-        height: 20%;
+        height: 10%;
         background-color: transparent;
 
         border-radius: 1000px;
