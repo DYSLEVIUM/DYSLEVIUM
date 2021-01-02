@@ -6,7 +6,12 @@ export default function Navbar() {
   const [showMenu, setshowMenu] = useState(false);
 
   return (
-    <nav className={styles.navContainer}>
+    <nav
+      className={styles.navContainer}
+      style={
+        showMenu ? { backdropFilter: 'none' } : { backdropFilter: 'blur(10px)' }
+      }
+    >
       <div>
         <Link href="/">
           <a>Logo</a>
@@ -27,7 +32,7 @@ export default function Navbar() {
         className={styles.blurContainer}
         style={
           showMenu
-            ? { backdropFilter: 'blur(15px)' }
+            ? { backdropFilter: 'blur(10px)' }
             : { backdropFilter: 'blur(0px)' }
         }
       ></div>
