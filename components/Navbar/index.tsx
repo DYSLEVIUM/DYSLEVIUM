@@ -12,8 +12,6 @@ export default function Navbar() {
   let currentOffset;
 
   const onScroll = () => {
-    setshowShadow(true);
-
     currentOffset = window.pageYOffset;
 
     if (previousOffset - currentOffset < 0) {
