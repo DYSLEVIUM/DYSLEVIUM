@@ -1,22 +1,28 @@
 @import '../../styles/variables';
 
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
 .navContainer {
   position: fixed;
 
-  display: flex;
-  flex-direction: row;
+  @include flexCenter(row);
   justify-content: space-between;
-  align-items: center;
 
   padding: 1rem;
 
   width: 100%;
 
+  background-color: rgba(17, 52, 80, 0.438);
+
   .hamburgerMenuContainer {
     position: fixed;
     right: 1rem;
-    display: flex;
-    justify-content: flex-start;
+
     transform: rotate(180deg);
     align-items: center;
     z-index: 1;
@@ -31,7 +37,8 @@
     transition: all 0.25s ease-in-out;
 
     @media (max-width: $mobileSize) {
-      display: flex;
+      @include flexCenter(row);
+      justify-content: flex-start;
     }
 
     .hamburgerMenu {
@@ -50,9 +57,9 @@
           content: '';
           position: absolute;
           width: 100%;
-          height: 10%;
+          height: inherit;
 
-          background-color: black;
+          background-color: inherit;
           border-radius: 1000px;
           transition: all 0.25s ease-in-out;
         }
@@ -73,7 +80,7 @@
       @media (max-width: $mobileSize) {
         display: block;
         width: 65%;
-        height: 10%;
+        height: 8%;
         background-color: transparent;
 
         border-radius: 1000px;
@@ -83,7 +90,7 @@
           content: '';
           position: absolute;
           width: 100% * 1.414;
-          height: 10%;
+          height: inherit;
 
           background-color: black;
           border-radius: 1000px;
@@ -93,13 +100,13 @@
         &::before {
           bottom: 0;
           transform-origin: 0% 50%;
-          transform: rotateZ(-45deg) translateY(20%) translateX(-5%);
+          transform: rotateZ(-45deg) translateY(20%) translateX(-2%);
         }
 
         &::after {
           top: 0;
           transform-origin: 0% 50%;
-          transform: rotateZ(45deg) translateY(-20%) translateX(-5%);
+          transform: rotateZ(45deg) translateY(-20%) translateX(-2.5%);
         }
       }
     }
@@ -116,17 +123,15 @@
       width: 100vw;
       height: 100vh;
 
-      transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out 0.25s;
     }
   }
 
   .listContainer {
     display: block;
     .list {
-      display: flex;
-      flex-direction: row;
+      @include flexCenter(row);
       justify-content: space-between;
-      align-items: center;
 
       list-style: none;
       .listItem {
@@ -146,10 +151,8 @@
     width: 100vw;
 
     .listAside {
-      display: flex;
-      flex-direction: row;
+      @include flexCenter(row);
       justify-content: space-between;
-      align-items: center;
 
       list-style: none;
       .listItemAside {
@@ -158,26 +161,26 @@
     }
 
     @media (max-width: $mobileSize) {
-      display: flex;
-      flex-direction: column;
+      @include flexCenter(column);
       align-items: flex-end;
+
       transform: translateX(100%);
       .listAside {
+        background-color: rgba(17, 52, 80, 0.438);
+
         z-index: 2;
-        background-color: rgba(0, 255, 0, 0.3);
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flexCenter(column);
+
         height: 100%;
-        width: 50%;
+        width: 60%;
 
         .listItemAside {
           padding: 0 3rem;
           margin: 1rem 0;
         }
       }
-      // transition: all 0.25s cubic-bezier(1, 0, 0, 1);
+      transition: all 0.25s ease-in-out;
     }
   }
 }

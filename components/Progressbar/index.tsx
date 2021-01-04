@@ -10,8 +10,7 @@ export default function Progressbar() {
   };
 
   useEffect(() => {
-    let totalHeight = document.body.scrollHeight - window.innerHeight;
-    setprogress((window.pageYOffset / totalHeight) * 100);
+    onScroll(); //  initial call on component load
 
     document.addEventListener('scroll', onScroll);
 
