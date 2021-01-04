@@ -17,7 +17,7 @@
 
   width: 100%;
 
-  background-color: rgba(17, 52, 80, 0.438);
+  background-color: $navColor;
 
   .hamburgerMenuContainer {
     position: fixed;
@@ -134,8 +134,16 @@
       justify-content: space-between;
 
       list-style: none;
+      counter-reset: item 0;
+
       .listItem {
         margin-left: 2rem;
+
+        &::before {
+          content: '0' counter(item) '. ';
+          counter-increment: item;
+          mix-blend-mode: difference;
+        }
       }
     }
     @media (max-width: $mobileSize) {
@@ -152,18 +160,14 @@
     width: 100vw;
 
     @media (max-width: $mobileSize) {
-      @include flexCenter(row);
+      display: flex;
+      flex-direction: row;
       justify-content: flex-end;
       align-items: center;
 
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: flex-end;
-      // align-items: center;
-
       transform: translateX(100%);
       .listAside {
-        background-color: rgba(17, 52, 80, 0.438);
+        background-color: $navColor;
 
         list-style: none;
 
@@ -174,9 +178,15 @@
         height: 100%;
         width: 60%;
 
+        counter-reset: item 0;
         .listItemAside {
           padding: 0 3rem;
           margin: 1rem 0;
+
+          &::before {
+            content: '0' counter(item) '. ';
+            counter-increment: item;
+          }
         }
       }
       transition: all 0.25s ease-in-out;
