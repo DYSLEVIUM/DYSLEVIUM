@@ -152,8 +152,13 @@
     width: 100vw;
 
     @media (max-width: $mobileSize) {
-      @include flexCenter(row);
+      // @include flexCenter(row);
+      // justify-content: flex-end;
+
+      display: flex;
+      flex-direction: row;
       justify-content: flex-end;
+      align-items: center;
 
       transform: translateX(100%);
       .listAside {
