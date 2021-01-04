@@ -144,21 +144,12 @@
   }
 
   .listContainerAside {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-
-    .listAside {
-      @include flexCenter(row);
-      justify-content: space-between;
-
-      list-style: none;
-      .listItemAside {
-        margin-left: 2rem;
-      }
-    }
 
     @media (max-width: $mobileSize) {
       @include flexCenter(row);
@@ -167,6 +158,8 @@
       transform: translateX(100%);
       .listAside {
         background-color: rgba(17, 52, 80, 0.438);
+
+        list-style: none;
 
         z-index: 2;
         position: relative;
