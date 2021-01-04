@@ -50,7 +50,7 @@ export default function Navbar() {
 
   const navContainerStyles: object = {
     ...(showMenu && { backdropFilter: 'none' }),
-    ...(!showMenu && { backdropFilter: 'blur(20px) saturate(180%)' }),
+    ...(!showMenu && { backdropFilter: 'blur(10px) saturate(180%)' }),
     ...(showNavbar && {
       transform: 'translateY(0)',
       transition: 'transform ease-in-out 0.25s',
@@ -92,7 +92,7 @@ export default function Navbar() {
         className={styles.blurContainer}
         style={
           showMenu
-            ? { backdropFilter: 'blur(20px) saturate(180%)' }
+            ? { backdropFilter: 'blur(10px) saturate(180%)' }
             : { backdropFilter: 'none', pointerEvents: 'none' }
         }
       ></div>
