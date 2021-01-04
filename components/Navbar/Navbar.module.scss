@@ -152,7 +152,7 @@
 
     .listAside {
       @include flexCenter(row);
-      justify-content: space-between;
+      justify-content: flex-end;
 
       list-style: none;
       .listItemAside {
