@@ -14,10 +14,18 @@
 .sectionContainer {
   width: 100%;
   min-height: 100vh;
-  padding: 5rem;
+  // padding: $sidePadding;
 
-  @media (max-width: $mobileSize) {
-    padding: $sidePadding;
+  @media only screen and (max-width: $mobileSize) {
+    padding: $sidePaddingMob;
+  }
+
+  @media only screen and (max-width: $tabSize) and (min-width: $mobileSize) {
+    padding: $sidePaddingTab;
+  }
+
+  @media only screen and (min-width: $monitorSize) {
+    padding: $sidePaddingMon;
   }
 
   @include flexCenter(column, center, flex-start);

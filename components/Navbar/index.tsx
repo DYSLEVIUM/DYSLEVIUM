@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
+import { transform } from 'framer-motion';
 
 const Navbar = () => {
   const [showNavbar, setshowNavbar] = useState(true);
@@ -54,7 +55,11 @@ const Navbar = () => {
 
   const navContainerStyles: object = {
     ...(showMenu && { backdropFilter: 'none' }),
-    ...(!showMenu && { backdropFilter: 'blur(5px) saturate(180%)' }),
+    ...(!showMenu && {
+      backdropFilter: 'blur(10px) saturate(200%)',
+      transform: 'translateZ(0)',
+      willChange: 'transform',
+    }),
     ...(showNavbar && {
       transform: 'translateY(0)',
       transition: 'all ease-in-out 0.25s',
@@ -66,7 +71,6 @@ const Navbar = () => {
         transition: 'all ease-in-out 0.25s',
       }),
     ...(showShadow && {
-      backgroundColor: '#222629a0',
       boxShadow: '0 10px 30px -10px rgba(2,12,27,0.7)',
     }),
     ...(!showShadow && {
@@ -99,7 +103,11 @@ const Navbar = () => {
         className={styles.blurContainer}
         style={
           showMenu
-            ? { backdropFilter: 'blur(5px) saturate(180%)' }
+            ? {
+                backdropFilter: 'blur(10px) saturate(200%)',
+                transform: 'translateZ(0)',
+                willChange: 'transform',
+              }
             : { backdropFilter: 'none', pointerEvents: 'none' }
         }
       ></div>
