@@ -1,0 +1,19 @@
+@mixin flexCenter(
+  $flexDirection,
+  $justifyContent: center,
+  $alignItems: center
+) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+.sectionContainer {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 2rem;
+  padding: 2rem;
+
+  @include flexCenter(column, center, flex-start);
+}

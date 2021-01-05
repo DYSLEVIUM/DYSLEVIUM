@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
 
-export default function Navbar() {
+const Navbar = () => {
   const [showNavbar, setshowNavbar] = useState(true);
   const [showShadow, setshowShadow] = useState(false);
 
@@ -24,6 +24,8 @@ export default function Navbar() {
       setshowShadow(true);
     }
 
+    if (showMenu) setshowNavbar(true);
+
     previousOffset = currentOffset;
 
     if (currentOffset === 0) setshowShadow(false);
@@ -43,26 +45,30 @@ export default function Navbar() {
 
   const showMenuOnClick = () => {
     setshowMenu(!showMenu);
+    setshowNavbar(true);
+    setshowShadow(true);
     document.body.style.overflow = showMenu ? 'visible' : 'hidden'; //  disabling scroll when menu is open
   };
 
   const navContainerStyles: object = {
     ...(showMenu && { backdropFilter: 'none' }),
-    ...(!showMenu && { backdropFilter: 'blur(10px) saturate(180%)' }),
+    ...(!showMenu && { backdropFilter: 'blur(5px) saturate(180%)' }),
     ...(showNavbar && {
       transform: 'translateY(0)',
-      transition: 'transform ease-in-out 0.25s',
+      transition: 'all ease-in-out 0.25s',
     }),
-    ...(!showNavbar && {
-      backdropFilter: 'none',
-      transform: 'translateY(-100%)',
-      transition: 'transform ease-in-out 0.25s',
-    }),
+    ...(!showNavbar &&
+      !showMenu && {
+        backdropFilter: 'none',
+        transform: 'translateY(-100%)',
+        transition: 'all ease-in-out 0.25s',
+      }),
     ...(showShadow && {
-      boxShadow: '0 10px 30px -10px rgba(0,0,0,0.3)',
+      boxShadow: '0 10px 30px -10px rgba(2,12,27,0.7)',
     }),
     ...(!showShadow && {
       boxShadow: 'none',
+      transition: 'all ease-in-out 0.25s',
     }),
   };
 
@@ -90,7 +96,7 @@ export default function Navbar() {
         className={styles.blurContainer}
         style={
           showMenu
-            ? { backdropFilter: 'blur(10px) saturate(180%)' }
+            ? { backdropFilter: 'blur(5px) saturate(180%)' }
             : { backdropFilter: 'none', pointerEvents: 'none' }
         }
       ></div>
@@ -102,17 +108,17 @@ export default function Navbar() {
           // stopping propagation of clickHandler to current and other children
         >
           <li className={styles.listItem}>
-            <Link href="/">
+            <Link href="#about">
               <a>About</a>
             </Link>
           </li>
           <li className={styles.listItem}>
-            <Link href="/">
+            <Link href="#contact">
               <a>Contact</a>
             </Link>
           </li>
           <li className={styles.listItem}>
-            <Link href="/">
+            <Link href="#projects">
               <a>Projects</a>
             </Link>
           </li>
@@ -134,17 +140,17 @@ export default function Navbar() {
           // stopping propagation of clickHandler to current and other children
         >
           <li className={styles.listItemAside}>
-            <Link href="/">
+            <Link href="#about">
               <a>About</a>
             </Link>
           </li>
           <li className={styles.listItemAside}>
-            <Link href="/">
+            <Link href="#contact">
               <a>Contact</a>
             </Link>
           </li>
           <li className={styles.listItemAside}>
-            <Link href="/">
+            <Link href="#projects">
               <a>Projects</a>
             </Link>
           </li>
@@ -152,4 +158,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

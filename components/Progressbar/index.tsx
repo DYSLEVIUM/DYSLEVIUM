@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Progress.module.scss';
 
-export default function Progressbar() {
+const Progressbar = () => {
   const [progress, setprogress] = useState(0);
 
   const onScroll = () => {
@@ -27,4 +27,6 @@ export default function Progressbar() {
       }}
     ></div>
   );
-}
+};
+
+export default Progressbar;

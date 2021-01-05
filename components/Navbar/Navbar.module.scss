@@ -1,17 +1,20 @@
 @import '../../styles/variables';
 
-@mixin flexCenter($direction) {
+@mixin flexCenter(
+  $flexDirection,
+  $justifyContent: center,
+  $alignItems: center
+) {
   display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
 }
 
 .navContainer {
   position: fixed;
 
-  @include flexCenter(row);
-  justify-content: space-between;
+  @include flexCenter(row, space-between);
 
   padding: 1rem;
 
@@ -19,13 +22,13 @@
 
   background-color: $navColor;
 
+  z-index: 1;
   .hamburgerMenuContainer {
     position: fixed;
     right: 1rem;
 
-    transform: rotate(180deg);
     align-items: center;
-    z-index: 1;
+    z-index: 2;
 
     width: 1.5rem;
     height: 1rem;
@@ -34,16 +37,15 @@
 
     display: none;
 
+    transform: rotateY(180deg);
     transition: all 0.25s ease-in-out;
 
     @media (max-width: $mobileSize) {
-      @include flexCenter(row);
-      justify-content: flex-start;
+      @include flexCenter(row, flex-start);
     }
 
     .hamburgerMenu {
       opacity: 0;
-      transition: all 0.25s ease-in-out;
       @media (max-width: $mobileSize) {
         width: 65%;
         height: 10%;
@@ -130,8 +132,7 @@
   .listContainer {
     display: block;
     .list {
-      @include flexCenter(row);
-      justify-content: space-between;
+      @include flexCenter(row, space-between);
 
       list-style: none;
       counter-reset: item 0;
@@ -159,6 +160,7 @@
     display: none;
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
@@ -171,11 +173,11 @@
 
       transform: translateX(100%);
       .listAside {
-        background-color: $navColor;
+        background-color: $sidebarColor;
 
         list-style: none;
 
-        z-index: 2;
+        z-index: 3;
         position: relative;
         @include flexCenter(column);
 
