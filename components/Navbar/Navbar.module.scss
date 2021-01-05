@@ -20,9 +20,8 @@
 
   width: 100%;
 
-  background-color: $navColor;
-
   z-index: 1;
+  transition: all 0.1s ease-in-out;
   .hamburgerMenuContainer {
     position: fixed;
     right: 1rem;
@@ -50,7 +49,7 @@
         width: 65%;
         height: 10%;
 
-        background-color: black;
+        background-color: $hamburgerColor;
         border-radius: 1000px;
         opacity: 1;
 
@@ -94,7 +93,7 @@
           width: 100% * 1.414;
           height: inherit;
 
-          background-color: black;
+          background-color: $hamburgerColor;
           border-radius: 1000px;
           transition: all 0.25s ease-in-out;
         }
@@ -173,7 +172,8 @@
 
       transform: translateX(100%);
       .listAside {
-        background-color: $sidebarColor;
+        background-color: $contrastColor;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 
         list-style: none;
 

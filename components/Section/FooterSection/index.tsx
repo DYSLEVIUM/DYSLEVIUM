@@ -1,13 +1,13 @@
 import React from 'react';
 import sectionStyles from '../Section.module.scss';
-import styles from './AboutSection.module.scss';
+import styles from './FooterSection.module.scss';
 
-const AboutSection = () => {
+const FooterSection = () => {
   return (
     <div id="about" className={sectionStyles.sectionContainer}>
-      About
+      Footer
     </div>
   );
 };
 
-export default AboutSection;
+export default FooterSection;

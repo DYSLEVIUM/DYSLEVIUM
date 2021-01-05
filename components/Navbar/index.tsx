@@ -24,7 +24,10 @@ const Navbar = () => {
       setshowShadow(true);
     }
 
-    if (showMenu) setshowNavbar(true);
+    if (showMenu) {
+      setshowNavbar(true);
+      setshowShadow(true);
+    }
 
     previousOffset = currentOffset;
 
@@ -46,7 +49,6 @@ const Navbar = () => {
   const showMenuOnClick = () => {
     setshowMenu(!showMenu);
     setshowNavbar(true);
-    setshowShadow(true);
     document.body.style.overflow = showMenu ? 'visible' : 'hidden'; //  disabling scroll when menu is open
   };
 
@@ -59,14 +61,17 @@ const Navbar = () => {
     }),
     ...(!showNavbar &&
       !showMenu && {
-        backdropFilter: 'none',
+        // backdropFilter: 'none',
         transform: 'translateY(-100%)',
         transition: 'all ease-in-out 0.25s',
       }),
     ...(showShadow && {
+      backgroundColor: '#222629a0',
       boxShadow: '0 10px 30px -10px rgba(2,12,27,0.7)',
     }),
     ...(!showShadow && {
+      // backgroundColor: '$contrastColor',
+      backdropFilter: 'none',
       boxShadow: 'none',
       transition: 'all ease-in-out 0.25s',
     }),
@@ -75,9 +80,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navContainer} style={navContainerStyles}>
       <div>
-        <Link href="/">
-          <a>Logo</a>
-        </Link>
+        <a href="#intro">Logo</a>
       </div>
 
       <div
@@ -108,19 +111,13 @@ const Navbar = () => {
           // stopping propagation of clickHandler to current and other children
         >
           <li className={styles.listItem}>
-            <Link href="#about">
-              <a>About</a>
-            </Link>
+            <a href="#about">About</a>
           </li>
           <li className={styles.listItem}>
-            <Link href="#contact">
-              <a>Contact</a>
-            </Link>
+            <a href="#contact">Contact</a>
           </li>
           <li className={styles.listItem}>
-            <Link href="#projects">
-              <a>Projects</a>
-            </Link>
+            <a href="#projects">Projects</a>
           </li>
         </ul>
       </div>
@@ -140,19 +137,13 @@ const Navbar = () => {
           // stopping propagation of clickHandler to current and other children
         >
           <li className={styles.listItemAside}>
-            <Link href="#about">
-              <a>About</a>
-            </Link>
+            <a href="#about">About</a>
           </li>
           <li className={styles.listItemAside}>
-            <Link href="#contact">
-              <a>Contact</a>
-            </Link>
+            <a href="#contact">Contact</a>
           </li>
           <li className={styles.listItemAside}>
-            <Link href="#projects">
-              <a>Projects</a>
-            </Link>
+            <a href="#projects">Projects</a>
           </li>
         </ul>
       </div>
