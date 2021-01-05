@@ -16,7 +16,7 @@
 
   @include flexCenter(row, space-between);
 
-  padding: 1rem;
+  padding: $sidePadding;
 
   width: 100%;
 
@@ -24,7 +24,7 @@
   transition: all 0.1s ease-in-out;
   .hamburgerMenuContainer {
     position: fixed;
-    right: 1rem;
+    right: $sidePadding;
 
     align-items: center;
     z-index: 2;
