@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+
+@mixin flexCenter(
+  $flexDirection,
+  $justifyContent: center,
+  $alignItems: center
+) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+.introductionContainer {
+  @include flexCenter(column, center, space-between);
+
+  .salutation {
+    @include flexCenter(row, flex-start, center);
+    img {
+      display: inline;
+      width: 3rem;
+      filter: saturate(200%);
+      margin-right: 1rem;
+    }
+    h4 {
+      color: $secondaryAccentColor;
+      font-weight: bolder;
+    }
+  }
+
+  h1 {
+    color: $primaryAccentColor;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: $secondaryAccentColor;
+    font-weight: bold;
+  }
+
+  h3 {
+    color: $secondaryColor;
+  }
+}

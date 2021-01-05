@@ -134,7 +134,7 @@
       @include flexCenter(row, space-between);
 
       list-style: none;
-      counter-reset: item 0;
+      counter-reset: item -1;
 
       .listItem {
         margin-left: 2rem;
@@ -147,6 +147,7 @@
           margin-right: 0.5rem;
           letter-spacing: 0.1rem;
           font-size: 0.8rem;
+          color: $primaryAccentColor;
         }
       }
     }
@@ -184,7 +185,7 @@
         height: 100%;
         width: 60%;
 
-        counter-reset: item 0;
+        counter-reset: item -1;
         .listItemAside {
           padding: 0 3rem;
           margin: 1rem 0;
@@ -197,6 +198,7 @@
             letter-spacing: 0.1rem;
             font-size: 0.8rem;
             font-weight: bold;
+            color: $primaryAccentColor;
           }
         }
       }
