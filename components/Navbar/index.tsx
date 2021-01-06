@@ -72,9 +72,10 @@ const Navbar = () => {
       }),
     ...(showShadow && {
       boxShadow: '0 10px 30px -10px rgba(2,12,27,0.7)',
+      backgroundColor: 'rgba(28,31,34,0.5)',
     }),
     ...(!showShadow && {
-      // backgroundColor: '$contrastColor',
+      backgroundColor: 'transparent',
       backdropFilter: 'none',
       boxShadow: 'none',
       transition: 'all ease-in-out 0.25s',

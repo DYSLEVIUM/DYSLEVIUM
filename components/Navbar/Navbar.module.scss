@@ -23,8 +23,6 @@
   z-index: 1;
   transition: all 0.1s ease-in-out;
 
-  background-color: rgba($contrastColor, 0.5);
-
   .hamburgerMenuContainer {
     position: fixed;
     right: $sidePaddingMob;

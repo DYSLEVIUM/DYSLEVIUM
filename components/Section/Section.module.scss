@@ -16,15 +16,15 @@
   min-height: 100vh;
 
   @media only screen and (min-width: $tabSize) {
-    padding: $sidePaddingMon;
+    padding: 0 $sidePaddingMon;
   }
 
   @media only screen and (max-width: $tabSize) and (min-width: $mobileSize) {
-    padding: $sidePaddingTab;
+    padding: 0 $sidePaddingTab;
   }
 
   @media only screen and (max-width: $mobileSize) {
-    padding: $sidePaddingMob;
+    padding: 0 $sidePaddingMob;
   }
 
   @include flexCenter(column, center, flex-start);
