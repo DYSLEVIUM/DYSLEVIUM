@@ -15,8 +15,10 @@
   position: fixed;
 
   @include flexCenter(row, space-between);
-
   padding: $sidePaddingMob;
+
+  font-family: 'Montserrat';
+  font-weight: bold;
 
   width: 100%;
 
@@ -50,7 +52,7 @@
         width: 65%;
         height: 10%;
 
-        background-color: $hamburgerColor;
+        background-color: $secondaryAccentColor;
         border-radius: 1000px;
         opacity: 1;
 
@@ -94,7 +96,8 @@
           width: 100% * 1.414;
           height: inherit;
 
-          background-color: $hamburgerColor;
+          background-color: $secondaryAccentColor;
+
           border-radius: 1000px;
           transition: all 0.25s ease-in-out;
         }
@@ -131,6 +134,7 @@
 
   .listContainer {
     display: block;
+
     .list {
       @include flexCenter(row, space-between);
 
@@ -141,17 +145,42 @@
         margin-left: $sidePaddingMob;
         padding-left: $sidePaddingMob;
 
-        // font-size: 1.15rem;
+        color: $secondaryColor;
+
+        transition: all 0.25s ease-in-out 0.1s;
+
+        &:hover {
+          color: $secondaryAccentColor;
+        }
 
         a::before {
           content: counter(item) '. ';
           counter-increment: item;
           display: inline-block;
-          font-weight: bold;
           margin-right: 0.5rem;
           letter-spacing: 0.1rem;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
+          font-weight: 500;
           color: $primaryAccentColor;
+        }
+
+        &:last-child {
+          a {
+            border: 1px solid $primaryAccentColor;
+            padding: 0.75rem 1.5rem;
+
+            transition: all 0.25s ease-in-out;
+
+            &::before {
+              content: none;
+              margin-right: 0;
+            }
+
+            &:hover {
+              background-color: $primaryAccentColor;
+              color: $contrastColor;
+            }
+          }
         }
       }
     }
@@ -197,14 +226,36 @@
           font-size: 1.25rem;
 
           padding-bottom: 3rem;
+
+          color: $secondaryColor;
+
           a::before {
             content: counter(item) '. ';
             margin: 0 0.5rem;
             counter-increment: item;
             letter-spacing: 0.1rem;
-            font-size: 0.8rem;
-            font-weight: bold;
+            font-size: 0.9rem;
+            font-weight: 500;
             color: $primaryAccentColor;
+          }
+
+          &:last-child {
+            a {
+              border: 1px solid $primaryAccentColor;
+              padding: 0.75rem 1.5rem;
+
+              transition: all 0.25s ease-in-out;
+
+              &::before {
+                content: none;
+                margin-right: 0;
+              }
+
+              &:hover {
+                background-color: $primaryAccentColor;
+                color: $contrastColor;
+              }
+            }
           }
         }
       }

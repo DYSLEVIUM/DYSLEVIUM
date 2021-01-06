@@ -66,7 +66,6 @@ const Navbar = () => {
     }),
     ...(!showNavbar &&
       !showMenu && {
-        // backdropFilter: 'none',
         transform: 'translateY(-100%)',
         transition: 'all ease-in-out 0.25s',
       }),
@@ -128,6 +127,11 @@ const Navbar = () => {
           <li className={styles.listItem}>
             <a href="#projects">Projects</a>
           </li>
+          <li className={styles.listItem}>
+            <a href="/wavingHand.gif" target="_blank">
+              Résumé
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -153,6 +157,11 @@ const Navbar = () => {
           </li>
           <li className={styles.listItemAside}>
             <a href="#projects">Projects</a>
+          </li>
+          <li className={styles.listItemAside}>
+            <a href="/wavingHand.gif" target="_blank">
+              Résumé
+            </a>
           </li>
         </ul>
       </div>
