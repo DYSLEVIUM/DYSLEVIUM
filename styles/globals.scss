@@ -72,3 +72,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  -webkit-box-shadow: inset 0 0 1rem rgba($secondaryColor, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: rgba($primaryColor, 1);
+
+  &:hover {
+    background-color: rgba($primaryAccentColor, 1);
+  }
+}

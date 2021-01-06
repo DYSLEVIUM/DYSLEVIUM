@@ -138,10 +138,13 @@
       counter-reset: item -1;
 
       .listItem {
-        margin-left: 2rem;
+        margin-left: $sidePaddingMob;
+        padding-left: $sidePaddingMob;
+
+        // font-size: 1.15rem;
 
         a::before {
-          content: '0' counter(item) '. ';
+          content: counter(item) '. ';
           counter-increment: item;
           display: inline-block;
           font-weight: bold;
@@ -191,11 +194,13 @@
           padding: 0 3rem;
           margin: 1rem 0;
 
+          font-size: 1.25rem;
+
+          padding-bottom: 3rem;
           a::before {
-            content: '0' counter(item) '. ';
+            content: counter(item) '. ';
+            margin: 0 0.5rem;
             counter-increment: item;
-            @include flexCenter(row);
-            margin-bottom: 0.5rem;
             letter-spacing: 0.1rem;
             font-size: 0.8rem;
             font-weight: bold;
