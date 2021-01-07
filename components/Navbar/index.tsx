@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
-import { motion } from 'framer-motion';
+
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 const Navbar = () => {
   const [showNavbar, setshowNavbar] = useState(true);
@@ -80,7 +82,7 @@ const Navbar = () => {
     }),
   };
 
-  const container = {
+  const containerY = {
     hidden: { opacity: 0, translateY: -15 },
     visible: {
       opacity: 1,
@@ -91,15 +93,46 @@ const Navbar = () => {
     },
   };
 
-  const listItem = {
+  const listItemY = {
     hidden: { opacity: 0, translateY: -15 },
     visible: { opacity: 1, translateY: 0 },
   };
 
+  //  mobile view animation
+  const containerX = {
+    hidden: { opacity: 0, translateX: 15 },
+    visible: {
+      opacity: 1,
+      translateX: 0,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const listItemX = {
+    hidden: { opacity: 0, translateX: 15 },
+    visible: { opacity: 1, translateX: 0 },
+  };
+
+  const animation = useAnimation();
+  const [ref, inView, entry] = useInView({
+    threshold: 0.1,
+    delay: 0.25,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start('visible');
+    } else {
+      animation.start('hidden');
+    }
+  }, [animation, inView]);
+
   return (
     <nav className={styles.navContainer} style={navContainerStyles}>
-      <motion.div variants={container} initial="hidden" animate="visible">
-        <motion.a variants={listItem} href="#intro">
+      <motion.div variants={containerY} initial="hidden" animate="visible">
+        <motion.a variants={listItemY} href="#intro">
           Logo
         </motion.a>
       </motion.div>
@@ -131,23 +164,23 @@ const Navbar = () => {
 
       <div className={styles.listContainer}>
         <motion.ul
-          variants={container}
+          variants={containerY}
           initial="hidden"
           animate="visible"
           className={styles.list}
           onClick={(e) => e.stopPropagation()}
           // stopping propagation of clickHandler to current and other children
         >
-          <motion.li variants={listItem} className={styles.listItem}>
+          <motion.li variants={listItemY} className={styles.listItemY}>
             <a href="#about">About</a>
           </motion.li>
-          <motion.li variants={listItem} className={styles.listItem}>
+          <motion.li variants={listItemY} className={styles.listItemY}>
             <a href="#contact">Contact</a>
           </motion.li>
-          <motion.li variants={listItem} className={styles.listItem}>
+          <motion.li variants={listItemY} className={styles.listItemY}>
             <a href="#projects">Projects</a>
           </motion.li>
-          <motion.li variants={listItem} className={styles.listItem}>
+          <motion.li variants={listItemY} className={styles.listItemY}>
             <a href="/wavingHand.gif" target="_blank">
               Résumé
             </a>
@@ -164,26 +197,30 @@ const Navbar = () => {
         }
         onClick={showMenuOnClick} //  closing navbar when the blurred container is clicked
       >
-        <ul
+        <motion.ul
+          ref={ref}
+          variants={containerX}
+          initial="hidden"
+          animate={animation}
           className={styles.listAside}
           onClick={(e) => e.stopPropagation()}
           // stopping propagation of clickHandler to current and other children
         >
-          <li className={styles.listItemAside}>
+          <motion.li variants={listItemX} className={styles.listItemAside}>
             <a href="#about">About</a>
-          </li>
-          <li className={styles.listItemAside}>
+          </motion.li>
+          <motion.li variants={listItemX} className={styles.listItemAside}>
             <a href="#contact">Contact</a>
-          </li>
-          <li className={styles.listItemAside}>
+          </motion.li>
+          <motion.li variants={listItemX} className={styles.listItemAside}>
             <a href="#projects">Projects</a>
-          </li>
-          <li className={styles.listItemAside}>
+          </motion.li>
+          <motion.li variants={listItemX} className={styles.listItemAside}>
             <a href="/wavingHand.gif" target="_blank">
               Résumé
             </a>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
     </nav>
   );

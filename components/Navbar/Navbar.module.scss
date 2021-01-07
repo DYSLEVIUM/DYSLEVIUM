@@ -214,19 +214,17 @@
 
         z-index: 3;
         position: relative;
-        @include flexCenter(column);
+        @include flexCenter(column, center, center);
 
         height: 100%;
         width: 60%;
 
         counter-reset: item -1;
         .listItemAside {
-          padding: 0 3rem;
-          margin: 1rem 0;
+          padding: 1rem;
+          margin: 1rem;
 
           font-size: 1.25rem;
-
-          padding-bottom: 3rem;
 
           color: $secondaryColor;
 
