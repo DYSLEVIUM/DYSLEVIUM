@@ -147,7 +147,7 @@
 
         color: $secondaryColor;
 
-        transition: all 0.25s ease-in-out 0.1s;
+        transition: color 0.25s ease-in-out 0.1s;
 
         &:hover {
           color: $secondaryAccentColor;
@@ -169,7 +169,8 @@
             border: 1px solid $primaryAccentColor;
             padding: 0.75rem 1.5rem;
 
-            transition: all 0.25s ease-in-out;
+            transition: color 0.25s ease-in-out,
+              background-color 0.25s ease-in-out;
 
             &::before {
               content: none;

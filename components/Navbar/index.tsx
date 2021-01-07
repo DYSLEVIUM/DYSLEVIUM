@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import styles from './Navbar.module.scss';
-import { transform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [showNavbar, setshowNavbar] = useState(true);
@@ -81,11 +80,29 @@ const Navbar = () => {
     }),
   };
 
+  const container = {
+    hidden: { opacity: 0, translateY: -15 },
+    visible: {
+      opacity: 1,
+      translateY: 0,
+      transition: {
+        staggerChildren: 0.25,
+      },
+    },
+  };
+
+  const listItem = {
+    hidden: { opacity: 0, translateY: -15 },
+    visible: { opacity: 1, translateY: 0 },
+  };
+
   return (
     <nav className={styles.navContainer} style={navContainerStyles}>
-      <div>
-        <a href="#intro">Logo</a>
-      </div>
+      <motion.div variants={container} initial="hidden" animate="visible">
+        <motion.a variants={listItem} href="#intro">
+          Logo
+        </motion.a>
+      </motion.div>
 
       <div
         className={styles.hamburgerMenuContainer}
@@ -113,26 +130,29 @@ const Navbar = () => {
       ></div>
 
       <div className={styles.listContainer}>
-        <ul
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          animate="visible"
           className={styles.list}
           onClick={(e) => e.stopPropagation()}
           // stopping propagation of clickHandler to current and other children
         >
-          <li className={styles.listItem}>
+          <motion.li variants={listItem} className={styles.listItem}>
             <a href="#about">About</a>
-          </li>
-          <li className={styles.listItem}>
+          </motion.li>
+          <motion.li variants={listItem} className={styles.listItem}>
             <a href="#contact">Contact</a>
-          </li>
-          <li className={styles.listItem}>
+          </motion.li>
+          <motion.li variants={listItem} className={styles.listItem}>
             <a href="#projects">Projects</a>
-          </li>
-          <li className={styles.listItem}>
+          </motion.li>
+          <motion.li variants={listItem} className={styles.listItem}>
             <a href="/wavingHand.gif" target="_blank">
               Résumé
             </a>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
 
       <div
