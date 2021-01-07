@@ -171,16 +171,16 @@ const Navbar = () => {
           onClick={(e) => e.stopPropagation()}
           // stopping propagation of clickHandler to current and other children
         >
-          <motion.li variants={listItemY} className={styles.listItemY}>
+          <motion.li variants={listItemY} className={styles.listItem}>
             <a href="#about">About</a>
           </motion.li>
-          <motion.li variants={listItemY} className={styles.listItemY}>
+          <motion.li variants={listItemY} className={styles.listItem}>
             <a href="#contact">Contact</a>
           </motion.li>
-          <motion.li variants={listItemY} className={styles.listItemY}>
+          <motion.li variants={listItemY} className={styles.listItem}>
             <a href="#projects">Projects</a>
           </motion.li>
-          <motion.li variants={listItemY} className={styles.listItemY}>
+          <motion.li variants={listItemY} className={styles.listItem}>
             <a href="/wavingHand.gif" target="_blank">
               Résumé
             </a>
