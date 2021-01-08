@@ -74,6 +74,10 @@ a {
 
 ::-webkit-scrollbar {
   width: 0.9rem;
+
+  @media only screen and (max-width: $mobileSize) {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar-track {
