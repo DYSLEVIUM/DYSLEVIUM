@@ -6,6 +6,8 @@ import AboutSection from '../components/Section/AboutSection';
 import IntroductionSection from '../components/Section/IntroductionSection';
 import ContactSection from '../components/Section/ContactSection';
 import FooterSection from '../components/Section/FooterSection';
+import ExperienceSection from '../components/Section/Experience';
+import Projects from '../components/Section/Projects';
 
 export default function App() {
   return (
@@ -24,6 +26,8 @@ export default function App() {
       <main>
         <IntroductionSection />
         <AboutSection />
+        <ExperienceSection />
+        <Projects />
         <ContactSection />
         <FooterSection />
       </main>

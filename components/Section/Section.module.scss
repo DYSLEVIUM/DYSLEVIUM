@@ -15,11 +15,11 @@
   width: 100%;
   min-height: 100vh;
 
-  @media only screen and (min-width: $tabSize) {
+  @media only screen and (min-width: $monitorSize) {
     padding: 0 $sidePaddingMon;
   }
 
-  @media only screen and (max-width: $tabSize) and (min-width: $mobileSize) {
+  @media only screen and (max-width: $monitorSize) and (min-width: $mobileSize) {
     padding: 0 $sidePaddingTab;
   }
 

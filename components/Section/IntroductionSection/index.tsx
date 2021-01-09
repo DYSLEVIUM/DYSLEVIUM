@@ -68,7 +68,7 @@ const IntroductionSection = () => {
         <motion.h2 variants={listItem} className={styles.carrerObjective}>
           I love to build things
         </motion.h2>
-        <motion.h3 variants={listItem}>
+        <motion.h3 variants={listItem} className={styles.shortIntro}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nam in
           omnis cumque eum animi esse exercitationem temporibus eveniet
           perspiciatis. Similique animi atque impedit perspiciatis error maxime
@@ -76,6 +76,12 @@ const IntroductionSection = () => {
           voluptas rem ipsum numquam tempore eligendi, vero ut facere
           voluptates. Voluptatum rem eaque eius!
         </motion.h3>
+
+        <motion.button variants={listItem} className={styles.contactBtn}>
+          <a href="/wavingHand.gif" target="_blank">
+            Contact Me
+          </a>
+        </motion.button>
       </motion.div>
     </div>
   );

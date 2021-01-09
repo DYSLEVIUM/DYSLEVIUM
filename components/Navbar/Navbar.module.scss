@@ -142,9 +142,12 @@
       counter-reset: item -1;
 
       .listItem {
-        margin-left: $sidePaddingMob;
+        margin-left: $sidePaddingMob/2;
         padding-left: $sidePaddingMob;
 
+        font-size: 0.9rem;
+
+        font-weight: 500;
         color: $secondaryColor;
 
         transition: color 0.25s ease-in-out 0.1s;
@@ -157,7 +160,7 @@
           content: counter(item) '. ';
           counter-increment: item;
           display: inline-block;
-          margin-right: 0.5rem;
+          margin-right: 0.25rem;
           letter-spacing: 0.1rem;
           font-size: 0.9rem;
           font-weight: 500;
@@ -166,20 +169,11 @@
 
         &:last-child {
           a {
-            border: 1px solid $primaryAccentColor;
-            padding: 0.75rem 1.5rem;
-
-            transition: color 0.25s ease-in-out,
-              background-color 0.25s ease-in-out;
+            @include buttonStyle;
 
             &::before {
               content: none;
               margin-right: 0;
-            }
-
-            &:hover {
-              background-color: $primaryAccentColor;
-              color: $contrastColor;
             }
           }
         }
@@ -214,17 +208,18 @@
 
         z-index: 3;
         position: relative;
-        @include flexCenter(column, center, center);
+        @include flexCenter(column, center, flex-end);
 
         height: 100%;
         width: 60%;
 
         counter-reset: item -1;
         .listItemAside {
-          padding: 1rem;
+          padding: 0.5rem 2rem;
           margin: 1rem;
 
-          font-size: 1.25rem;
+          font-size: 0.9rem;
+          font-weight: 500;
 
           color: $secondaryColor;
 
@@ -240,19 +235,10 @@
 
           &:last-child {
             a {
-              border: 1px solid $primaryAccentColor;
-              padding: 0.75rem 1.5rem;
-
-              transition: all 0.25s ease-in-out;
-
+              @include buttonStyle;
               &::before {
                 content: none;
                 margin-right: 0;
-              }
-
-              &:hover {
-                background-color: $primaryAccentColor;
-                color: $contrastColor;
               }
             }
           }

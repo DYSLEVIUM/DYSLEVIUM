@@ -175,10 +175,13 @@ const Navbar = () => {
             <a href="#about">About</a>
           </motion.li>
           <motion.li variants={listItemY} className={styles.listItem}>
-            <a href="#contact">Contact</a>
+            <a href="#experience">Experience</a>
           </motion.li>
           <motion.li variants={listItemY} className={styles.listItem}>
             <a href="#projects">Projects</a>
+          </motion.li>
+          <motion.li variants={listItemY} className={styles.listItem}>
+            <a href="#contact">Contact</a>
           </motion.li>
           <motion.li variants={listItemY} className={styles.listItem}>
             <a href="/wavingHand.gif" target="_blank">
@@ -210,10 +213,13 @@ const Navbar = () => {
             <a href="#about">About</a>
           </motion.li>
           <motion.li variants={listItemX} className={styles.listItemAside}>
-            <a href="#contact">Contact</a>
+            <a href="#experience">Experience</a>
           </motion.li>
           <motion.li variants={listItemX} className={styles.listItemAside}>
             <a href="#projects">Projects</a>
+          </motion.li>
+          <motion.li variants={listItemX} className={styles.listItemAside}>
+            <a href="#contact">Contact</a>
           </motion.li>
           <motion.li variants={listItemX} className={styles.listItemAside}>
             <a href="/wavingHand.gif" target="_blank">

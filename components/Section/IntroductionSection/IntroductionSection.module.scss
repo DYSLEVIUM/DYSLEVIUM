@@ -14,12 +14,6 @@
 .introductionContainer {
   @include flexCenter(column, center, space-between);
 
-  padding: 1rem;
-
-  @media only screen and (max-width: $mobileSize) {
-    padding-top: 7rem;
-  }
-
   .salutationSpan {
     @include flexCenter(row, flex-start, center);
     .helloImg {
@@ -44,8 +38,13 @@
     font-weight: 400;
   }
 
-  h3 {
+  .shortIntro {
     color: $secondaryColor;
     font-weight: 400;
+  }
+
+  .contactBtn {
+    @include buttonStyle;
+    margin-top: 1rem;
   }
 }

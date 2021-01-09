@@ -1,13 +1,10 @@
-$mobileSize: 750px;
-$tabSize: 1024px;
+$mobileSize: 850px;
 $monitorSize: 1440px;
 
 $sidePaddingMob: 2rem;
 $sidePaddingTab: 8rem;
 $sidePaddingMon: 20rem;
 
-$navColor: #222629a0;
-$sidebarColor: rgb(17, 52, 80);
 $hamburgerColor: rgb(255, 255, 255);
 
 $primaryColor: #7fb43d;
@@ -15,3 +12,23 @@ $primaryAccentColor: #98db3b;
 $contrastColor: #15171a;
 $secondaryColor: #8a8d8f;
 $secondaryAccentColor: #c1c8ce;
+
+@mixin buttonStyle {
+  background-color: transparent;
+  color: $primaryAccentColor;
+
+  width: fit-content;
+
+  cursor: pointer;
+
+  border: 1px solid $primaryAccentColor;
+  padding: 0.75rem 1.5rem;
+
+  font-weight: 700;
+  &:hover {
+    background-color: $primaryAccentColor;
+    color: $contrastColor;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease-in-out;
+  }
+}
