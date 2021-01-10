@@ -53,6 +53,56 @@ export default class GlobalDocument extends Document {
           <meta name="robots" content="index, follow" />
 
           <link rel="icon" href="/favicon.ico" />
+
+          <link
+            rel="preload"
+            href="/fonts/Roboto/Roboto-Thin.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Roboto/Roboto-Light.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Roboto/Roboto-Regular.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Roboto/Roboto-Medium.ttf"
+            as="font"
+            type="font/ttf"
+          />
+
+          <link
+            rel="preload"
+            href="/fonts/Montserrat/Montserrat-Thin.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Montserrat/Montserrat-Light.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Montserrat/Montserrat-Regular.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Montserrat/Montserrat-Medium.ttf"
+            as="font"
+            type="font/ttf"
+          />
         </Head>
 
         <body>
