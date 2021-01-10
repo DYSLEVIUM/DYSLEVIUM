@@ -54,54 +54,17 @@ export default class GlobalDocument extends Document {
 
           <link rel="icon" href="/favicon.ico" />
 
-          <link
-            rel="preload"
-            href="/fonts/Roboto/Roboto-Thin.ttf"
-            as="font"
-            type="font/ttf"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Roboto/Roboto-Light.ttf"
-            as="font"
-            type="font/ttf"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Roboto/Roboto-Regular.ttf"
-            as="font"
-            type="font/ttf"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Roboto/Roboto-Medium.ttf"
-            as="font"
-            type="font/ttf"
-          />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
 
           <link
             rel="preload"
-            href="/fonts/Montserrat/Montserrat-Thin.ttf"
-            as="font"
-            type="font/ttf"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
           />
+
           <link
-            rel="preload"
-            href="/fonts/Montserrat/Montserrat-Light.ttf"
-            as="font"
-            type="font/ttf"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Montserrat/Montserrat-Regular.ttf"
-            as="font"
-            type="font/ttf"
-          />
-          <link
-            rel="preload"
-            href="/fonts/Montserrat/Montserrat-Medium.ttf"
-            as="font"
-            type="font/ttf"
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
           />
         </Head>
 

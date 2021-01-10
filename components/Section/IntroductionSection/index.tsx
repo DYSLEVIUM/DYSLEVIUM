@@ -54,6 +54,8 @@ const IntroductionSection = () => {
           <motion.img
             src="/wavingHand.gif"
             alt="Hello GIF"
+            width="3rem"
+            height="3rem"
             className={styles.helloImg}
             variants={listItem}
           />
