@@ -67,8 +67,6 @@ export default class GlobalDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
           />
-
-          <link rel="preload" href="/wavingHand.gif" />
         </Head>
 
         <body>

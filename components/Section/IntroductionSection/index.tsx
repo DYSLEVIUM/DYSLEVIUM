@@ -58,6 +58,7 @@ const IntroductionSection = () => {
               alt="Hello GIF"
               width={180}
               height={180}
+              layout="intrinsic"
             />
           </motion.div>
           <motion.h4 className={styles.salutation} variants={listItem}>
