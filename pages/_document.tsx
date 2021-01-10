@@ -17,6 +17,7 @@ export default class GlobalDocument extends Document {
     return (
       <Html>
         <Head>
+          <html lang="en" />
           <meta charSet="utf-8" />
 
           <meta name="description" content={this.metaDescription} />
@@ -66,6 +67,8 @@ export default class GlobalDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
           />
+
+          <link rel="preload" href="/wavingHand.gif" />
         </Head>
 
         <body>

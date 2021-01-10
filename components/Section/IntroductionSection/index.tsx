@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import sectionStyles from '../Section.module.scss';
 import styles from './IntroductionSection.module.scss';
+import Image from 'next/image';
 
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
@@ -51,14 +52,14 @@ const IntroductionSection = () => {
         className={styles.introductionContainer}
       >
         <motion.span className={styles.salutationSpan}>
-          <motion.img
-            src="/wavingHand.gif"
-            alt="Hello GIF"
-            width="3rem"
-            height="3rem"
-            className={styles.helloImg}
-            variants={listItem}
-          />
+          <motion.div className={styles.helloImg} variants={listItem}>
+            <Image
+              src="/wavingHand.gif"
+              alt="Hello GIF"
+              width={180}
+              height={180}
+            />
+          </motion.div>
           <motion.h4 className={styles.salutation} variants={listItem}>
             Hi, my name is
           </motion.h4>
