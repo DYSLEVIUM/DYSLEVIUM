@@ -24,7 +24,7 @@
   }
 
   @media only screen and (max-width: $mobileSize) {
-    padding: 3 * $sidePaddingMob $sidePaddingMob;
+    padding: $sidePaddingMob;
   }
 
   @include flexCenter(column, center, flex-start);
