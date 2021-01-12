@@ -8,7 +8,7 @@
 
 # Github Stats
 
-[![Pushpakant's github stats](https://github-readme-stats.vercel.app/api?username=pushpakant&theme=radical&show_icons=true)](https://github.com/pushpakant/github-readme-stats)
+[![Pushpakant's github stats](https://github-readme-stats.vercel.app/api?username=DYSLEVIUM&theme=radical&show_icons=true)](https://github.com/pushpakant/github-readme-stats)
 
 # 🛠 Languages and Tools familiar with
 
