@@ -4,6 +4,7 @@ import styles from './IntroductionSection.module.scss';
 
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
+import { email } from '../../../utils/constants';
 
 const IntroductionSection = () => {
   const animation = useAnimation();
@@ -80,7 +81,7 @@ const IntroductionSection = () => {
         </motion.h3>
 
         <motion.button variants={listItem} className={styles.contactBtn}>
-          <a href="/wavingHand.gif" target="_blank">
+          <a href={`mailto:${email}`} target="_blank">
             Contact Me
           </a>
         </motion.button>

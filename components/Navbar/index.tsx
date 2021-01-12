@@ -222,7 +222,7 @@ const Navbar = () => {
             <a href="#contact">Contact</a>
           </motion.li>
           <motion.li variants={listItemX} className={styles.listItemAside}>
-            <a href="/wavingHand.gif" target="_blank">
+            <a href="/resume.pdf" target="_blank">
               Résumé
             </a>
           </motion.li>
