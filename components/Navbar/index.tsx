@@ -184,7 +184,7 @@ const Navbar = () => {
             <a href="#contact">Contact</a>
           </motion.li>
           <motion.li variants={listItemY} className={styles.listItem}>
-            <a href="/wavingHand.gif" target="_blank">
+            <a href="/resume.pdf" target="_blank">
               Résumé
             </a>
           </motion.li>
