@@ -150,10 +150,10 @@
         font-weight: 500;
         color: $secondaryColor;
 
-        transition: color 0.25s ease-in-out 0.1s;
+        transition: color 0.25s ease-in-out;
 
         &:hover {
-          color: $secondaryAccentColor;
+          color: $primaryAccentColor;
         }
 
         a::before {
@@ -222,6 +222,12 @@
           font-weight: 500;
 
           color: $secondaryColor;
+
+          transition: color 0.25s ease-in-out;
+
+          &:hover {
+            color: $primaryAccentColor;
+          }
 
           a::before {
             content: counter(item) '. ';

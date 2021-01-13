@@ -72,12 +72,8 @@ const IntroductionSection = () => {
           I love to build things
         </motion.h2>
         <motion.h3 variants={listItem} className={styles.shortIntro}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nam in
-          omnis cumque eum animi esse exercitationem temporibus eveniet
-          perspiciatis. Similique animi atque impedit perspiciatis error maxime
-          reiciendis recusandae vel. Quibusdam quasi culpa unde aperiam minima
-          voluptas rem ipsum numquam tempore eligendi, vero ut facere
-          voluptates. Voluptatum rem eaque eius!
+          I am a sophomore at National Institute of Technology Jamshedpur, and
+          have an avid passion for Software Engineering.
         </motion.h3>
 
         <motion.button variants={listItem} className={styles.contactBtn}>

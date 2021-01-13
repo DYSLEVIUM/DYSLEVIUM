@@ -49,27 +49,7 @@ const ContactSection = () => {
         initial="hidden"
         animate={animation}
       >
-        Contact Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Dignissimos vel tempore culpa sed ullam maxime nihil saepe ratione atque
-        magni tempora, corporis commodi quas. Nobis alias voluptas dolores eos
-        excepturi maiores unde inventore voluptatibus amet culpa, ad rem eveniet
-        porro voluptatum autem expedita consectetur quaerat odio sequi
-        exercitationem beatae distinctio similique cum vel. Sed illum ea maiores
-        placeat veritatis voluptas velit? Quae nihil iusto accusamus totam atque
-        sequi facere dolorum possimus et impedit eius natus quia autem cumque
-        sed, rerum at doloremque sapiente? Facere velit illum vel odio molestiae
-        dolorem dolor, aut iste repellendus ad tempora. Quas voluptates vero
-        deleniti quaerat expedita animi, sunt ex necessitatibus obcaecati eaque
-        voluptatum eos, saepe doloribus hic, laborum tenetur vitae totam magnam
-        laboriosam fugit? Repellendus amet possimus facilis, quaerat aliquid
-        nulla adipisci veniam? Facilis magnam qui, veritatis atque soluta odio
-        vitae a, fugiat ad repellat rerum quis dignissimos magni aut obcaecati
-        quod laboriosam saepe voluptate sint sequi animi ullam cum! Odio rem,
-        beatae blanditiis voluptas eaque aut tenetur dolore neque. Possimus
-        iusto veritatis accusantium. Sit culpa doloremque quae eius fuga
-        facilis, beatae tempore reprehenderit porro quaerat sequi distinctio
-        animi perspiciatis atque ad aliquam rem sunt exercitationem nostrum
-        adipisci officiis eaque officia tenetur aut. Libero.
+        Currently working on building this contact section.
       </motion.div>
     </div>
   );
