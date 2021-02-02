@@ -5,7 +5,7 @@
 - 📫 Contact me : pushpakantbehera@hotmail.com.
 - 🤔 I’m looking for help with Data Structures and Algorithms.
 - ⚡ Fun fact : I like to play basketball.
-- 🔗 Webiste : http://portfolio.pushpakant.vercel.app
+- 🔗 Webiste : https://portfolio.pushpakant.vercel.app
 
 # Github Stats
 
