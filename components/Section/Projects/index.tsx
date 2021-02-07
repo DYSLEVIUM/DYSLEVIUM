@@ -49,6 +49,7 @@ const ProjectsSection = () => {
         initial="hidden"
         animate={animation}
       >
+        <span style={{ fontSize: 25 }}>👷‍♂️</span>
         Currently working on building this project section.
       </motion.div>
     </div>

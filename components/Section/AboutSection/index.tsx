@@ -49,6 +49,7 @@ const AboutSection = () => {
         initial="hidden"
         animate={animation}
       >
+        <span style={{ fontSize: 25 }}>👷‍♂️</span>
         Currently working on building this about section.
       </motion.div>
     </div>

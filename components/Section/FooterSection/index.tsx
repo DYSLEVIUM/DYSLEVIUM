@@ -49,7 +49,8 @@ const FooterSection = () => {
         initial="hidden"
         animate={animation}
       >
-        Currently working on building this footer section.
+        <span style={{ fontSize: 25 }}>👷‍♂️</span> Currently working on building
+        this footer section.
       </motion.div>
     </div>
   );

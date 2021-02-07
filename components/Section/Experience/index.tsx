@@ -49,6 +49,7 @@ const ExperienceSection = () => {
         initial="hidden"
         animate={animation}
       >
+        <span style={{ fontSize: 25 }}>👷‍♂️</span>
         Currently working on building this experience section.
       </motion.div>
     </div>

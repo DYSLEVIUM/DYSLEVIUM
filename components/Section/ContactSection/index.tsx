@@ -49,6 +49,7 @@ const ContactSection = () => {
         initial="hidden"
         animate={animation}
       >
+        <span style={{ fontSize: 25 }}>👷‍♂️</span>
         Currently working on building this contact section.
       </motion.div>
     </div>
