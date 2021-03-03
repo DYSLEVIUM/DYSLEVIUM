@@ -2,7 +2,7 @@ $mobileSize: 850px;
 $monitorSize: 1440px;
 
 $sidePaddingMob: 2rem;
-$sidePaddingTab: 8rem;
+$sidePaddingTab: 4rem;
 $sidePaddingMon: 20rem;
 
 $hamburgerColor: rgb(255, 255, 255);
@@ -10,25 +10,40 @@ $hamburgerColor: rgb(255, 255, 255);
 $primaryColor: #7fb43d;
 $primaryAccentColor: #98db3b;
 $contrastColor: #15171a;
-$secondaryColor: #8a8d8f;
-$secondaryAccentColor: #c1c8ce;
+
+$secondaryColor: #262a30;
+$secondaryAccentColor: #aeb3b8;
+
+$primaryFontColor: #919292;
+$secondaryFontColor: #d3dae0;
 
 @mixin buttonStyle {
-  background-color: transparent;
-  color: $primaryAccentColor;
+	background-color: transparent;
+	color: $primaryAccentColor;
 
-  width: fit-content;
+	width: fit-content;
 
-  cursor: pointer;
+	cursor: pointer;
 
-  border: 1px solid $primaryAccentColor;
-  padding: 0.75rem 1.5rem;
+	border: 1px solid $primaryAccentColor;
+	padding: 0.75rem 1.5rem;
 
-  font-weight: 700;
-  &:hover {
-    background-color: $primaryAccentColor;
-    color: $contrastColor;
-    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4);
-    transition: all 0.5s ease-in-out;
-  }
+	font-weight: 700;
+	&:hover {
+		background-color: $primaryAccentColor;
+		color: $contrastColor;
+		box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4);
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+@mixin flexCenter(
+	$flexDirection,
+	$justifyContent: center,
+	$alignItems: center
+) {
+	display: flex;
+	flex-direction: $flexDirection;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
 }

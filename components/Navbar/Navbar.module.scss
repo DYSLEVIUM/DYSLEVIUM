@@ -1,256 +1,256 @@
 @import '../../styles/variables';
 
 @mixin flexCenter(
-  $flexDirection,
-  $justifyContent: center,
-  $alignItems: center
+	$flexDirection,
+	$justifyContent: center,
+	$alignItems: center
 ) {
-  display: flex;
-  flex-direction: $flexDirection;
-  justify-content: $justifyContent;
-  align-items: $alignItems;
+	display: flex;
+	flex-direction: $flexDirection;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
 }
 
 .navContainer {
-  position: fixed;
+	position: fixed;
 
-  @include flexCenter(row, space-between);
-  padding: $sidePaddingMob;
+	@include flexCenter(row, space-between);
+	padding: $sidePaddingMob;
 
-  font-family: 'Montserrat';
-  font-weight: bold;
+	font-family: 'Montserrat';
+	font-weight: bold;
 
-  width: 100%;
+	width: 100%;
 
-  z-index: 1;
-  transition: all 0.1s ease-in-out;
+	z-index: 1;
+	transition: all 0.1s ease-in-out;
 
-  .hamburgerMenuContainer {
-    position: fixed;
-    right: $sidePaddingMob;
+	.hamburgerMenuContainer {
+		position: fixed;
+		right: $sidePaddingMob;
 
-    align-items: center;
-    z-index: 2;
+		align-items: center;
+		z-index: 2;
 
-    width: 1.5rem;
-    height: 1rem;
+		width: 1.5rem;
+		height: 1rem;
 
-    cursor: pointer;
+		cursor: pointer;
 
-    display: none;
+		display: none;
 
-    transform: rotateY(180deg);
-    transition: all 0.25s ease-in-out;
+		transform: rotateY(180deg);
+		transition: all 0.25s ease-in-out;
 
-    @media only screen and (max-width: $mobileSize) {
-      @include flexCenter(row, flex-start);
-    }
+		@media only screen and (max-width: $mobileSize) {
+			@include flexCenter(row, flex-start);
+		}
 
-    .hamburgerMenu {
-      opacity: 0;
-      @media only screen and (max-width: $mobileSize) {
-        width: 65%;
-        height: 10%;
+		.hamburgerMenu {
+			opacity: 0;
+			@media only screen and (max-width: $mobileSize) {
+				width: 65%;
+				height: 10%;
 
-        background-color: $secondaryAccentColor;
-        border-radius: 1000px;
-        opacity: 1;
+				background-color: $secondaryFontColor;
+				border-radius: 1000px;
+				opacity: 1;
 
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: inherit;
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: inherit;
 
-          background-color: inherit;
-          border-radius: 1000px;
-          transition: all 0.25s ease-in-out;
-        }
+					background-color: inherit;
+					border-radius: 1000px;
+					transition: all 0.25s ease-in-out;
+				}
 
-        &::before {
-          bottom: 0;
-        }
+				&::before {
+					bottom: 0;
+				}
 
-        &::after {
-          top: 0;
-        }
-      }
-    }
+				&::after {
+					top: 0;
+				}
+			}
+		}
 
-    .close {
-      display: none;
+		.close {
+			display: none;
 
-      @media only screen and (max-width: $mobileSize) {
-        display: block;
-        width: 65%;
-        height: 8%;
-        background-color: transparent;
+			@media only screen and (max-width: $mobileSize) {
+				display: block;
+				width: 65%;
+				height: 8%;
+				background-color: transparent;
 
-        border-radius: 1000px;
+				border-radius: 1000px;
 
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          width: 100% * 1.414;
-          height: inherit;
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100% * 1.414;
+					height: inherit;
 
-          background-color: $secondaryAccentColor;
+					background-color: $secondaryFontColor;
 
-          border-radius: 1000px;
-          transition: all 0.25s ease-in-out;
-        }
+					border-radius: 1000px;
+					transition: all 0.25s ease-in-out;
+				}
 
-        &::before {
-          bottom: 0;
-          transform-origin: 0% 50%;
-          transform: rotateZ(-45deg) translateY(20%) translateX(-2%);
-        }
+				&::before {
+					bottom: 0;
+					transform-origin: 0% 50%;
+					transform: rotateZ(-45deg) translateY(20%) translateX(-2%);
+				}
 
-        &::after {
-          top: 0;
-          transform-origin: 0% 50%;
-          transform: rotateZ(45deg) translateY(-20%) translateX(-2.5%);
-        }
-      }
-    }
-  }
+				&::after {
+					top: 0;
+					transform-origin: 0% 50%;
+					transform: rotateZ(45deg) translateY(-20%) translateX(-2.5%);
+				}
+			}
+		}
+	}
 
-  .blurContainer {
-    position: fixed;
-    display: none;
+	.blurContainer {
+		position: fixed;
+		display: none;
 
-    @media only screen and (max-width: $mobileSize) {
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+		@media only screen and (max-width: $mobileSize) {
+			display: block;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
 
-      transition: all 0.25s ease-in-out 0.25s;
-    }
-  }
+			transition: all 0.25s ease-in-out 0.25s;
+		}
+	}
 
-  .listContainer {
-    display: block;
+	.listContainer {
+		display: block;
 
-    .list {
-      @include flexCenter(row, space-between);
+		.list {
+			@include flexCenter(row, space-between);
 
-      list-style: none;
-      counter-reset: item -1;
+			list-style: none;
+			counter-reset: item -1;
 
-      .listItem {
-        margin-left: $sidePaddingMob/2;
-        padding-left: $sidePaddingMob;
+			.listItem {
+				margin-left: $sidePaddingMob/2;
+				padding-left: $sidePaddingMob;
 
-        font-size: 0.9rem;
+				font-size: 0.9rem;
 
-        font-weight: 500;
-        color: $secondaryColor;
+				font-weight: 500;
+				color: $primaryFontColor;
 
-        transition: color 0.25s ease-in-out;
+				transition: color 0.25s ease-in-out;
 
-        &:hover {
-          color: $primaryAccentColor;
-        }
+				&:hover {
+					color: $primaryAccentColor;
+				}
 
-        a::before {
-          content: counter(item) '. ';
-          counter-increment: item;
-          display: inline-block;
-          margin-right: 0.25rem;
-          letter-spacing: 0.1rem;
-          font-size: 0.9rem;
-          font-weight: 500;
-          color: $primaryAccentColor;
-        }
+				a::before {
+					content: counter(item) '. ';
+					counter-increment: item;
+					display: inline-block;
+					margin-right: 0.25rem;
+					letter-spacing: 0.1rem;
+					font-size: 0.9rem;
+					font-weight: 500;
+					color: $primaryAccentColor;
+				}
 
-        &:last-child {
-          a {
-            @include buttonStyle;
+				&:last-child {
+					a {
+						@include buttonStyle;
 
-            &::before {
-              content: none;
-              margin-right: 0;
-            }
-          }
-        }
-      }
-    }
-    @media only screen and (max-width: $mobileSize) {
-      display: none;
-    }
-  }
+						&::before {
+							content: none;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+		@media only screen and (max-width: $mobileSize) {
+			display: none;
+		}
+	}
 
-  .listContainerAside {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
+	.listContainerAside {
+		display: none;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
 
-    @media only screen and (max-width: $mobileSize) {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
+		@media only screen and (max-width: $mobileSize) {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
 
-      transform: translateX(100%);
-      .listAside {
-        background-color: $contrastColor;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+			transform: translateX(100%);
+			.listAside {
+				background-color: $contrastColor;
+				box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 
-        list-style: none;
+				list-style: none;
 
-        z-index: 3;
-        position: relative;
-        @include flexCenter(column, center, flex-end);
+				z-index: 3;
+				position: relative;
+				@include flexCenter(column, center, flex-end);
 
-        height: 100%;
-        width: 60%;
+				height: 100%;
+				width: 60%;
 
-        counter-reset: item -1;
-        .listItemAside {
-          padding: 0.5rem 2rem;
-          margin: 1rem;
+				counter-reset: item -1;
+				.listItemAside {
+					padding: 0.5rem 2rem;
+					margin: 1rem;
 
-          font-size: 0.9rem;
-          font-weight: 500;
+					font-size: 0.9rem;
+					font-weight: 500;
 
-          color: $secondaryColor;
+					color: $primaryFontColor;
 
-          transition: color 0.25s ease-in-out;
+					transition: color 0.25s ease-in-out;
 
-          &:hover {
-            color: $primaryAccentColor;
-          }
+					&:hover {
+						color: $primaryAccentColor;
+					}
 
-          a::before {
-            content: counter(item) '. ';
-            margin: 0 0.5rem;
-            counter-increment: item;
-            letter-spacing: 0.1rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: $primaryAccentColor;
-          }
+					a::before {
+						content: counter(item) '. ';
+						margin: 0 0.5rem;
+						counter-increment: item;
+						letter-spacing: 0.1rem;
+						font-size: 0.9rem;
+						font-weight: 500;
+						color: $primaryAccentColor;
+					}
 
-          &:last-child {
-            a {
-              @include buttonStyle;
-              &::before {
-                content: none;
-                margin-right: 0;
-              }
-            }
-          }
-        }
-      }
-      transition: all 0.25s ease-in-out;
-    }
-  }
+					&:last-child {
+						a {
+							@include buttonStyle;
+							&::before {
+								content: none;
+								margin-right: 0;
+							}
+						}
+					}
+				}
+			}
+			transition: all 0.25s ease-in-out;
+		}
+	}
 }

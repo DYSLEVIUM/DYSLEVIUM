@@ -1,0 +1,70 @@
+@import '../../../styles/variables';
+
+.projectsContainer {
+	.sectionIntro {
+		@include flexCenter(column, center, center);
+		margin-bottom: 2rem;
+
+		.sectionTitle {
+			color: $primaryAccentColor;
+			letter-spacing: 0.05rem;
+		}
+
+		.sectionAlt {
+			font-size: 0.85rem;
+			letter-spacing: 0.05rem;
+			color: $primaryFontColor;
+
+			&:hover {
+				color: $secondaryFontColor;
+			}
+			transition: color 200ms ease-in-out;
+		}
+	}
+
+	.projectsList {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+		.projectListItem {
+			padding: 2rem;
+			border-radius: 0.25rem;
+			line-height: 1.5rem;
+
+			background-color: $secondaryColor;
+
+			box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+
+			transition: background-color, translate 250ms ease-in-out;
+
+			min-height: 15rem;
+
+			&:hover {
+				translate: 0 -0.5rem;
+			}
+
+			.projectTitle,
+			.projectDescription {
+				word-break: break-word;
+			}
+
+			.projectTitle {
+				text-transform: capitalize;
+				color: $primaryColor;
+
+				&:hover {
+					color: $primaryAccentColor;
+				}
+
+				transition: color 250ms ease-in-out;
+				font-weight: 400;
+			}
+
+			.projectDescription {
+				color: $primaryFontColor;
+				font-weight: 400;
+			}
+		}
+	}
+}

@@ -1,42 +1,50 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
-
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Progressbar from '../components/Progressbar';
 import AboutSection from '../components/Section/AboutSection';
-import IntroductionSection from '../components/Section/IntroductionSection';
 import ContactSection from '../components/Section/ContactSection';
-import FooterSection from '../components/Section/FooterSection';
 import ExperienceSection from '../components/Section/Experience';
+import FooterSection from '../components/Section/FooterSection';
+import IntroductionSection from '../components/Section/IntroductionSection';
 import Projects from '../components/Section/Projects';
+import { githubUsername } from '../utils/constants';
 
-export default function App() {
-  useEffect(() => {
-    if (window.location.origin + '/' !== window.location.href)
-      window.location.href = '/';
-    console.clear();
-  });
+export default function App({ projects }) {
+	useEffect(() => {
+		if (window.location.origin + '/' !== window.location.href)
+			window.location.href = '/';
+	});
 
-  return (
-    <div>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Pushpakant Behera - Portfolio</title>
-      </Head>
-      {/* header */}
-      <>
-        <Navbar />
-        <Progressbar />
-      </>
+	return (
+		<div>
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<title>Pushpakant Behera - Portfolio</title>
+			</Head>
+			{/* header */}
+			<>
+				<Navbar />
+				<Progressbar />
+			</>
 
-      <main>
-        <IntroductionSection />
-        <AboutSection />
-        <ExperienceSection />
-        <Projects />
-        <ContactSection />
-        <FooterSection />
-      </main>
-    </div>
-  );
+			<main>
+				<IntroductionSection />
+				<AboutSection />
+				<ExperienceSection />
+				<Projects projects={projects} />
+				<ContactSection />
+				<FooterSection />
+			</main>
+		</div>
+	);
+}
+
+export async function getStaticProps(context) {
+	const projects = await fetch(
+		`https://api.github.com/users/${githubUsername}/repos?sort=DESC`
+	).then((result) => result.json());
+
+	const refreshRate = 60 * 60 * 24 * 2;
+	return { props: { projects }, revalidate: refreshRate };
 }

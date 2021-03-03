@@ -1,55 +1,44 @@
 @import '../../../styles/variables';
 
-@mixin flexCenter(
-  $flexDirection,
-  $justifyContent: center,
-  $alignItems: center
-) {
-  display: flex;
-  flex-direction: $flexDirection;
-  justify-content: $justifyContent;
-  align-items: $alignItems;
-}
-
 .introductionContainer {
-  @include flexCenter(column, center, space-between);
+	@include flexCenter(column, center, space-between);
 
-  @media only screen and (max-width: $mobileSize) {
-    padding-top: 3 * $sidePaddingMob;
-  }
+	@media only screen and (max-width: $mobileSize) {
+		padding-top: 3 * $sidePaddingMob;
+	}
 
-  .salutationSpan {
-    @include flexCenter(row, flex-start, center);
-    .helloImg {
-      display: inline;
-      width: 3rem;
-      height: 3rem;
-      filter: saturate(200%);
-      margin-right: 2rem;
-    }
-    .salutation {
-      color: $secondaryAccentColor;
-      font-weight: 500;
-    }
-  }
+	.salutationSpan {
+		@include flexCenter(row, flex-start, center);
+		.helloImg {
+			display: inline;
+			width: 3rem;
+			height: 3rem;
+			filter: saturate(200%);
+			margin-right: 2rem;
+		}
+		.salutation {
+			color: $secondaryFontColor;
+			font-weight: 500;
+		}
+	}
 
-  .name {
-    color: $primaryAccentColor;
-    font-weight: 500;
-  }
+	.name {
+		color: $primaryAccentColor;
+		font-weight: 500;
+	}
 
-  .carrerObjective {
-    color: $secondaryAccentColor;
-    font-weight: 400;
-  }
+	.carrerObjective {
+		color: $secondaryFontColor;
+		font-weight: 400;
+	}
 
-  .shortIntro {
-    color: $secondaryColor;
-    font-weight: 400;
-  }
+	.shortIntro {
+		color: $primaryFontColor;
+		font-weight: 400;
+	}
 
-  .contactBtn {
-    @include buttonStyle;
-    margin-top: 1rem;
-  }
+	.contactBtn {
+		@include buttonStyle;
+		margin-top: 1rem;
+	}
 }
