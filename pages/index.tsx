@@ -45,6 +45,6 @@ export async function getStaticProps(context) {
 		`https://api.github.com/users/${githubUsername}/repos?sort=DESC`
 	).then((result) => result.json());
 
-	const refreshRate = 60 * 60 * 24 * 2;
+	const refreshRate = 60 * 60 * 8; //	in seconds
 	return { props: { projects }, revalidate: refreshRate };
 }

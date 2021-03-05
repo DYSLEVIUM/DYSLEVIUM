@@ -28,7 +28,7 @@ const ProjectsSection = ({ projects }) => {
 			translateY: 0,
 			transition: {
 				staggerChildren: 0.25,
-				delayChildren: 0.25 * 4,
+				delayChildren: 0.25 * 1,
 			},
 		},
 	};

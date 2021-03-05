@@ -36,12 +36,12 @@
 
 			box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 
-			transition: background-color, translate 250ms ease-in-out;
+			transition: background-color, scale 200ms ease-in-out;
 
 			min-height: 15rem;
 
 			&:hover {
-				translate: 0 -0.5rem;
+				scale: 1.05;
 			}
 
 			.projectTitle,
@@ -50,11 +50,34 @@
 			}
 
 			.projectTitle {
+				position: relative;
 				text-transform: capitalize;
 				color: $primaryColor;
+				width: fit-content;
 
 				&:hover {
 					color: $primaryAccentColor;
+
+					&::after {
+						transform-origin: left;
+
+						transform: scaleX(1);
+					}
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0.75rem;
+					width: 100%;
+					height: 1px;
+					background-color: $primaryAccentColor;
+
+					transform: scaleX(0);
+					transform-origin: right;
+
+					transition: transform 200ms 50ms ease-in-out;
 				}
 
 				transition: color 250ms ease-in-out;
