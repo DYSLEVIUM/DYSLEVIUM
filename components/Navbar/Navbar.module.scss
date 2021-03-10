@@ -155,6 +155,8 @@
 				a {
 					position: relative;
 					width: fit-content;
+					padding-bottom: 0.2rem;
+
 					&:hover {
 						color: $primaryAccentColor;
 

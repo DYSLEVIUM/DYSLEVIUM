@@ -1,5 +1,5 @@
 import { motion, useAnimation } from 'framer-motion';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { githubProfile } from '../../../utils/constants';
 import sectionStyles from '../Section.module.scss';
@@ -64,6 +64,21 @@ const ProjectsSection = ({ projects }) => {
 		return newStr;
 	};
 
+	const MAX_RENDERED_PROJECTS = 6;
+	const [showMore, setShowMore] = useState(false);
+	const [projectsList, setProjectsList] = useState(
+		projects.slice(0, MAX_RENDERED_PROJECTS)
+	);
+
+	useEffect(() => {
+		if (showMore) setProjectsList(projects);
+		else setProjectsList(projects.slice(0, MAX_RENDERED_PROJECTS));
+	}, [showMore]);
+
+	const showMoreToggle = () => {
+		setShowMore((prevState) => !prevState);
+	};
+
 	return (
 		<div id="projects" className={sectionStyles.sectionContainer}>
 			<motion.div
@@ -88,7 +103,7 @@ const ProjectsSection = ({ projects }) => {
 				</div>
 
 				<ul className={styles.projectsList}>
-					{projects.map((project) => (
+					{projectsList.map((project) => (
 						<motion.li
 							key={project.id}
 							variants={listItem}
@@ -120,6 +135,14 @@ const ProjectsSection = ({ projects }) => {
 						</motion.li>
 					))}
 				</ul>
+
+				<motion.button
+					onClick={showMoreToggle}
+					variants={listItem}
+					className={styles.showMore}
+				>
+					Show {showMore ? 'Less' : 'More'}
+				</motion.button>
 			</motion.div>
 		</div>
 	);
