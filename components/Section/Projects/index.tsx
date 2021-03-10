@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { githubProfile } from '../../../utils/constants';
@@ -28,9 +28,24 @@ const ProjectsSection = ({ projects }) => {
 			translateY: 0,
 			transition: {
 				staggerChildren: 0.25,
-				delayChildren: 0.25 * 1,
+				delayChildren: 0.25,
 			},
 		},
+	};
+
+	const MAX_RENDERED_PROJECTS = 6;
+	const [showMore, setShowMore] = useState(false);
+	const [projectsList, setProjectsList] = useState(
+		projects.slice(0, MAX_RENDERED_PROJECTS)
+	);
+
+	useEffect(() => {
+		if (showMore) setProjectsList(projects);
+		else setProjectsList(projects.slice(0, MAX_RENDERED_PROJECTS));
+	}, [showMore]);
+
+	const showMoreToggle = () => {
+		setShowMore((prevState) => !prevState);
 	};
 
 	const listItem = {
@@ -64,21 +79,6 @@ const ProjectsSection = ({ projects }) => {
 		return newStr;
 	};
 
-	const MAX_RENDERED_PROJECTS = 6;
-	const [showMore, setShowMore] = useState(false);
-	const [projectsList, setProjectsList] = useState(
-		projects.slice(0, MAX_RENDERED_PROJECTS)
-	);
-
-	useEffect(() => {
-		if (showMore) setProjectsList(projects);
-		else setProjectsList(projects.slice(0, MAX_RENDERED_PROJECTS));
-	}, [showMore]);
-
-	const showMoreToggle = () => {
-		setShowMore((prevState) => !prevState);
-	};
-
 	return (
 		<div id="projects" className={sectionStyles.sectionContainer}>
 			<motion.div
@@ -103,26 +103,25 @@ const ProjectsSection = ({ projects }) => {
 				</div>
 
 				<ul className={styles.projectsList}>
-					<AnimatePresence initial={true}>
-						{projectsList.map((project) => (
-							<motion.li
-								key={project.id}
-								variants={listItem}
-								initial={['hidden']}
-								animate={['visible']}
-								exit={['hidden']}
-								className={styles.projectListItem}
-							>
-								<motion.h3 className={styles.projectTitle}>
-									<a href={project.html_url} target="_blank">
-										{formatTitle(project.name)}
-									</a>
-								</motion.h3>
+					{projectsList.map((project) => (
+						<motion.li
+							key={project.id}
+							variants={listItem}
+							initial={listItem.hidden}
+							animate={listItem.visible}
+							exit={listItem.hidden}
+							className={styles.projectListItem}
+						>
+							<motion.h3 className={styles.projectTitle}>
+								<a href={project.html_url} target="_blank">
+									{formatTitle(project.name)}
+								</a>
+							</motion.h3>
 
-								<motion.h4 className={styles.projectDescription}>
-									{project.description}
-								</motion.h4>
-								{/* <motion.h5 variants={listItem}>
+							<motion.h4 className={styles.projectDescription}>
+								{project.description}
+							</motion.h4>
+							{/* <motion.h5 variants={listItem}>
 								<a href={project.html_url} target="_blank">
 									GITHUB
 								</a>
@@ -133,9 +132,8 @@ const ProjectsSection = ({ projects }) => {
 									LINK
 								</a>
 							</motion.h5> */}
-							</motion.li>
-						))}
-					</AnimatePresence>
+						</motion.li>
+					))}
 				</ul>
 
 				<motion.button

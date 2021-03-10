@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Progressbar from '../components/Progressbar';
 import AboutSection from '../components/Section/AboutSection';
@@ -11,11 +10,6 @@ import Projects from '../components/Section/Projects';
 import { githubUsername } from '../utils/constants';
 
 export default function App({ projects }) {
-	useEffect(() => {
-		if (window.location.origin + '/' !== window.location.href)
-			window.location.href = '/';
-	});
-
 	return (
 		<div>
 			<Head>
