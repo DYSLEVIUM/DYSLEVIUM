@@ -1,4 +1,4 @@
-import { motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { githubProfile } from '../../../utils/constants';
@@ -103,25 +103,26 @@ const ProjectsSection = ({ projects }) => {
 				</div>
 
 				<ul className={styles.projectsList}>
-					{projectsList.map((project) => (
-						<motion.li
-							key={project.id}
-							variants={listItem}
-							initial={listItem.hidden}
-							animate={listItem.visible}
-							exit={listItem.hidden}
-							className={styles.projectListItem}
-						>
-							<motion.h3 className={styles.projectTitle}>
-								<a href={project.html_url} target="_blank">
-									{formatTitle(project.name)}
-								</a>
-							</motion.h3>
+					<AnimatePresence>
+						{projectsList.map((project) => (
+							<motion.li
+								key={project.id}
+								variants={listItem}
+								initial={listItem.hidden}
+								animate={listItem.visible}
+								exit={listItem.hidden}
+								className={styles.projectListItem}
+							>
+								<motion.h3 className={styles.projectTitle}>
+									<a href={project.html_url} target="_blank">
+										{formatTitle(project.name)}
+									</a>
+								</motion.h3>
 
-							<motion.h4 className={styles.projectDescription}>
-								{project.description}
-							</motion.h4>
-							{/* <motion.h5 variants={listItem}>
+								<motion.h4 className={styles.projectDescription}>
+									{project.description}
+								</motion.h4>
+								{/* <motion.h5 variants={listItem}>
 								<a href={project.html_url} target="_blank">
 									GITHUB
 								</a>
@@ -132,8 +133,9 @@ const ProjectsSection = ({ projects }) => {
 									LINK
 								</a>
 							</motion.h5> */}
-						</motion.li>
-					))}
+							</motion.li>
+						))}
+					</AnimatePresence>
 				</ul>
 
 				<motion.button
