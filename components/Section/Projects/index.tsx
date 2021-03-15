@@ -1,3 +1,6 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -129,7 +132,7 @@ const ProjectsSection = ({ projects }) => {
 											exit={listItem.hidden}
 										>
 											<motion.a href={project.html_url} target="_blank">
-												G
+												<FontAwesomeIcon icon={faGithub} />
 											</motion.a>
 										</motion.h5>
 										{(() => {
@@ -143,7 +146,7 @@ const ProjectsSection = ({ projects }) => {
 														exit={listItem.hidden}
 													>
 														<a href={project.homepage} target="_blank">
-															L
+															<FontAwesomeIcon icon={faExternalLinkAlt} />
 														</a>
 													</motion.h5>
 												);
