@@ -114,9 +114,11 @@ const ProjectsSection = ({ projects }) => {
 								className={styles.projectListItem}
 							>
 								<motion.h3 className={styles.projectTitle}>
-									<a href={project.html_url} target="_blank">
-										{formatTitle(project.name)}
-									</a>
+									<div className={styles.titleContainer}>
+										<a href={project.html_url} target="_blank">
+											{formatTitle(project.name)}
+										</a>
+									</div>
 
 									<motion.div className={styles.linksContainer}>
 										<motion.h5
@@ -126,9 +128,9 @@ const ProjectsSection = ({ projects }) => {
 											animate={listItem.visible}
 											exit={listItem.hidden}
 										>
-											<a href={project.html_url} target="_blank">
+											<motion.a href={project.html_url} target="_blank">
 												G
-											</a>
+											</motion.a>
 										</motion.h5>
 										{(() => {
 											if (project.homepage !== '') {

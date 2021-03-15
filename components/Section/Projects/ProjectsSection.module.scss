@@ -93,8 +93,26 @@
 				transition: color 250ms ease-in-out;
 				font-weight: 400;
 
-				a {
-					// margin: 0 2rem 0 0;
+				.titleContainer {
+					margin-right: 1rem;
+				}
+
+				.linksContainer {
+					@include flexCenter(row, space-between, center);
+					min-width: fit-content;
+					color: $secondaryAccentColor;
+
+					.githubLink,
+					.homepage {
+						transition: color 200ms ease-in-out;
+						&:hover {
+							color: $primaryColor;
+						}
+					}
+
+					.homepage {
+						margin-left: 2rem;
+					}
 				}
 			}
 
@@ -109,14 +127,5 @@
 	.showMore {
 		@include buttonStyle;
 		margin: 2rem;
-	}
-
-	.linksContainer {
-		@include flexCenter(row, space-between, center);
-		min-width: fit-content;
-
-		.homepage {
-			margin-left: 2rem;
-		}
 	}
 }
