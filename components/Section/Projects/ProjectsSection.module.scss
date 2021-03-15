@@ -105,8 +105,10 @@
 					.githubLink,
 					.homepage {
 						transition: color 200ms ease-in-out;
-						&:hover {
-							color: $primaryColor;
+						a {
+							&:hover {
+								color: $primaryColor;
+							}
 						}
 					}
 

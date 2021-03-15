@@ -136,7 +136,10 @@ const ProjectsSection = ({ projects }) => {
 											</motion.a>
 										</motion.h5>
 										{(() => {
-											if (project.homepage !== '') {
+											if (
+												project.homepage !== '' &&
+												project.homepage !== null
+											) {
 												return (
 													<motion.h5
 														className={styles.homepage}
