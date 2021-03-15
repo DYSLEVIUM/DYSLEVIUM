@@ -117,22 +117,41 @@ const ProjectsSection = ({ projects }) => {
 									<a href={project.html_url} target="_blank">
 										{formatTitle(project.name)}
 									</a>
-								</motion.h3>
 
+									<motion.div className={styles.linksContainer}>
+										<motion.h5
+											className={styles.githubLink}
+											variants={listItem}
+											initial={listItem.hidden}
+											animate={listItem.visible}
+											exit={listItem.hidden}
+										>
+											<a href={project.html_url} target="_blank">
+												G
+											</a>
+										</motion.h5>
+										{(() => {
+											if (project.homepage !== '') {
+												return (
+													<motion.h5
+														className={styles.homepage}
+														variants={listItem}
+														initial={listItem.hidden}
+														animate={listItem.visible}
+														exit={listItem.hidden}
+													>
+														<a href={project.homepage} target="_blank">
+															L
+														</a>
+													</motion.h5>
+												);
+											}
+										})()}
+									</motion.div>
+								</motion.h3>
 								<motion.h4 className={styles.projectDescription}>
 									{project.description}
 								</motion.h4>
-								{/* <motion.h5 variants={listItem}>
-								<a href={project.html_url} target="_blank">
-									GITHUB
-								</a>
-							</motion.h5>
-
-							<motion.h5 variants={listItem}>
-								<a href={project.homepage} target="_blank">
-									LINK
-								</a>
-							</motion.h5> */}
 							</motion.li>
 						))}
 					</AnimatePresence>

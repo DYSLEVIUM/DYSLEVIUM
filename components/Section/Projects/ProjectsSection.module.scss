@@ -7,6 +7,7 @@
 		@include flexCenter(column, center, center);
 		margin-bottom: 2rem;
 
+		@include flexCenter(column, center, center);
 		.sectionTitle {
 			color: $primaryAccentColor;
 			letter-spacing: 0.05rem;
@@ -79,17 +80,22 @@
 			}
 
 			.projectTitle {
+				@include flexCenter(row, space-between, center);
+				flex-wrap: wrap;
 				position: relative;
 				text-transform: capitalize;
 				color: $primaryColor;
-				width: fit-content;
+				width: 100%;
 
 				&:hover {
 					color: $primaryAccentColor;
 				}
-
 				transition: color 250ms ease-in-out;
 				font-weight: 400;
+
+				a {
+					// margin: 0 2rem 0 0;
+				}
 			}
 
 			.projectDescription {
@@ -103,5 +109,14 @@
 	.showMore {
 		@include buttonStyle;
 		margin: 2rem;
+	}
+
+	.linksContainer {
+		@include flexCenter(row, space-between, center);
+		min-width: fit-content;
+
+		.homepage {
+			margin-left: 2rem;
+		}
 	}
 }
