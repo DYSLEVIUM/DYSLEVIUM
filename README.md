@@ -7,6 +7,8 @@
 - ⚡ Fun fact : I like to play basketball.
 - 🔗 Webiste : https://pushpakantbehera.vercel.app
 
+<img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/resume.svg" width="250px" alt="Résumé"></img>
+
 # Github Stats
 
 [![Pushpakant's github stats](https://github-readme-stats.vercel.app/api?username=DYSLEVIUM&theme=radical&show_icons=true)](https://github.com/pushpakant/github-readme-stats)
