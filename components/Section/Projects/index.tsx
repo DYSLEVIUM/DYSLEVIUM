@@ -100,6 +100,7 @@ const ProjectsSection = ({ projects }) => {
 						className={styles.sectionAlt}
 						href={githubProfile + '?tab=repositories'}
 						target="_blank"
+						rel="noopener noreferrer"
 					>
 						View on Github
 					</motion.a>
@@ -118,7 +119,11 @@ const ProjectsSection = ({ projects }) => {
 							>
 								<motion.h3 className={styles.projectTitle}>
 									<div className={styles.titleContainer}>
-										<a href={project.html_url} target="_blank">
+										<a
+											href={project.html_url}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
 											{formatTitle(project.name)}
 										</a>
 									</div>
@@ -131,7 +136,11 @@ const ProjectsSection = ({ projects }) => {
 											animate={listItem.visible}
 											exit={listItem.hidden}
 										>
-											<motion.a href={project.html_url} target="_blank">
+											<motion.a
+												href={project.html_url}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
 												<FontAwesomeIcon icon={faGithub} />
 											</motion.a>
 										</motion.h5>
@@ -148,7 +157,11 @@ const ProjectsSection = ({ projects }) => {
 														animate={listItem.visible}
 														exit={listItem.hidden}
 													>
-														<a href={project.homepage} target="_blank">
+														<a
+															href={project.homepage}
+															target="_blank"
+															rel="noopener noreferrer"
+														>
 															<FontAwesomeIcon icon={faExternalLinkAlt} />
 														</a>
 													</motion.h5>

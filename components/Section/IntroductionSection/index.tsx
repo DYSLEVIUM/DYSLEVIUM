@@ -77,12 +77,16 @@ const IntroductionSection = () => {
 
 				<motion.div className={styles.buttonContainer}>
 					<motion.button variants={listItem} className={styles.contactBtn}>
-						<a href={`mailto:${email}`} target="_blank">
+						<a
+							href={`mailto:${email}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							Get in Touch
 						</a>
 					</motion.button>
 					<motion.button variants={listItem} className={styles.resumeBtn}>
-						<a href="/resume.pdf" target="_blank">
+						<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
 							Get Résumé
 						</a>
 					</motion.button>

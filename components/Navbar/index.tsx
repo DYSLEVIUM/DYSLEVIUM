@@ -183,7 +183,7 @@ const Navbar = () => {
 						<a href="#contact">Contact</a>
 					</motion.li>
 					<motion.li variants={listItemY} className={styles.listItem}>
-						<a href="/resume.pdf" target="_blank">
+						<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
 							Résumé
 						</a>
 					</motion.li>
@@ -221,7 +221,7 @@ const Navbar = () => {
 						<a href="#contact">Contact</a>
 					</motion.li>
 					<motion.li variants={listItemX} className={styles.listItemAside}>
-						<a href="/resume.pdf" target="_blank">
+						<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
 							Résumé
 						</a>
 					</motion.li>
