@@ -1,18 +1,13 @@
 # <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi"> Hi there
 
-<div>
-    <div style="display:inline-block;">
-		<p>🔭 I’m currently working on Competitive Programming and Problem Solving.</p>
-		<p>🌱 I’m currently learning React.</p>
-		<p>📫 Contact me : pushpakantbehera@hotmail.com.</p>
-		<p>🤔 I’m looking for help with Data Structures and Algorithms.</p>
-		<p>⚡ Fun fact : I like to play basketball.</p>
-		<p>🔗 Webiste : https://pushpakantbehera.vercel.app</p>
-    </div>
-    <div style="display:inline-block;">
-        <img width="250" src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/resume.svg"></img>
-    </div>
-</div>
+- 🔭 I’m currently working on Competitive Programming and Problem Solving.
+- 🌱 I’m currently learning React.
+- 📫 Contact me : pushpakantbehera@hotmail.com.
+- 🤔 I’m looking for help with Data Structures and Algorithms.
+- ⚡ Fun fact : I like to play basketball.
+- 🔗 Webiste : https://pushpakantbehera.vercel.app
+
+<img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/resume.svg" width="250px" alt="Résumé"></img>
 
 # Github Stats
 
