@@ -7,7 +7,7 @@
 - ⚡ Fun fact : I like to play basketball.
 - 🔗 Webiste : https://pushpakantbehera.vercel.app
 
-<img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/resume.svg" width="250px" alt="Résumé"></img>
+<img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/resume.svg" width="250px" alt="Résumé"></img>
 
 # Github Stats
 

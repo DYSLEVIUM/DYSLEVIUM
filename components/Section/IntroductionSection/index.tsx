@@ -1,7 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { email } from '../../../utils/constants';
+import { email, resumeUrl } from '../../../utils/constants';
 import sectionStyles from '../Section.module.scss';
 import styles from './IntroductionSection.module.scss';
 
@@ -86,7 +86,7 @@ const IntroductionSection = () => {
 						</a>
 					</motion.button>
 					<motion.button variants={listItem} className={styles.resumeBtn}>
-						<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+						<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
 							Get Résumé
 						</a>
 					</motion.button>

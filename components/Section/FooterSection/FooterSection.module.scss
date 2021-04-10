@@ -1,18 +1,76 @@
 @import '../../../styles/variables';
 
 .footerContainer {
-	@include flexCenter(column, center, center);
+	@include flexCenter(row, space-between, flex-start);
 
 	width: 100%;
+	padding: 2rem 0;
+
+	color: $secondaryAccentColor;
 
 	@media only screen and (max-width: $mobileSize) {
 		padding-top: 3 * $sidePaddingMob;
+		@include flexCenter(column, center, center);
 	}
 
-	background-color: red;
+	.socialLinksContainer {
+		@media only screen and (max-width: $mobileSize) {
+			@include flexCenter(column, center, center);
+			margin: 0rem;
+		}
 
-	.sayHello {
-		@include buttonStyle;
-		margin: 2rem;
+		.socialLinksTitle {
+			width: 100%;
+			margin-bottom: 1rem;
+			font-weight: normal;
+
+			color: $primaryAccentColor;
+
+			@media only screen and (max-width: $mobileSize) {
+				@include flexCenter(column, center, center);
+			}
+		}
+
+		width: 60%;
+
+		margin: 2rem 4rem 0 2rem;
+
+		.socialLinks {
+			width: 50%;
+			@include flexCenter(row, space-between, flex-start);
+
+			@media only screen and (max-width: $mobileSize) {
+				margin: 0;
+			}
+
+			.link {
+				transition: color 200ms ease-in-out;
+				&:hover {
+					color: $primaryAccentColor;
+				}
+			}
+		}
+	}
+
+	.resumeQrCode {
+		@include flexCenter(row, center, center);
+
+		padding-left: 4rem;
+		min-height: 250px;
+		border-left: 1px solid $secondaryColor;
+
+		a {
+			@include flexCenter(column, center, center);
+			transition: color 200ms ease-in-out;
+			&:hover {
+				color: $primaryAccentColor;
+			}
+		}
+
+		@media only screen and (max-width: $mobileSize) {
+			padding-left: 0;
+			margin-top: 2rem;
+			border: none;
+		}
 	}
 }

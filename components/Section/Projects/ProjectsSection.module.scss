@@ -2,10 +2,12 @@
 
 .projectsContainer {
 	@include flexCenter(column, center, center);
+	min-height: 100vh;
+	padding: 10rem 0;
 
 	.sectionIntro {
 		@include flexCenter(column, center, center);
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 
 		@include flexCenter(column, center, center);
 		.sectionTitle {
@@ -44,7 +46,7 @@
 				transform: scaleX(0);
 				transform-origin: right;
 
-				transition: transform 200ms 50ms ease-in-out;
+				transition: transform 200ms 100ms ease-in-out;
 			}
 			transition: color 200ms ease-in-out;
 		}
@@ -107,7 +109,7 @@
 						transition: color 200ms ease-in-out;
 						a {
 							&:hover {
-								color: $primaryColor;
+								color: $primaryAccentColor;
 							}
 						}
 					}

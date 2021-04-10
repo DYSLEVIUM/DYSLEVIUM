@@ -1,31 +1,30 @@
 @import '../../styles/variables';
 
 @mixin flexCenter(
-  $flexDirection,
-  $justifyContent: center,
-  $alignItems: center
+	$flexDirection,
+	$justifyContent: center,
+	$alignItems: center
 ) {
-  display: flex;
-  flex-direction: $flexDirection;
-  justify-content: $justifyContent;
-  align-items: $alignItems;
+	display: flex;
+	flex-direction: $flexDirection;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
 }
 
 .sectionContainer {
-  width: 100%;
-  min-height: 100vh;
+	width: 100%;
 
-  @media only screen and (min-width: $monitorSize) {
-    padding: $sidePaddingMon;
-  }
+	@media only screen and (min-width: $monitorSize) {
+		padding: 0 $sidePaddingMon;
+	}
 
-  @media only screen and (max-width: $monitorSize) and (min-width: $mobileSize) {
-    padding: $sidePaddingTab;
-  }
+	@media only screen and (max-width: $monitorSize) and (min-width: $mobileSize) {
+		padding: 0 $sidePaddingTab;
+	}
 
-  @media only screen and (max-width: $mobileSize) {
-    padding: $sidePaddingMob;
-  }
+	@media only screen and (max-width: $mobileSize) {
+		padding: 0 $sidePaddingMob;
+	}
 
-  @include flexCenter(column, center, flex-start);
+	@include flexCenter(column, center, flex-start);
 }

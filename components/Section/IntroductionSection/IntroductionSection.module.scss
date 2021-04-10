@@ -3,9 +3,10 @@
 .introductionContainer {
 	@include flexCenter(column, center, space-between);
 
-	@media only screen and (max-width: $mobileSize) {
-		padding-top: 3 * $sidePaddingMob;
-	}
+	padding: 10rem 0;
+	// @media only screen and (max-width: $mobileSize) {
+	// 	padding: 3 * $sidePaddingMob;
+	// }
 
 	.salutationSpan {
 		@include flexCenter(row, flex-start, center);

@@ -1,10 +1,22 @@
 import React, { useEffect } from 'react';
-import sectionStyles from '../Section.module.scss';
-import styles from './FooterSection.module.scss';
-
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { email } from '../../../utils/constants';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import sectionStyles from '../Section.module.scss';
+import styles from './FooterSection.module.scss';
+import {
+	githubProfile,
+	instagramProfile,
+	linkedinProfile,
+	resumeUrl,
+} from '../../../utils/constants';
+import {
+	faGithub,
+	faInstagram,
+	faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 
 const FooterSection = () => {
 	const animation = useAnimation();
@@ -51,13 +63,55 @@ const FooterSection = () => {
 				animate={animation}
 				className={styles.footerContainer}
 			>
-				<h2 className={sectionStyles.c}>Find me at</h2>
+				<motion.div className={styles.socialLinksContainer}>
+					<motion.h4 variants={listItem} className={styles.socialLinksTitle}>
+						Find me at
+					</motion.h4>
+					<motion.ul className={styles.socialLinks}>
+						<motion.li variants={listItem}>
+							<motion.a
+								href={instagramProfile}
+								target="_blank"
+								className={styles.link}
+								title="Instagram"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+							</motion.a>
+						</motion.li>
+						<motion.li variants={listItem}>
+							<motion.a
+								href={githubProfile}
+								target="_blank"
+								className={styles.link}
+								title="Github"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+							</motion.a>
+						</motion.li>
+						<motion.li variants={listItem}>
+							<motion.a
+								href={linkedinProfile}
+								target="_blank"
+								className={styles.link}
+								title="LinkedIn"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+							</motion.a>
+						</motion.li>
+					</motion.ul>
+				</motion.div>
+				<motion.div className={styles.resumeQrCode}>
+					<motion.span variants={listItem}>
+						<a href={resumeUrl} target="_blank">
+							<Image src="/resume.svg" alt="Résumé" width={250} height={250} />
 
-				<motion.button variants={listItem} className={styles.sayHello}>
-					<a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
-						Say Hi
-					</a>
-				</motion.button>
+							<motion.span>Résumé</motion.span>
+						</a>
+					</motion.span>
+				</motion.div>
 			</motion.div>
 		</div>
 	);
