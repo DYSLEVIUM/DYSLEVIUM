@@ -1,0 +1,7 @@
+@import '../../../styles/variables';
+
+.contactContainer {
+	@include flexCenter(row);
+
+	min-height: 100vh;
+}

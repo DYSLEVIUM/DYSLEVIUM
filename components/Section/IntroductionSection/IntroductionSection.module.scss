@@ -3,6 +3,8 @@
 .introductionContainer {
 	@include flexCenter(column, center, space-between);
 
+	min-height: 100vh;
+
 	padding: 10rem 0;
 	// @media only screen and (max-width: $mobileSize) {
 	// 	padding: 3 * $sidePaddingMob;

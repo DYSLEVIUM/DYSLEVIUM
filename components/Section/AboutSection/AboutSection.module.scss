@@ -1,0 +1,7 @@
+@import '../../../styles/variables';
+
+.aboutContainer {
+	@include flexCenter(row);
+
+	min-height: 100vh;
+}

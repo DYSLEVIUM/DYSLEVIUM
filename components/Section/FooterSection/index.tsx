@@ -10,12 +10,16 @@ import {
 	githubProfile,
 	instagramProfile,
 	linkedinProfile,
+	redditProfile,
 	resumeUrl,
+	twitterProfile,
 } from '../../../utils/constants';
 import {
 	faGithub,
 	faInstagram,
 	faLinkedin,
+	faReddit,
+	faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
 const FooterSection = () => {
@@ -70,24 +74,13 @@ const FooterSection = () => {
 					<motion.ul className={styles.socialLinks}>
 						<motion.li variants={listItem}>
 							<motion.a
-								href={instagramProfile}
-								target="_blank"
-								className={styles.link}
-								title="Instagram"
-								rel="noopener noreferrer"
-							>
-								<FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-							</motion.a>
-						</motion.li>
-						<motion.li variants={listItem}>
-							<motion.a
 								href={githubProfile}
 								target="_blank"
 								className={styles.link}
 								title="Github"
 								rel="noopener noreferrer"
 							>
-								<FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+								<FontAwesomeIcon icon={faGithub} size="2x"></FontAwesomeIcon>
 							</motion.a>
 						</motion.li>
 						<motion.li variants={listItem}>
@@ -98,7 +91,40 @@ const FooterSection = () => {
 								title="LinkedIn"
 								rel="noopener noreferrer"
 							>
-								<FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+								<FontAwesomeIcon icon={faLinkedin} size="2x"></FontAwesomeIcon>
+							</motion.a>
+						</motion.li>
+						<motion.li variants={listItem}>
+							<motion.a
+								href={instagramProfile}
+								target="_blank"
+								className={styles.link}
+								title="Instagram"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faInstagram} size="2x"></FontAwesomeIcon>
+							</motion.a>
+						</motion.li>
+						<motion.li variants={listItem}>
+							<motion.a
+								href={twitterProfile}
+								target="_blank"
+								className={styles.link}
+								title="Reddit"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon>
+							</motion.a>
+						</motion.li>
+						<motion.li variants={listItem}>
+							<motion.a
+								href={redditProfile}
+								target="_blank"
+								className={styles.link}
+								title="Reddit"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon icon={faReddit} size="2x"></FontAwesomeIcon>
 							</motion.a>
 						</motion.li>
 					</motion.ul>
