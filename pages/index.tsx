@@ -6,15 +6,15 @@ import ContactSection from '../components/Section/ContactSection';
 import ExperienceSection from '../components/Section/Experience';
 import FooterSection from '../components/Section/FooterSection';
 import IntroductionSection from '../components/Section/IntroductionSection';
-import Projects from '../components/Section/Projects';
+import ProjectsSection from '../components/Section/ProjectsSection';
 import { githubUsername } from '../utils/constants';
 
 export default function App({ projects }) {
 	return (
-		<div>
+		<>
 			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<title>Pushpakant Behera - Portfolio</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			{/* header */}
 			<>
@@ -26,11 +26,11 @@ export default function App({ projects }) {
 				<IntroductionSection />
 				<AboutSection />
 				<ExperienceSection />
-				<Projects projects={projects} />
+				<ProjectsSection projects={projects} />
 				<ContactSection />
 				<FooterSection />
 			</main>
-		</div>
+		</>
 	);
 }
 
