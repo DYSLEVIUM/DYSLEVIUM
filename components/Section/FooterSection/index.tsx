@@ -80,7 +80,7 @@ const FooterSection = () => {
 								title="Github"
 								rel="noopener noreferrer"
 							>
-								<FontAwesomeIcon icon={faGithub} size="2x"></FontAwesomeIcon>
+								<FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
 							</motion.a>
 						</motion.li>
 						<motion.li variants={listItem}>
@@ -91,7 +91,7 @@ const FooterSection = () => {
 								title="LinkedIn"
 								rel="noopener noreferrer"
 							>
-								<FontAwesomeIcon icon={faLinkedin} size="2x"></FontAwesomeIcon>
+								<FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
 							</motion.a>
 						</motion.li>
 						<motion.li variants={listItem}>
@@ -102,7 +102,7 @@ const FooterSection = () => {
 								title="Instagram"
 								rel="noopener noreferrer"
 							>
-								<FontAwesomeIcon icon={faInstagram} size="2x"></FontAwesomeIcon>
+								<FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
 							</motion.a>
 						</motion.li>
 						<motion.li variants={listItem}>
@@ -113,7 +113,7 @@ const FooterSection = () => {
 								title="Reddit"
 								rel="noopener noreferrer"
 							>
-								<FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon>
+								<FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
 							</motion.a>
 						</motion.li>
 						<motion.li variants={listItem}>
@@ -124,7 +124,7 @@ const FooterSection = () => {
 								title="Reddit"
 								rel="noopener noreferrer"
 							>
-								<FontAwesomeIcon icon={faReddit} size="2x"></FontAwesomeIcon>
+								<FontAwesomeIcon icon={faReddit}></FontAwesomeIcon>
 							</motion.a>
 						</motion.li>
 					</motion.ul>
@@ -134,7 +134,7 @@ const FooterSection = () => {
 						<a href={resumeUrl} target="_blank">
 							<Image src="/resume.svg" alt="Résumé" width={250} height={250} />
 
-							<motion.span>Résumé</motion.span>
+							<motion.span title="Résumé">Résumé</motion.span>
 						</a>
 					</motion.span>
 				</motion.div>

@@ -111,6 +111,24 @@
 							&:hover {
 								color: $primaryAccentColor;
 							}
+
+							svg {
+								transition: transform 200ms ease-in-out;
+
+								&:hover {
+									animation: bounce 500ms ease-in-out infinite;
+								}
+
+								@keyframes bounce {
+									0%,
+									100% {
+										transform: translateY(0);
+									}
+									50% {
+										transform: translateY(-10px);
+									}
+								}
+							}
 						}
 					}
 
