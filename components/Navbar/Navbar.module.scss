@@ -15,7 +15,7 @@
 	position: fixed;
 
 	@include flexCenter(row, space-between);
-	padding: $sidePaddingMob;
+	padding: $sidePaddingMob * 2;
 
 	font-family: 'Montserrat';
 	font-weight: bold;
@@ -142,8 +142,8 @@
 			counter-reset: item -1;
 
 			.listItem {
-				margin-left: $sidePaddingMob/2;
-				padding-left: $sidePaddingMob;
+				margin-left: $sidePaddingMob * 2;
+				padding-left: $sidePaddingMob * 2;
 
 				font-size: 0.9rem;
 

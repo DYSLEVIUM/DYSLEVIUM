@@ -9,7 +9,7 @@ import styles from './FooterSection.module.scss';
 import {
 	githubProfile,
 	instagramProfile,
-	linkedinProfile,
+	linkedInProfile,
 	redditProfile,
 	resumeUrl,
 	twitterProfile,
@@ -68,9 +68,9 @@ const FooterSection = () => {
 				className={styles.footerContainer}
 			>
 				<motion.div className={styles.socialLinksContainer}>
-					<motion.h4 variants={listItem} className={styles.socialLinksTitle}>
+					<motion.h3 variants={listItem} className={styles.socialLinksTitle}>
 						Find me at
-					</motion.h4>
+					</motion.h3>
 					<motion.ul className={styles.socialLinks}>
 						<motion.li variants={listItem}>
 							<motion.a
@@ -85,7 +85,7 @@ const FooterSection = () => {
 						</motion.li>
 						<motion.li variants={listItem}>
 							<motion.a
-								href={linkedinProfile}
+								href={linkedInProfile}
 								target="_blank"
 								className={styles.link}
 								title="LinkedIn"
@@ -110,7 +110,7 @@ const FooterSection = () => {
 								href={twitterProfile}
 								target="_blank"
 								className={styles.link}
-								title="Reddit"
+								title="Twitter"
 								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>

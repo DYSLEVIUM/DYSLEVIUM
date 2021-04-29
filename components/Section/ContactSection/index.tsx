@@ -4,6 +4,7 @@ import styles from './ContactSection.module.scss';
 
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
+import { email } from '../../../utils/constants';
 
 const ContactSection = () => {
 	const animation = useAnimation();
@@ -50,8 +51,18 @@ const ContactSection = () => {
 				animate={animation}
 				className={styles.contactContainer}
 			>
-				<span style={{ fontSize: 25 }}>👷‍♂️</span>
-				Currently working on building this contact section.
+				<motion.h2 variants={listItem} className={styles.contactTitle}>
+					Get in Touch
+				</motion.h2>
+				<motion.h3 variants={listItem} className={styles.contactDescription}>
+					Whether you have a question or just want to say hi, my inbox is always
+					open. I'll try my best to get back to you!
+				</motion.h3>
+				<motion.button variants={listItem} className={styles.contactBtn}>
+					<a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+						Get in Touch
+					</a>
+				</motion.button>
 			</motion.div>
 		</div>
 	);

@@ -16,9 +16,10 @@
 	.socialLinksContainer {
 		@media only screen and (max-width: $mobileSize) {
 			@include flexCenter(column, center, center);
-			width: 100%;
 			margin: 0rem;
 		}
+
+		max-width: 400px;
 
 		.socialLinksTitle {
 			width: 100%;
@@ -33,8 +34,6 @@
 		}
 
 		width: 60%;
-
-		margin: 2rem 4rem 0 2rem;
 
 		.socialLinks {
 			width: 100%;

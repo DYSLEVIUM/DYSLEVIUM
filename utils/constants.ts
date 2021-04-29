@@ -1,7 +1,7 @@
 export const email: string = 'pushpakantbehera@hotmail.com';
 export const githubUsername: string = 'DYSLEVIUM';
 export const githubProfile: string = `https://github.com/${githubUsername}`;
-export const linkedinProfile: string =
+export const linkedInProfile: string =
 	'https://www.linkedin.com/in/pushpakant-behera-466ba4162';
 export const resumeUrl: string = `https://bit.ly/32AZD5B`;
 export const instagramProfile: string =

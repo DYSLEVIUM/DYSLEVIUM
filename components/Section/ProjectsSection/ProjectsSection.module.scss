@@ -54,7 +54,7 @@
 
 	.projectsList {
 		display: grid;
-		gap: 2rem;
+		gap: $sidePaddingMob * 2;
 		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
 		.projectListItem {
