@@ -3,7 +3,7 @@
 .contactContainer {
 	@include flexCenter(column);
 	width: 100%;
-	min-height: 100vh;
+	padding: 2rem 0;
 
 	.contactTitle {
 		color: $primaryAccentColor;
