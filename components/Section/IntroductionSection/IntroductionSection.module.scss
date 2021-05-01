@@ -13,7 +13,7 @@
 			width: 3rem;
 			height: 3rem;
 			filter: saturate(200%);
-			margin-right: 2rem;
+			margin-right: 1rem;
 		}
 		.salutation {
 			color: $secondaryFontColor;
@@ -41,7 +41,7 @@
 		.contactBtn {
 			@include buttonStyle;
 
-			margin: 2rem 3rem 0 0;
+			margin: 2rem 2rem 0 0;
 			background-color: $primaryAccentColor;
 			color: $contrastColor;
 			box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4);

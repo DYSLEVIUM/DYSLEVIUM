@@ -57,7 +57,7 @@ const Navbar = () => {
 	const navContainerStyles: object = {
 		...(showMenu && { backdropFilter: 'none' }),
 		...(!showMenu && {
-			backdropFilter: 'blur(10px) saturate(200%)',
+			backdropFilter: 'blur(10px)',
 			transform: 'translateZ(0)',
 			willChange: 'transform',
 		}),
@@ -154,7 +154,7 @@ const Navbar = () => {
 				style={
 					showMenu
 						? {
-								backdropFilter: 'blur(10px) saturate(200%)',
+								backdropFilter: 'blur(10px)',
 								transform: 'translateZ(0)',
 								willChange: 'transform',
 						  }

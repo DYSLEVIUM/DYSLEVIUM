@@ -15,7 +15,7 @@
 	position: fixed;
 
 	@include flexCenter(row, space-between);
-	padding: $sidePaddingMob * 2;
+	padding: $sidePaddingMob;
 
 	font-family: 'Montserrat';
 	font-weight: bold;
