@@ -10,7 +10,7 @@ export default class GlobalDocument extends Document {
 		super(props);
 		this.metaDescription = 'This is my portfolio website.'; //! change or remove description later
 		this.metaTitle = 'Pushpakant Behera Portfolio'; //! change or remove title later
-		this.siteUrl = 'https://portfolio.pushpakant.vercel.app'; //! change or remove name later
+		this.siteUrl = 'https://pushpakantbehera.vercel.app'; //! change or remove name later
 		this.domain = 'portfolio.pushpakant.vercel.app'; //! change or remove name later
 	}
 	render() {
