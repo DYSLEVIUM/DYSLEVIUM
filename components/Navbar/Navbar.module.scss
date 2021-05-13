@@ -13,6 +13,7 @@
 
 .navContainer {
 	position: fixed;
+	z-index: 3;
 
 	@include flexCenter(row, space-between);
 	padding: $sidePaddingMob;
@@ -21,8 +22,6 @@
 	font-weight: bold;
 
 	width: 100%;
-
-	z-index: 1;
 	transition: all 0.1s ease-in-out;
 
 	.hamburgerMenuContainer {
