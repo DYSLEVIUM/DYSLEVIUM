@@ -12,10 +12,7 @@
 }
 
 .sectionContainer {
-	position: relative;
 	width: 100%;
-
-	z-index: 2;
 
 	@media only screen and (min-width: $monitorSize) {
 		padding: 0 $sidePaddingMon;

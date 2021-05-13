@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import Navbar from '../components/Navbar';
 import Progressbar from '../components/Progressbar';
 import AboutSection from '../components/Section/AboutSection';
@@ -8,7 +7,6 @@ import ExperienceSection from '../components/Section/Experience';
 import FooterSection from '../components/Section/FooterSection';
 import IntroductionSection from '../components/Section/IntroductionSection';
 import ProjectsSection from '../components/Section/ProjectsSection';
-import Canvas from '../components/Canvas';
 import { githubUsername } from '../utils/constants';
 
 export default function App({ projects }) {
@@ -24,8 +22,7 @@ export default function App({ projects }) {
 				<Progressbar />
 			</>
 
-			<main style={{ position: 'relative' }}>
-				<Canvas />
+			<main>
 				<IntroductionSection />
 				<AboutSection />
 				<ExperienceSection />
