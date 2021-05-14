@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { PrimaryButton, SecondaryButton } from '../../../styles/shared/Button';
 import { email, resumeUrl } from '../../../utils/constants';
 import sectionStyles from '../Section.module.scss';
 import styles from './IntroductionSection.module.scss';
@@ -76,7 +77,7 @@ const IntroductionSection = () => {
 				</motion.h3>
 
 				<motion.div className={styles.buttonContainer}>
-					<motion.button variants={listItem} className={styles.contactBtn}>
+					<SecondaryButton variants={listItem}>
 						<a
 							href={`mailto:${email}`}
 							target="_blank"
@@ -84,12 +85,13 @@ const IntroductionSection = () => {
 						>
 							Get in Touch
 						</a>
-					</motion.button>
-					<motion.button variants={listItem} className={styles.resumeBtn}>
+					</SecondaryButton>
+
+					<PrimaryButton variants={listItem}>
 						<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
 							Get Résumé
 						</a>
-					</motion.button>
+					</PrimaryButton>
 				</motion.div>
 			</motion.div>
 		</div>

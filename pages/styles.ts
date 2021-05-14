@@ -1,5 +1,14 @@
-@import './variables';
+import { createGlobalStyle } from 'styled-components';
+import {
+	hamburgerColor,
+	contrastColor,
+	mobileSize,
+	primaryColor,
+	secondaryColor,
+	primaryAccentColor,
+} from '../styles/_variables';
 
+export const GlobalStyles = createGlobalStyle`
 * {
 	padding: 0;
 	margin: 0;
@@ -21,9 +30,11 @@ body {
 
 	scroll-behavior: smooth;
 
-	color: $hamburgerColor;
+	color: ${hamburgerColor};
 
-	background-color: $contrastColor;
+	background-color: ${contrastColor};
+
+	scrollbar-color: ${primaryColor} ${secondaryColor};
 }
 
 ul {
@@ -37,7 +48,7 @@ h4,
 h5,
 h6 {
 	padding: 1rem 0;
-	@media only screen and (max-width: $mobileSize) {
+	@media only screen and (max-width: ${mobileSize}) {
 		padding: 0.5rem 0;
 	}
 }
@@ -46,7 +57,7 @@ h1 {
 	font-size: 4rem;
 	line-height: 4rem;
 
-	@media only screen and (max-width: $mobileSize) {
+	@media only screen and (max-width: ${mobileSize}) {
 		font-size: 2.5rem;
 	}
 }
@@ -55,7 +66,7 @@ h2 {
 	font-size: 2rem;
 	line-height: 2rem;
 
-	@media only screen and (max-width: $mobileSize) {
+	@media only screen and (max-width: ${mobileSize}) {
 		font-size: 1.65rem;
 	}
 }
@@ -64,7 +75,7 @@ h3 {
 	font-size: 1.35rem;
 	line-height: 1.5rem;
 
-	@media only screen and (max-width: $mobileSize) {
+	@media only screen and (max-width: ${mobileSize}) {
 		font-size: 1.13rem;
 	}
 }
@@ -73,7 +84,7 @@ h4 {
 	font-size: 1rem;
 	line-height: 1.5rem;
 
-	@media only screen and (max-width: $mobileSize) {
+	@media only screen and (max-width: ${mobileSize}) {
 		font-size: 0.95rem;
 	}
 }
@@ -84,24 +95,25 @@ a {
 	cursor: pointer;
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
 	width: 0.75rem;
 
-	@media only screen and (max-width: $mobileSize) {
+	@media only screen and (max-width: ${mobileSize}) {
 		display: none;
 	}
 }
 
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
 	border-radius: 1rem;
-	background-color: rgba($secondaryFontColor, 0.05);
+	background-color: ${secondaryColor};
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
 	border-radius: 1rem;
-	background-color: rgba($primaryColor, 0.8);
+	background-color: ${primaryColor};
 
 	&:hover {
-		background-color: rgba($primaryAccentColor, 1);
+		background-color: ${primaryAccentColor};
 	}
 }
+`;

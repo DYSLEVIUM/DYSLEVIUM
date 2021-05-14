@@ -1,4 +1,7 @@
+import { GlobalStyles } from './styles';
 import Head from 'next/head';
+import { useState } from 'react';
+
 import Navbar from '../components/Navbar';
 import Progressbar from '../components/Progressbar';
 import AboutSection from '../components/Section/AboutSection';
@@ -10,19 +13,25 @@ import ProjectsSection from '../components/Section/ProjectsSection';
 import { githubUsername } from '../utils/constants';
 
 export default function App({ projects }) {
+	const [showBlur, setShowBlur] = useState(false);
+	const toggleBlurContainer = (isClose) => {
+		console.log('isClose ', isClose);
+		setShowBlur(!isClose);
+	};
 	return (
 		<>
 			<Head>
 				<title>Pushpakant Behera - Portfolio</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
+			<GlobalStyles />
 			{/* header */}
 			<>
-				<Navbar />
+				<Navbar onSideBarToggle={toggleBlurContainer} />
 				<Progressbar />
 			</>
 
-			<main>
+			<main style={showBlur ? { filter: 'blur(10px)' } : { filter: 'blur(0)' }}>
 				<IntroductionSection />
 				<AboutSection />
 				<ExperienceSection />

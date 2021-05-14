@@ -1,10 +1,24 @@
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { resumeUrl } from '../../utils/constants';
-import styles from './Navbar.module.scss';
+import {
+	BlurContainer,
+	HamburgerMenuContainer,
+	ListContainer,
+	ListContainerAside,
+	NavContainer,
+	List,
+	ListItem,
+	ListAside,
+	ListItemAside,
+	HamburgerMenu,
+} from './styles';
 
-const Navbar = () => {
+import { PrimaryButton } from '../../styles/shared/Button';
+
+import { resumeUrl } from '../../utils/constants';
+
+const Navbar = (props) => {
 	const [showNavbar, setshowNavbar] = useState(true);
 	const [showShadow, setshowShadow] = useState(false);
 
@@ -16,12 +30,12 @@ const Navbar = () => {
 	const onScroll = () => {
 		currentOffset = window.pageYOffset;
 
-		if (previousOffset - currentOffset < 0) {
+		if (previousOffset < currentOffset) {
 			setshowShadow(false);
 			setshowNavbar(false);
 		}
 
-		if (previousOffset - currentOffset > 0) {
+		if (previousOffset > currentOffset) {
 			setshowNavbar(true);
 			setshowShadow(true);
 		}
@@ -33,7 +47,7 @@ const Navbar = () => {
 
 		previousOffset = currentOffset;
 
-		if (currentOffset === 0) setshowShadow(false);
+		if (currentOffset <= 50) setshowShadow(false);
 	};
 
 	useEffect(() => {
@@ -50,36 +64,9 @@ const Navbar = () => {
 
 	const showMenuOnClick = () => {
 		setshowMenu(!showMenu);
+		props.onSideBarToggle(showMenu);
 		setshowNavbar(true);
 		document.body.style.overflow = showMenu ? 'visible' : 'hidden'; //  disabling scroll when menu is open
-	};
-
-	const navContainerStyles: object = {
-		...(showMenu && { backdropFilter: 'none' }),
-		...(!showMenu && {
-			backdropFilter: 'blur(10px)',
-			transform: 'translateZ(0)',
-			willChange: 'transform',
-		}),
-		...(showNavbar && {
-			transform: 'translateY(0)',
-			transition: 'all ease-in-out 0.25s',
-		}),
-		...(!showNavbar &&
-			!showMenu && {
-				transform: 'translateY(-100%)',
-				transition: 'all ease-in-out 0.25s',
-			}),
-		...(showShadow && {
-			boxShadow: '0 10px 30px -10px rgba(2,12,27,0.7)',
-			backgroundColor: 'rgba(28,31,34,0.5)',
-		}),
-		...(!showShadow && {
-			backgroundColor: 'transparent',
-			backdropFilter: 'none',
-			boxShadow: 'none',
-			transition: 'all ease-in-out 0.25s',
-		}),
 	};
 
 	const containerY = {
@@ -130,69 +117,55 @@ const Navbar = () => {
 	}, [animation, inView]);
 
 	return (
-		<nav className={styles.navContainer} style={navContainerStyles}>
+		<NavContainer menu={showMenu} navbar={showNavbar} shadow={showShadow}>
 			<motion.div variants={containerY} initial="hidden" animate="visible">
 				<motion.a variants={listItemY} href="#intro">
 					Logo
 				</motion.a>
 			</motion.div>
 
-			<div
-				className={styles.hamburgerMenuContainer}
-				onClick={showMenuOnClick}
-				style={
-					showMenu
-						? { width: '1.5rem', height: '1.5rem' }
-						: { width: '1.5rem', height: '1rem' }
-				}
-			>
-				<div className={showMenu ? styles.close : styles.hamburgerMenu}></div>
-			</div>
+			<HamburgerMenuContainer onClick={showMenuOnClick} isHidden={showMenu}>
+				<HamburgerMenu
+					// className={showMenu ? styles.close : styles.hamburgerMenu}
 
-			<div
-				className={styles.blurContainer}
-				style={
-					showMenu
-						? {
-								backdropFilter: 'blur(10px)',
-								transform: 'translateZ(0)',
-								willChange: 'transform',
-						  }
-						: { backdropFilter: 'none', pointerEvents: 'none' }
-				}
-			></div>
+					isHidden={showMenu}
+				></HamburgerMenu>
+			</HamburgerMenuContainer>
 
-			<div className={styles.listContainer}>
-				<motion.ul
+			<BlurContainer isHidden={showMenu}></BlurContainer>
+
+			<ListContainer>
+				<List
 					variants={containerY}
 					initial="hidden"
 					animate="visible"
-					className={styles.list}
 					onClick={(e) => e.stopPropagation()}
 					// stopping propagation of clickHandler to current and other children
 				>
-					<motion.li variants={listItemY} className={styles.listItem}>
+					<ListItem variants={listItemY}>
 						<a href="#about">About</a>
-					</motion.li>
-					<motion.li variants={listItemY} className={styles.listItem}>
+					</ListItem>
+					<ListItem variants={listItemY}>
 						<a href="#experience">Experience</a>
-					</motion.li>
-					<motion.li variants={listItemY} className={styles.listItem}>
+					</ListItem>
+					<ListItem variants={listItemY}>
 						<a href="#projects">Projects</a>
-					</motion.li>
-					<motion.li variants={listItemY} className={styles.listItem}>
+					</ListItem>
+					<ListItem variants={listItemY}>
 						<a href="#contact">Contact</a>
-					</motion.li>
-					<motion.li variants={listItemY} className={styles.listItem}>
-						<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-							Résumé
-						</a>
-					</motion.li>
-				</motion.ul>
-			</div>
+					</ListItem>
+					<ListItem variants={listItemY}>
+						<PrimaryButton>
+							<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+								Résumé
+							</a>
+						</PrimaryButton>
+					</ListItem>
+				</List>
+			</ListContainer>
 
-			<div
-				className={styles.listContainerAside}
+			<ListContainerAside
+				// isHidden={showMenu}
 				style={
 					showMenu
 						? { transform: 'translateX(0)' }
@@ -200,35 +173,36 @@ const Navbar = () => {
 				}
 				onClick={showMenuOnClick} //  closing navbar when the blurred container is clicked
 			>
-				<motion.ul
+				<ListAside
 					ref={ref}
 					variants={containerX}
 					initial="hidden"
 					animate={animation}
-					className={styles.listAside}
 					onClick={(e) => e.stopPropagation()}
 					// stopping propagation of clickHandler to current and other children
 				>
-					<motion.li variants={listItemX} className={styles.listItemAside}>
+					<ListItemAside variants={listItemX}>
 						<a href="#about">About</a>
-					</motion.li>
-					<motion.li variants={listItemX} className={styles.listItemAside}>
+					</ListItemAside>
+					<ListItemAside variants={listItemX}>
 						<a href="#experience">Experience</a>
-					</motion.li>
-					<motion.li variants={listItemX} className={styles.listItemAside}>
+					</ListItemAside>
+					<ListItemAside variants={listItemX}>
 						<a href="#projects">Projects</a>
-					</motion.li>
-					<motion.li variants={listItemX} className={styles.listItemAside}>
+					</ListItemAside>
+					<ListItemAside variants={listItemX}>
 						<a href="#contact">Contact</a>
-					</motion.li>
-					<motion.li variants={listItemX} className={styles.listItemAside}>
-						<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-							Résumé
-						</a>
-					</motion.li>
-				</motion.ul>
-			</div>
-		</nav>
+					</ListItemAside>
+					<ListItemAside variants={listItemX}>
+						<PrimaryButton>
+							<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+								Résumé
+							</a>
+						</PrimaryButton>
+					</ListItemAside>
+				</ListAside>
+			</ListContainerAside>
+		</NavContainer>
 	);
 };
 

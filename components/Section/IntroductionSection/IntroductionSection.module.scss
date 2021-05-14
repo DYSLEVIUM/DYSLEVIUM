@@ -38,25 +38,10 @@
 	}
 
 	.buttonContainer {
-		.contactBtn {
-			@include buttonStyle;
-
-			margin: 2rem 2rem 0 0;
-			background-color: $primaryAccentColor;
-			color: $contrastColor;
-			box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4);
-
-			transition: background-color 200ms ease-in-out, color 200ms ease-in-out,
-				box-shadow 200ms ease-in-out;
-			&:hover {
-				background-color: transparent;
-				color: $primaryAccentColor;
-				box-shadow: none;
-			}
-		}
-
-		.resumeBtn {
-			@include buttonStyle;
-		}
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin: 2rem 0;
+		width: 100%;
 	}
 }
