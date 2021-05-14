@@ -29,6 +29,7 @@ export const ProjectsContainer = styled(motion.div)`
 
 	min-height: 100vh;
 	padding: 2rem 0;
+	width: 100%;
 `;
 
 export const SectionIntro = styled.div`

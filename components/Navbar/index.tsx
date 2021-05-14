@@ -124,11 +124,7 @@ const Navbar = (props) => {
 			</motion.div>
 
 			<HamburgerMenuContainer onClick={showMenuOnClick} isHidden={showMenu}>
-				<HamburgerMenu
-					// className={showMenu ? styles.close : styles.hamburgerMenu}
-
-					isHidden={showMenu}
-				></HamburgerMenu>
+				<HamburgerMenu isHidden={showMenu}></HamburgerMenu>
 			</HamburgerMenuContainer>
 
 			<BlurContainer isHidden={showMenu}></BlurContainer>

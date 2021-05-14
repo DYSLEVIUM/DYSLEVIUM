@@ -24,7 +24,9 @@ import {
 	ShowMore,
 } from './styles';
 
-const ProjectsSection = ({ projects }) => {
+import * as projectsData from '../../../data/projects.json';
+
+const ProjectsSection = () => {
 	const animation = useAnimation();
 	const [ref, inView, entry] = useInView({
 		threshold: 0.1,
@@ -54,6 +56,7 @@ const ProjectsSection = ({ projects }) => {
 
 	const MAX_RENDERED_PROJECTS = 6;
 	const [showMore, setShowMore] = useState(false);
+	const [projects, setProjects] = useState((projectsData as any).default);
 	const [projectsList, setProjectsList] = useState(
 		projects.slice(0, MAX_RENDERED_PROJECTS)
 	);
@@ -120,9 +123,9 @@ const ProjectsSection = ({ projects }) => {
 
 				<ProjectsList>
 					<AnimatePresence>
-						{projectsList.map((project) => (
+						{projectsList.map((project, idx) => (
 							<ProjectListItem
-								key={project.id}
+								key={idx}
 								variants={listItem}
 								initial={listItem.hidden}
 								animate={listItem.visible}

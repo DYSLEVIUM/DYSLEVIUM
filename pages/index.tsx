@@ -10,12 +10,10 @@ import ExperienceSection from '../components/Section/Experience';
 import FooterSection from '../components/Section/FooterSection';
 import IntroductionSection from '../components/Section/IntroductionSection';
 import ProjectsSection from '../components/Section/ProjectsSection';
-import { githubUsername } from '../utils/constants';
 
-export default function App({ projects }) {
+export default function App() {
 	const [showBlur, setShowBlur] = useState(false);
 	const toggleBlurContainer = (isClose) => {
-		console.log('isClose ', isClose);
 		setShowBlur(!isClose);
 	};
 	return (
@@ -35,7 +33,7 @@ export default function App({ projects }) {
 				<IntroductionSection />
 				<AboutSection />
 				<ExperienceSection />
-				<ProjectsSection projects={projects} />
+				<ProjectsSection />
 				<ContactSection />
 				<FooterSection />
 			</MainContainer>
@@ -43,11 +41,11 @@ export default function App({ projects }) {
 	);
 }
 
-export async function getStaticProps(context) {
-	const projects = await fetch(
-		`https://api.github.com/users/${githubUsername}/repos?sort=DESC`
-	).then((result) => result.json());
+// export async function getStaticProps(context) {
+// 	const projects = await fetch(
+// 		`https://api.github.com/users/${githubUsername}/repos?sort=DESC`
+// 	).then((result) => result.json());
 
-	const refreshRate = 60 * 60 * 8; //	in seconds
-	return { props: { projects }, revalidate: refreshRate };
-}
+// 	const refreshRate = 60 * 60 * 8; //	in seconds
+// 	return { props: { projects }, revalidate: refreshRate };
+// }

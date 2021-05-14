@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
 import { SectionContainer } from '../styles';
 import { ExperienceContainer } from './styles';
+import * as experienceData from '../../../data/experience.json';
 
 const ExperienceSection = () => {
 	const animation = useAnimation();
@@ -19,6 +20,8 @@ const ExperienceSection = () => {
 		} else {
 			animation.start('hidden');
 		}
+
+		console.log(experiences);
 	}, [animation, inView]);
 
 	const container = {
@@ -41,6 +44,10 @@ const ExperienceSection = () => {
 		},
 	};
 
+	const [experiences, setExperiences] = useState(
+		(experienceData as any).default
+	);
+
 	return (
 		<SectionContainer id="experience">
 			<ExperienceContainer
@@ -49,8 +56,17 @@ const ExperienceSection = () => {
 				initial="hidden"
 				animate={animation}
 			>
-				<span style={{ fontSize: 25 }}>👷‍♂️</span>
-				Currently working on building this experience section.
+				<div>
+					{experiences.map((experience, idx) => (
+						<div key={idx}>
+							<div>{experience.position}</div>
+							<div>{experience.organization}</div>
+							<div>{new Date(experience.startDate).toUTCString()}</div>
+							<div>{experience.endDate}</div>
+							<div>{experience.address}</div>
+						</div>
+					))}
+				</div>
 			</ExperienceContainer>
 		</SectionContainer>
 	);
