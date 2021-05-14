@@ -7,7 +7,7 @@ import {
 	sidePaddingMob,
 	mobileSize,
 	monitorSize,
-} from '../_variables';
+} from '../variables';
 
 export const PrimaryButton = styled(motion.button)`
 	background-color: ${contrastColor};

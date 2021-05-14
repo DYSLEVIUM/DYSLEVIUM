@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import sectionStyles from '../Section.module.scss';
-import styles from './AboutSection.module.scss';
-
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
+
+import { SectionContainer } from '../styles';
+import { AboutContainer } from './styles';
 
 const AboutSection = () => {
 	const animation = useAnimation();
@@ -42,18 +42,17 @@ const AboutSection = () => {
 	};
 
 	return (
-		<div id="about" className={sectionStyles.sectionContainer}>
-			<motion.div
+		<SectionContainer id="about">
+			<AboutContainer
 				ref={ref}
 				variants={container}
 				initial="hidden"
 				animate={animation}
-				className={styles.aboutContainer}
 			>
 				<span style={{ fontSize: 25 }}>👷‍♂️</span>
 				Currently working on building this about section.
-			</motion.div>
-		</div>
+			</AboutContainer>
+		</SectionContainer>
 	);
 };
 

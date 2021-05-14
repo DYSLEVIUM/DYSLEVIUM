@@ -4,9 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+
+import { PrimaryButton } from '../../../styles/shared/Button';
 import { githubProfile } from '../../../utils/constants';
-import sectionStyles from '../Section.module.scss';
-import styles from './ProjectsSection.module.scss';
+import { SectionContainer } from '../styles';
+import {
+	ProjectsContainer,
+	SectionIntro,
+	ProjectDescription,
+	Homepage,
+	GithubLink,
+	LinksContainer,
+	TitleContainer,
+	ProjectTitle,
+	ProjectListItem,
+	ProjectsList,
+	SectionAlt,
+	SectionTitle,
+	ShowMore,
+} from './styles';
 
 const ProjectsSection = ({ projects }) => {
 	const animation = useAnimation();
@@ -83,42 +99,37 @@ const ProjectsSection = ({ projects }) => {
 	};
 
 	return (
-		<div id="projects" className={sectionStyles.sectionContainer}>
-			<motion.div
+		<SectionContainer id="projects">
+			<ProjectsContainer
 				ref={ref}
 				variants={container}
 				initial="hidden"
 				animate={animation}
-				className={styles.projectsContainer}
 			>
-				<div className={styles.sectionIntro}>
-					<motion.h2 variants={listItem} className={styles.sectionTitle}>
-						Some of my projects
-					</motion.h2>
-					<motion.a
+				<SectionIntro>
+					<SectionTitle variants={listItem}>Some of my projects</SectionTitle>
+					<SectionAlt
 						variants={listItem}
-						className={styles.sectionAlt}
 						href={githubProfile + '?tab=repositories'}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						View on Github
-					</motion.a>
-				</div>
+					</SectionAlt>
+				</SectionIntro>
 
-				<ul className={styles.projectsList}>
+				<ProjectsList>
 					<AnimatePresence>
 						{projectsList.map((project) => (
-							<motion.li
+							<ProjectListItem
 								key={project.id}
 								variants={listItem}
 								initial={listItem.hidden}
 								animate={listItem.visible}
 								exit={listItem.hidden}
-								className={styles.projectListItem}
 							>
-								<motion.h3 className={styles.projectTitle}>
-									<div className={styles.titleContainer}>
+								<ProjectTitle>
+									<TitleContainer>
 										<a
 											href={project.html_url}
 											target="_blank"
@@ -126,11 +137,10 @@ const ProjectsSection = ({ projects }) => {
 										>
 											{formatTitle(project.name)}
 										</a>
-									</div>
+									</TitleContainer>
 
-									<motion.div className={styles.linksContainer}>
-										<motion.h5
-											className={styles.githubLink}
+									<LinksContainer>
+										<GithubLink
 											variants={listItem}
 											initial={listItem.hidden}
 											animate={listItem.visible}
@@ -143,15 +153,14 @@ const ProjectsSection = ({ projects }) => {
 											>
 												<FontAwesomeIcon icon={faGithub} />
 											</motion.a>
-										</motion.h5>
+										</GithubLink>
 										{(() => {
 											if (
 												project.homepage !== '' &&
 												project.homepage !== null
 											) {
 												return (
-													<motion.h5
-														className={styles.homepage}
+													<Homepage
 														variants={listItem}
 														initial={listItem.hidden}
 														animate={listItem.visible}
@@ -164,29 +173,25 @@ const ProjectsSection = ({ projects }) => {
 														>
 															<FontAwesomeIcon icon={faExternalLinkAlt} />
 														</a>
-													</motion.h5>
+													</Homepage>
 												);
 											}
 										})()}
-									</motion.div>
-								</motion.h3>
-								<motion.h4 className={styles.projectDescription}>
-									{project.description}
-								</motion.h4>
-							</motion.li>
+									</LinksContainer>
+								</ProjectTitle>
+								<ProjectDescription>{project.description}</ProjectDescription>
+							</ProjectListItem>
 						))}
 					</AnimatePresence>
-				</ul>
+				</ProjectsList>
 
-				<motion.button
-					onClick={showMoreToggle}
-					variants={listItem}
-					className={styles.showMore}
-				>
-					Show {showMore ? 'Less' : 'More'}
-				</motion.button>
-			</motion.div>
-		</div>
+				<ShowMore>
+					<PrimaryButton onClick={showMoreToggle} variants={listItem}>
+						Show {showMore ? 'Less' : 'More'}
+					</PrimaryButton>
+				</ShowMore>
+			</ProjectsContainer>
+		</SectionContainer>
 	);
 };
 

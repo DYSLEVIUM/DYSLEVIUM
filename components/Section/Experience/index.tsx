@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import sectionStyles from '../Section.module.scss';
-import styles from './ExperienceSection.module.scss';
-
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
+
+import { SectionContainer } from '../styles';
+import { ExperienceContainer } from './styles';
 
 const ExperienceSection = () => {
 	const animation = useAnimation();
@@ -42,18 +42,17 @@ const ExperienceSection = () => {
 	};
 
 	return (
-		<div id="experience" className={sectionStyles.sectionContainer}>
-			<motion.div
+		<SectionContainer id="experience">
+			<ExperienceContainer
 				ref={ref}
 				variants={container}
 				initial="hidden"
 				animate={animation}
-				className={styles.experienceContainer}
 			>
 				<span style={{ fontSize: 25 }}>👷‍♂️</span>
 				Currently working on building this experience section.
-			</motion.div>
-		</div>
+			</ExperienceContainer>
+		</SectionContainer>
 	);
 };
 

@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import sectionStyles from '../Section.module.scss';
-import styles from './ContactSection.module.scss';
-
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
+
 import { email } from '../../../utils/constants';
+import { SectionContainer } from '../styles';
+import { ContactContainer, ContactDescription, ContactTitle } from './styles';
+import { PrimaryButton } from '../../../styles/shared/Button';
 
 const ContactSection = () => {
 	const animation = useAnimation();
@@ -43,28 +44,25 @@ const ContactSection = () => {
 	};
 
 	return (
-		<div id="contact" className={sectionStyles.sectionContainer}>
-			<motion.div
+		<SectionContainer id="contact">
+			<ContactContainer
 				ref={ref}
 				variants={container}
 				initial="hidden"
 				animate={animation}
-				className={styles.contactContainer}
 			>
-				<motion.h2 variants={listItem} className={styles.contactTitle}>
-					Get in Touch
-				</motion.h2>
-				<motion.h3 variants={listItem} className={styles.contactDescription}>
+				<ContactTitle variants={listItem}>Get in Touch</ContactTitle>
+				<ContactDescription variants={listItem}>
 					Whether you have a question or just want to say hi, my inbox is always
 					open. I'll try my best to get back to you!
-				</motion.h3>
-				<motion.button variants={listItem} className={styles.contactBtn}>
+				</ContactDescription>
+				<PrimaryButton variants={listItem}>
 					<a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
 						Get in Touch
 					</a>
-				</motion.button>
-			</motion.div>
-		</div>
+				</PrimaryButton>
+			</ContactContainer>
+		</SectionContainer>
 	);
 };
 

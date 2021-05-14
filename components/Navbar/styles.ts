@@ -8,7 +8,7 @@ import {
 	primaryFontColor,
 	primaryAccentColor,
 	contrastColor,
-} from '../../styles/_variables';
+} from '../../styles/variables';
 
 export const NavContainer = styled.nav`
 	position: fixed;

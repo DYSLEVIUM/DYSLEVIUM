@@ -4,8 +4,6 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import sectionStyles from '../Section.module.scss';
-import styles from './FooterSection.module.scss';
 import {
 	githubProfile,
 	instagramProfile,
@@ -21,6 +19,15 @@ import {
 	faReddit,
 	faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import { SectionContainer } from '../styles';
+import {
+	FooterContainer,
+	SocialLinksContainer,
+	SocialLinksTitle,
+	SocialLinks,
+	StyledSocialLink,
+	ResumeQRCode,
+} from './styles';
 
 const FooterSection = () => {
 	const animation = useAnimation();
@@ -59,77 +66,69 @@ const FooterSection = () => {
 	};
 
 	return (
-		<div id="footer" className={sectionStyles.sectionContainer}>
-			<motion.div
+		<SectionContainer id="footer">
+			<FooterContainer
 				ref={ref}
 				variants={container}
 				initial="hidden"
 				animate={animation}
-				className={styles.footerContainer}
 			>
-				<motion.div className={styles.socialLinksContainer}>
-					<motion.h3 variants={listItem} className={styles.socialLinksTitle}>
-						Find me at
-					</motion.h3>
-					<motion.ul className={styles.socialLinks}>
+				<SocialLinksContainer>
+					<SocialLinksTitle variants={listItem}>Find me at</SocialLinksTitle>
+					<SocialLinks>
 						<motion.li variants={listItem}>
-							<motion.a
+							<StyledSocialLink
 								href={githubProfile}
 								target="_blank"
-								className={styles.link}
 								title="Github"
 								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-							</motion.a>
+							</StyledSocialLink>
 						</motion.li>
 						<motion.li variants={listItem}>
-							<motion.a
+							<StyledSocialLink
 								href={linkedInProfile}
 								target="_blank"
-								className={styles.link}
 								title="LinkedIn"
 								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-							</motion.a>
+							</StyledSocialLink>
 						</motion.li>
 						<motion.li variants={listItem}>
-							<motion.a
+							<StyledSocialLink
 								href={instagramProfile}
 								target="_blank"
-								className={styles.link}
 								title="Instagram"
 								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-							</motion.a>
+							</StyledSocialLink>
 						</motion.li>
 						<motion.li variants={listItem}>
-							<motion.a
+							<StyledSocialLink
 								href={twitterProfile}
 								target="_blank"
-								className={styles.link}
 								title="Twitter"
 								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-							</motion.a>
+							</StyledSocialLink>
 						</motion.li>
 						<motion.li variants={listItem}>
-							<motion.a
+							<StyledSocialLink
 								href={redditProfile}
 								target="_blank"
-								className={styles.link}
 								title="Reddit"
 								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faReddit}></FontAwesomeIcon>
-							</motion.a>
+							</StyledSocialLink>
 						</motion.li>
-					</motion.ul>
-				</motion.div>
-				<motion.div className={styles.resumeQrCode}>
+					</SocialLinks>
+				</SocialLinksContainer>
+				<ResumeQRCode>
 					<motion.span variants={listItem}>
 						<a href={resumeUrl} target="_blank">
 							<Image src="/resume.svg" alt="Résumé" width={250} height={250} />
@@ -137,9 +136,9 @@ const FooterSection = () => {
 							<motion.span title="Résumé">Résumé</motion.span>
 						</a>
 					</motion.span>
-				</motion.div>
-			</motion.div>
-		</div>
+				</ResumeQRCode>
+			</FooterContainer>
+		</SectionContainer>
 	);
 };
 

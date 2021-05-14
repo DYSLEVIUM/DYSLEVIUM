@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
 	hamburgerColor,
 	contrastColor,
@@ -6,7 +7,7 @@ import {
 	primaryColor,
 	secondaryColor,
 	primaryAccentColor,
-} from './_variables';
+} from './variables';
 
 export const GlobalStyles = createGlobalStyle`
 * {
@@ -116,4 +117,16 @@ a {
 		background-color: ${primaryAccentColor};
 	}
 }
+`;
+
+export const MainContainer = styled.main`
+	${(props) =>
+		props.isBlur
+			? css`
+					filter: blur(10px);
+					transition: all 250ms ease-in-out;
+			  `
+			: css`
+					transition: all 250ms ease-in-out;
+			  `}
 `;

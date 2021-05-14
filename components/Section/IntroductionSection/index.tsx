@@ -1,10 +1,23 @@
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+
 import { PrimaryButton, SecondaryButton } from '../../../styles/shared/Button';
 import { email, resumeUrl } from '../../../utils/constants';
-import sectionStyles from '../Section.module.scss';
-import styles from './IntroductionSection.module.scss';
+import { SectionContainer } from '../styles';
+
+import {
+	IntroductionContainer,
+	SalutationSpan,
+	HelloImage,
+	Salutation,
+	Name,
+	CareerObjective,
+	ShortIntro,
+	ButtonContainer,
+	ContactButtonContainer,
+	ResumeButtonContainer,
+} from './styles';
 
 const IntroductionSection = () => {
 	const animation = useAnimation();
@@ -43,58 +56,56 @@ const IntroductionSection = () => {
 	};
 
 	return (
-		<div id="intro" className={sectionStyles.sectionContainer}>
-			<motion.div
+		<SectionContainer id="intro">
+			<IntroductionContainer
 				ref={ref}
 				variants={container}
 				initial="hidden"
 				animate={animation}
-				className={styles.introductionContainer}
 			>
-				<motion.span className={styles.salutationSpan}>
-					<motion.img
+				<SalutationSpan>
+					<HelloImage
 						src="/wavingHand.gif"
 						alt="Hello GIF"
 						width="3rem"
 						height="3rem"
-						className={styles.helloImg}
 						variants={listItem}
 					/>
-					<motion.h4 className={styles.salutation} variants={listItem}>
-						Hi, my name is
-					</motion.h4>
-				</motion.span>
+					<Salutation variants={listItem}>Hi, my name is</Salutation>
+				</SalutationSpan>
 
-				<motion.h1 variants={listItem} className={styles.name}>
-					Pushpakant Behera.
-				</motion.h1>
-				<motion.h2 variants={listItem} className={styles.carrerObjective}>
+				<Name variants={listItem}>Pushpakant Behera.</Name>
+				<CareerObjective variants={listItem}>
 					I love to build things
-				</motion.h2>
-				<motion.h3 variants={listItem} className={styles.shortIntro}>
+				</CareerObjective>
+				<ShortIntro variants={listItem}>
 					I am a sophomore at National Institute of Technology Jamshedpur, and
 					have an avid passion for Software Engineering.
-				</motion.h3>
+				</ShortIntro>
 
-				<motion.div className={styles.buttonContainer}>
-					<SecondaryButton variants={listItem}>
-						<a
-							href={`mailto:${email}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Get in Touch
-						</a>
-					</SecondaryButton>
+				<ButtonContainer>
+					<ContactButtonContainer>
+						<SecondaryButton variants={listItem}>
+							<a
+								href={`mailto:${email}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Get in Touch
+							</a>
+						</SecondaryButton>
+					</ContactButtonContainer>
 
-					<PrimaryButton variants={listItem}>
-						<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-							Get Résumé
-						</a>
-					</PrimaryButton>
-				</motion.div>
-			</motion.div>
-		</div>
+					<ResumeButtonContainer>
+						<PrimaryButton variants={listItem}>
+							<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+								Get Résumé
+							</a>
+						</PrimaryButton>
+					</ResumeButtonContainer>
+				</ButtonContainer>
+			</IntroductionContainer>
+		</SectionContainer>
 	);
 };
 

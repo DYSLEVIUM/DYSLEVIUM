@@ -1,4 +1,4 @@
-import { GlobalStyles } from '../styles';
+import { GlobalStyles, MainContainer } from '../styles';
 import Head from 'next/head';
 import { useState } from 'react';
 
@@ -31,14 +31,14 @@ export default function App({ projects }) {
 				<Progressbar />
 			</>
 
-			<main style={showBlur ? { filter: 'blur(10px)' } : { filter: 'blur(0)' }}>
+			<MainContainer isBlur={showBlur}>
 				<IntroductionSection />
 				<AboutSection />
 				<ExperienceSection />
 				<ProjectsSection projects={projects} />
 				<ContactSection />
 				<FooterSection />
-			</main>
+			</MainContainer>
 		</>
 	);
 }
