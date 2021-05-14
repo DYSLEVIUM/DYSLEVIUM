@@ -1,4 +1,4 @@
-import { GlobalStyles } from './styles';
+import { GlobalStyles } from '../styles';
 import Head from 'next/head';
 import { useState } from 'react';
 

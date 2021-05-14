@@ -6,7 +6,7 @@ import {
 	primaryColor,
 	secondaryColor,
 	primaryAccentColor,
-} from '../styles/_variables';
+} from './_variables';
 
 export const GlobalStyles = createGlobalStyle`
 * {
