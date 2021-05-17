@@ -131,8 +131,15 @@ const FooterSection = () => {
 				<ResumeQRCode>
 					<motion.span variants={listItem}>
 						<a href={resumeUrl} target="_blank">
-							<Image src="/resume.svg" alt="Résumé" width={250} height={250} />
-
+							<Image
+								src="/resume.svg"
+								alt="Résumé"
+								width="250px"
+								height="250px"
+								layout="intrinsic"
+								quality="100"
+								loading="lazy"
+							/>
 							<motion.span title="Résumé">Résumé</motion.span>
 						</a>
 					</motion.span>

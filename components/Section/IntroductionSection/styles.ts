@@ -22,10 +22,8 @@ export const SalutationSpan = styled(motion.span)`
 	justify-content: flex-start;
 	align-items: center;
 `;
-export const HelloImage = styled(motion.img)`
+export const HelloImage = styled(motion.div)`
 	display: inline;
-	width: 3rem;
-	height: 3rem;
 	filter: saturate(200%);
 	margin-right: 1rem;
 `;

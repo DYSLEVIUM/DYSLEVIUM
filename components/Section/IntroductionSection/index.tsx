@@ -1,6 +1,7 @@
 import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 
 import { PrimaryButton, SecondaryButton } from '../../../styles/shared/Button';
 import { email, resumeUrl } from '../../../utils/constants';
@@ -64,13 +65,17 @@ const IntroductionSection = () => {
 				animate={animation}
 			>
 				<SalutationSpan>
-					<HelloImage
-						src="/wavingHand.gif"
-						alt="Hello GIF"
-						width="3rem"
-						height="3rem"
-						variants={listItem}
-					/>
+					<HelloImage variants={listItem}>
+						<Image
+							src="/wavingHand.gif"
+							alt="Hello GIF"
+							width="50px"
+							height="50px"
+							layout="intrinsic"
+							quality="100"
+							loading="lazy"
+						/>
+					</HelloImage>
 					<Salutation variants={listItem}>Hi, my name is</Salutation>
 				</SalutationSpan>
 
