@@ -54,7 +54,7 @@ export const NavContainer = styled.nav`
 		props.shadow
 			? css`
 					box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-					background-color: rgba(28, 31, 34, 0.5);
+					background-color: rgba(28, 31, 34, 0.85);
 			  `
 			: css`
 					background-color: transparent;
