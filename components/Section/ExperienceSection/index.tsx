@@ -110,7 +110,7 @@ const ExperienceSection = () => {
 							<TabHighlight activeTabIndex={activeTabIndex} />
 						</TabList>
 
-						<TabPanelsList>
+						<TabPanelsList variants={listItem}>
 							{experiences.map(
 								(
 									{

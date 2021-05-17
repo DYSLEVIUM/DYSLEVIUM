@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import Progressbar from '../components/Progressbar';
 import AboutSection from '../components/Section/AboutSection';
 import ContactSection from '../components/Section/ContactSection';
-import ExperienceSection from '../components/Section/Experience';
+import ExperienceSection from '../components/Section/ExperienceSection';
 import FooterSection from '../components/Section/FooterSection';
 import IntroductionSection from '../components/Section/IntroductionSection';
 import ProjectsSection from '../components/Section/ProjectsSection';
