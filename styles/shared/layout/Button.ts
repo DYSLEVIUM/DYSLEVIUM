@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import {
-	primaryAccentColor,
-	contrastColor,
-	sidePaddingMob,
-	mobileSize,
-	monitorSize,
-} from '../variables';
+import { primaryAccentColor, contrastColor } from '../../variables';
 
 export const PrimaryButton = styled(motion.button)`
 	background-color: ${contrastColor};

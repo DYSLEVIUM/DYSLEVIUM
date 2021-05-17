@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import { PrimaryButton } from '../../../styles/shared/Button';
+import { PrimaryButton } from '../../../styles/shared/layout/Button';
 import { githubProfile } from '../../../utils/constants';
 import { SectionContainer } from '../styles';
 import {

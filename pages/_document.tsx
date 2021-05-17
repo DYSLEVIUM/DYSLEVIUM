@@ -97,6 +97,7 @@ export default class GlobalDocument extends Document {
 				/>
 
 				<link rel="preload" as="image" href="/wavingHand.gif" />
+				<link rel="preload" as="image" href="/resume.svg" />
 
 				<body>
 					<Main />

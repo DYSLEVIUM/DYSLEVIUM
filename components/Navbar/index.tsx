@@ -14,7 +14,7 @@ import {
 	HamburgerMenu,
 } from './styles';
 
-import { PrimaryButton } from '../../styles/shared/Button';
+import { PrimaryButton } from '../../styles/shared/layout/Button';
 import { resumeUrl } from '../../utils/constants';
 
 const Navbar = (props) => {

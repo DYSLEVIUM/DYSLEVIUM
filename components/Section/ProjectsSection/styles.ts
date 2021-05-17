@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+
+import { bounce } from '../../../styles/shared/animations/bounce';
 
 import {
 	primaryFontColor,
@@ -10,16 +12,6 @@ import {
 	secondaryAccentColor,
 	sidePaddingMob,
 } from '../../../styles/variables';
-
-export const bounce = keyframes`
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-`;
 
 export const ProjectsContainer = styled(motion.div)`
 	display: flex;

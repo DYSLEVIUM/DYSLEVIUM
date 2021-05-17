@@ -5,7 +5,7 @@ import { useAnimation } from 'framer-motion';
 import { email } from '../../../utils/constants';
 import { SectionContainer } from '../styles';
 import { ContactContainer, ContactDescription, ContactTitle } from './styles';
-import { PrimaryButton } from '../../../styles/shared/Button';
+import { PrimaryButton } from '../../../styles/shared/layout/Button';
 
 const ContactSection = () => {
 	const animation = useAnimation();

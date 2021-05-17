@@ -3,7 +3,10 @@ import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 
-import { PrimaryButton, SecondaryButton } from '../../../styles/shared/Button';
+import {
+	PrimaryButton,
+	SecondaryButton,
+} from '../../../styles/shared/layout/Button';
 import { email, resumeUrl } from '../../../utils/constants';
 import { SectionContainer } from '../styles';
 
