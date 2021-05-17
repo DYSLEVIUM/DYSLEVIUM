@@ -19,7 +19,11 @@ const Progressbar = () => {
 		};
 	}, []);
 
-	return <ProgressBarContainer totalDone={progress}></ProgressBarContainer>;
+	return (
+		<ProgressBarContainer
+			style={{ width: `${progress}%` }}
+		></ProgressBarContainer>
+	);
 };
 
 export default Progressbar;

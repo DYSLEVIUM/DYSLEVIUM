@@ -68,9 +68,9 @@ export const SectionAlt = styled(motion.a)`
 		transform: scaleX(0);
 		transform-origin: right;
 
-		transition: transform 200ms 100ms ease-in-out;
+		transition: transform 200ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 	}
-	transition: color 200ms ease-in-out;
+	transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 `;
 
 export const ProjectsList = styled.ul`
@@ -86,7 +86,7 @@ export const ProjectListItem = styled(motion.li)`
 
 	border: 0.2rem solid ${secondaryColor};
 
-	transition: all 250ms ease-in-out;
+	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	min-height: 15rem;
 
@@ -106,7 +106,7 @@ export const ProjectTitle = styled(motion.h3)`
 	justify-content: space-between;
 	align-items: center;
 
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	position: relative;
 	text-transform: capitalize;
 	color: ${primaryColor};
@@ -115,7 +115,7 @@ export const ProjectTitle = styled(motion.h3)`
 	&:hover {
 		color: ${primaryAccentColor};
 	}
-	transition: all 250ms ease-in-out;
+	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 	font-weight: 400;
 `;
 
@@ -134,34 +134,34 @@ export const LinksContainer = styled(motion.div)`
 `;
 
 export const GithubLink = styled(motion.h5)`
-	transition: all 250ms ease-in-out;
+	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 	a {
 		&:hover {
 			color: ${primaryAccentColor};
 		}
 
 		svg {
-			transition: all 250ms ease-in-out;
+			transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
 			&:hover {
-				animation: ${bounce} 500ms ease-in-out infinite;
+				animation: ${bounce} 500ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
 			}
 		}
 	}
 `;
 
 export const Homepage = styled(motion.h5)`
-	transition: all 250ms ease-in-out;
+	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 	a {
 		&:hover {
 			color: ${primaryAccentColor};
 		}
 
 		svg {
-			transition: all 250ms ease-in-out;
+			transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
 			&:hover {
-				animation: ${bounce} 500ms ease-in-out infinite;
+				animation: ${bounce} 500ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
 			}
 		}
 	}

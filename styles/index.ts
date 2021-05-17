@@ -124,9 +124,9 @@ export const MainContainer = styled.main`
 		props.isBlur
 			? css`
 					filter: blur(10px);
-					transition: all 250ms ease-in-out;
+					transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 			  `
 			: css`
-					transition: all 250ms ease-in-out;
+					transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 			  `}
 `;

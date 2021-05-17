@@ -26,7 +26,7 @@ export const NavContainer = styled.nav`
 	width: 100%;
 
 	z-index: 1;
-	transition: all 100ms ease-in-out;
+	transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	${(props) =>
 		props.menu
@@ -60,7 +60,7 @@ export const NavContainer = styled.nav`
 					background-color: transparent;
 					backdrop-filter: none;
 					box-shadow: none;
-					transition: all 250ms ease-in-out 0.25s;
+					transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
 			  `}
 `;
 
@@ -76,7 +76,7 @@ export const HamburgerMenuContainer = styled.div`
 	display: none;
 
 	transform: rotateY(180deg);
-	transition: all 0.25s ease-in-out;
+	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	@media only screen and (max-width: ${mobileSize}) {
 		display: flex;
@@ -121,7 +121,7 @@ export const HamburgerMenu = styled.div`
 							background-color: ${secondaryFontColor};
 
 							border-radius: 1000px;
-							transition: all 0.25s ease-in-out;
+							transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 						}
 
 						&::before {
@@ -156,7 +156,7 @@ export const HamburgerMenu = styled.div`
 
 							background-color: inherit;
 							border-radius: 1000px;
-							transition: all 0.25s ease-in-out;
+							transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 						}
 
 						&::before {
@@ -181,7 +181,7 @@ export const BlurContainer = styled.section`
 		width: 100vw;
 		height: 100vh;
 
-		transition: all 0.25s ease-in-out 0.25s;
+		transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
 	}
 
 	${(props) =>
@@ -222,7 +222,7 @@ export const ListContainerAside = styled.div`
 
 		transform: translateX(100%);
 
-		transition: all 0.25s ease-in-out;
+		transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 	}
 
 	${(props) =>
@@ -253,7 +253,7 @@ export const ListItem = styled(motion.li)`
 	font-weight: 500;
 	color: ${primaryFontColor};
 
-	transition: color 0.25s ease-in-out;
+	transition: color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	a {
 		position: relative;
@@ -281,7 +281,7 @@ export const ListItem = styled(motion.li)`
 			transform: scaleX(0);
 			transform-origin: right;
 
-			transition: transform 200ms 100ms ease-in-out;
+			transition: transform 200ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 		}
 	}
 
@@ -337,7 +337,7 @@ export const ListItemAside = styled(motion.li)`
 
 	color: ${primaryFontColor};
 
-	transition: color 0.25s ease-in-out;
+	transition: color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	&:hover {
 		color: ${primaryAccentColor};

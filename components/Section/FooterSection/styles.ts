@@ -72,18 +72,18 @@ export const SocialLinks = styled(motion.ul)`
 `;
 
 export const StyledSocialLink = styled(motion.a)`
-	transition: all 250ms ease-in-out;
+	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 	&:hover {
 		color: ${primaryAccentColor};
 	}
 
 	svg {
-		transition: all 250ms ease-in-out;
+		transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 		transform: scale(1.25);
 
 		&:hover {
-			transition: all 250ms ease-in-out;
-			animation: ${bounce} 500ms ease-in-out infinite;
+			transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+			animation: ${bounce} 500ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
 		}
 	}
 `;
@@ -103,7 +103,7 @@ export const ResumeQRCode = styled(motion.div)`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		transition: color 200ms ease-in-out;
+		transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 		&:hover {
 			color: ${primaryAccentColor};
 		}

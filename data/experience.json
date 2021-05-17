@@ -1,9 +1,20 @@
 [
 	{
 		"position": "Full Stack Developer",
-		"organization": "National Institute Of Technology Jamshedpur",
-		"startDate": "2021-03-01",
-		"endDate": "",
+		"position_details": ["det1", "det2", "det3"],
+		"organization": "NIT Jamshedpur",
+		"website": "http://www.nitjsr.ac.in/",
+		"startDate": "March 2021",
+		"endDate": "Present",
 		"address": "Jamshedpur, Jharkhand, India"
+	},
+	{
+		"position": "2Full Stack Developer",
+		"position_details": ["det1", "det2", "det3"],
+		"organization": "2NIT Jamshedpur",
+		"website": "http://www.nitjsr.ac.in/",
+		"startDate": "March 2020",
+		"endDate": "July 2020",
+		"address": "2Jamshedpur, Jharkhand, India"
 	}
 ]

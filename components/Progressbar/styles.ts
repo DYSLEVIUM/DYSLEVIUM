@@ -33,6 +33,4 @@ export const ProgressBarContainer = styled.div`
 	&::after {
 		filter: blur(30px);
 	}
-
-	width: ${(prop) => prop.totalDone}%;
 `;
