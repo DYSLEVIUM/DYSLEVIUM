@@ -90,6 +90,7 @@ export const TabList = styled(motion.div)`
 `;
 
 const tabHeight = 3 + 'rem';
+const tabWidth = 12 + 'rem';
 
 export const TabButton = styled(motion.div)`
 	cursor: pointer;
@@ -99,21 +100,23 @@ export const TabButton = styled(motion.div)`
 	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	&:hover {
+		/* color: ${primaryAccentColor}; */
 		background-color: ${secondaryAccentColor + '10'};
 	}
 
-	@media only screen and (min-width: ${mobileSize}) {
-		padding: 0 4rem 0 1rem;
-	}
-
 	@media only screen and (max-width: ${mobileSize}) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		margin-bottom: 0.5rem;
+		min-width: ${tabWidth};
 	}
 
 	${(props) =>
 		props.isActive
 			? css`
 					color: ${primaryAccentColor};
+					/* background-color: ${secondaryAccentColor + '10'}; */
 			  `
 			: css``};
 `;
@@ -135,8 +138,8 @@ export const TabHighlight = styled(motion.div)`
 
 	@media only screen and (max-width: ${mobileSize}) {
 		height: 0.2rem;
-		width: calc(${(props) => 1 / props.totalSize} * 100%);
-		top: calc(${tabHeight});
+		width: ${tabWidth};
+		top: ${tabHeight};
 		left: 0;
 		transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 		transform: translateX(calc(${(props) => props.activeTabIndex} * 100%));

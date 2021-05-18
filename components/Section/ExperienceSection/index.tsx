@@ -116,10 +116,7 @@ const ExperienceSection = () => {
 										<span>{organization}</span>
 									</TabButton>
 								))}
-								<TabHighlight
-									activeTabIndex={activeTabIndex}
-									totalSize={experiences.length}
-								/>
+								<TabHighlight activeTabIndex={activeTabIndex} />
 							</TabList>
 						</TabListWrapper>
 						<TabPanelsList variants={listItem}>
