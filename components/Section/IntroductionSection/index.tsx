@@ -76,7 +76,6 @@ const IntroductionSection = () => {
 							height="50px"
 							layout="intrinsic"
 							quality="100"
-							loading="lazy"
 						/>
 					</HelloImage>
 					<Salutation variants={listItem}>Hi, my name is</Salutation>

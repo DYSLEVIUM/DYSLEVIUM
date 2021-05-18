@@ -66,6 +66,7 @@ export const TabListWrapper = styled.div`
 `;
 
 export const TabList = styled(motion.div)`
+	margin-right: 1rem;
 	position: relative;
 	border-left: 0.2rem solid ${secondaryColor};
 
@@ -82,6 +83,7 @@ export const TabList = styled(motion.div)`
 		width: fit-content;
 		border-left: none;
 		overflow-x: auto;
+		mask-right: 0;
 	}
 
 	&::-webkit-scrollbar {

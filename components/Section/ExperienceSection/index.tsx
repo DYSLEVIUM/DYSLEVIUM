@@ -50,7 +50,7 @@ const listItem = {
 	},
 };
 
-const listItemTab = {
+const listItemPanel = {
 	hidden: {
 		opacity: 0,
 		display: 'none',
@@ -103,8 +103,8 @@ const ExperienceSection = () => {
 
 				<ExperienceListContainer>
 					<ExperienceListContainerWrapper>
-						<TabListWrapper>
-							<TabList variants={listItem}>
+						<TabListWrapper variants={listItem}>
+							<TabList>
 								{experiences.map(({ organization }, idx) => (
 									<TabButton
 										key={idx}
@@ -134,7 +134,7 @@ const ExperienceSection = () => {
 								) => (
 									<TabPanel
 										key={idx}
-										variants={listItemTab}
+										variants={listItemPanel}
 										animate={activeTabIndex !== idx ? 'hidden' : 'visible'}
 									>
 										<PositionContainer variants={listItem}>
