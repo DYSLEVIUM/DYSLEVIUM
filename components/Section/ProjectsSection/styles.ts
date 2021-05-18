@@ -91,7 +91,7 @@ export const ProjectListItem = styled(motion.li)`
 	min-height: 15rem;
 
 	&:hover {
-		background-color: ${secondaryColor};
+		background-color: ${secondaryColor + '55'};
 
 		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 		scale: 1.05;

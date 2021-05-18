@@ -3,7 +3,7 @@ export const monitorSize = '1440px';
 
 export const sidePaddingMob = '2rem';
 export const sidePaddingTab = '4rem';
-export const sidePaddingMon = '20rem';
+export const sidePaddingMon = '15rem';
 
 export const hamburgerColor = 'rgb(255, 255, 255)';
 
@@ -16,14 +16,3 @@ export const secondaryAccentColor = '#aeb3b8';
 
 export const primaryFontColor = '#919292';
 export const secondaryFontColor = '#d3dae0';
-
-// @mixin flexCenter(
-// 	$flexDirection,
-// 	$justifyContent: center,
-// 	$alignItems: center
-// ) {
-// 	display: flex;
-// 	flex-direction: $flexDirection;
-// 	justify-content: $justifyContent;
-// 	align-items: $alignItems;
-// }

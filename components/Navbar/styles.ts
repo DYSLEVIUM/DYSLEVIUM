@@ -281,7 +281,7 @@ export const ListItem = styled(motion.li)`
 			transform: scaleX(0);
 			transform-origin: right;
 
-			transition: transform 200ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+			transition: transform 250ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 		}
 	}
 

@@ -6,7 +6,6 @@
 		"description": "A clone of the most famous typing game - Typeracer. This is a multiplayer game which uses sockets. It was made with NodeJS and Angular.",
 		"technologies_and_tools": ["implement later"]
 	},
-
 	{
 		"html_url": "https://github.com/DYSLEVIUM/Elite-Classroom-Backend",
 		"name": "Elite-Classroom-Backend",
@@ -21,7 +20,6 @@
 		"description": "My portfolio website, made with ReactJs and NextJs.",
 		"technologies_and_tools": ["implement later"]
 	},
-
 	{
 		"html_url": "https://github.com/DYSLEVIUM/JEE-Management-System",
 		"name": "JEE-Management-System",

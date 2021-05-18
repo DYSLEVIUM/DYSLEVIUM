@@ -6,7 +6,6 @@ import {
 	primaryAccentColor,
 	primaryColor,
 	secondaryColor,
-	monitorSize,
 	mobileSize,
 } from '../../../styles/variables';
 
@@ -48,10 +47,22 @@ export const ExperienceListContainerWrapper = styled(motion.div)`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+
+	@media only screen and (max-width: ${mobileSize}) {
+		display: flex;
+		flex-direction: column;
+	}
 
 	width: 100%;
 	height: 100%;
+`;
+
+//  moving slider was working weird so added a wrapper cheat 😅
+export const TabListWrapper = styled.div`
+	@media only screen and (max-width: ${mobileSize}) {
+		width: 100%;
+		overflow-x: auto;
+	}
 `;
 
 export const TabList = styled(motion.div)`
@@ -64,6 +75,18 @@ export const TabList = styled(motion.div)`
 		justify-content: center;
 		height: 100%;
 	}
+
+	@media only screen and (max-width: ${mobileSize}) {
+		display: flex;
+		flex-direction: row;
+		width: fit-content;
+		border-left: none;
+		overflow-x: auto;
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 `;
 
 const tabHeight = 3 + 'rem';
@@ -73,9 +96,26 @@ export const TabButton = styled(motion.div)`
 	height: ${tabHeight};
 	padding: 0 1rem;
 
+	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	&:hover {
+		background-color: ${secondaryAccentColor + '10'};
+	}
+
 	@media only screen and (min-width: ${mobileSize}) {
 		padding: 0 4rem 0 1rem;
 	}
+
+	@media only screen and (max-width: ${mobileSize}) {
+		margin-bottom: 0.5rem;
+	}
+
+	${(props) =>
+		props.isActive
+			? css`
+					color: ${primaryAccentColor};
+			  `
+			: css``};
 `;
 
 export const TabHighlight = styled(motion.div)`
@@ -88,18 +128,83 @@ export const TabHighlight = styled(motion.div)`
 	background-color: ${primaryColor};
 
 	transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
-	${(props) =>
-		props.activeTabIndex
-			? css`
-					transform: translateY(calc(${props.activeTabIndex} * ${tabHeight}));
-			  `
-			: css``}
+
+	transform: translateY(
+		calc(${(props) => props.activeTabIndex} * ${tabHeight})
+	);
+
+	@media only screen and (max-width: ${mobileSize}) {
+		height: 0.2rem;
+		width: calc(${(props) => 1 / props.totalSize} * 100%);
+		top: calc(${tabHeight});
+		left: 0;
+		transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+		transform: translateX(calc(${(props) => props.activeTabIndex} * 100%));
+	}
 `;
 
 export const TabPanelsList = styled(motion.div)`
-	width: 30rem;
+	@media only screen and (min-width: ${mobileSize}) {
+		width: 30rem;
+	}
+
+	@media only screen and (max-width: ${mobileSize}) {
+		margin-top: 1rem;
+	}
 `;
 
-export const TabPanel = styled(motion.div)`
-	padding: 1rem;
+export const TabPanel = styled(motion.div)``;
+
+export const PositionContainer = styled(motion.div)`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+
+	font-weight: 500;
+	font-size: 1.5rem;
+
+	margin-bottom: 1rem;
+
+	@media only screen and (max-width: ${mobileSize}) {
+		min-height: 4rem;
+	}
+`;
+
+export const Position = styled.div`
+	margin-right: 0.5rem;
+`;
+
+export const Delimiter = styled.span`
+	margin-right: 0.5rem;
+	color: ${primaryAccentColor};
+`;
+
+export const Organization = styled.div`
+	position: relative;
+	color: ${primaryAccentColor};
+
+	&:hover {
+		color: ${primaryAccentColor};
+
+		&::after {
+			transform-origin: left;
+
+			transform: scaleX(1);
+		}
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		background-color: ${primaryAccentColor};
+
+		transform: scaleX(0);
+		transform-origin: right;
+
+		transition: transform 250ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
 `;

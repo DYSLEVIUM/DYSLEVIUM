@@ -14,6 +14,11 @@ import {
 	TabPanel,
 	ExperienceListContainer,
 	ExperienceListContainerWrapper,
+	PositionContainer,
+	Position,
+	Delimiter,
+	Organization,
+	TabListWrapper,
 } from './styles';
 import * as experienceData from '../../../data/experience.json';
 
@@ -60,6 +65,10 @@ const listItemTab = {
 };
 
 const ExperienceSection = () => {
+	const [experiences, setExperiences] = useState(
+		(experienceData as any).default
+	);
+	const [activeTabIndex, setActiveTabIndex] = useState(0);
 	const animation = useAnimation();
 	const [ref, inView, entry] = useInView({
 		threshold: 0.1,
@@ -75,12 +84,6 @@ const ExperienceSection = () => {
 		}
 	}, [animation, inView]);
 
-	const [experiences, setExperiences] = useState(
-		(experienceData as any).default
-	);
-
-	const [activeTabIndex, setActiveTabIndex] = useState(0);
-
 	return (
 		<SectionContainer id="experience">
 			<ExperienceContainer
@@ -95,21 +98,25 @@ const ExperienceSection = () => {
 
 				<ExperienceListContainer>
 					<ExperienceListContainerWrapper>
-						<TabList variants={listItem}>
-							{experiences.map(({ organization }, idx) => (
-								<TabButton
-									key={idx}
-									isActive={activeTabIndex === idx}
-									onClick={() => {
-										setActiveTabIndex(idx);
-									}}
-								>
-									<span>{organization}</span>
-								</TabButton>
-							))}
-							<TabHighlight activeTabIndex={activeTabIndex} />
-						</TabList>
-
+						<TabListWrapper>
+							<TabList variants={listItem}>
+								{experiences.map(({ organization }, idx) => (
+									<TabButton
+										key={idx}
+										isActive={activeTabIndex === idx}
+										onClick={() => {
+											setActiveTabIndex(idx);
+										}}
+									>
+										<span>{organization}</span>
+									</TabButton>
+								))}
+								<TabHighlight
+									activeTabIndex={activeTabIndex}
+									totalSize={experiences.length}
+								/>
+							</TabList>
+						</TabListWrapper>
 						<TabPanelsList variants={listItem}>
 							{experiences.map(
 								(
@@ -128,16 +135,19 @@ const ExperienceSection = () => {
 										variants={listItemTab}
 										animate={activeTabIndex !== idx ? 'hidden' : 'visible'}
 									>
-										<div>
-											{position} as{' '}
-											<a
-												href={website}
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												{organization}
-											</a>
-										</div>
+										<PositionContainer variants={listItem}>
+											<Position>{position}</Position>
+											<Delimiter>@</Delimiter>
+											<Organization>
+												<a
+													href={website}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													{organization}
+												</a>
+											</Organization>
+										</PositionContainer>
 
 										<div>
 											{startDate} - {endDate}
