@@ -19,6 +19,11 @@ import {
 	Delimiter,
 	Organization,
 	TabListWrapper,
+	WorkDuration,
+	StartDate,
+	EndDate,
+	WorkDetailsList,
+	WorkDetailsListItem,
 } from './styles';
 import * as experienceData from '../../../data/experience.json';
 
@@ -50,7 +55,6 @@ const listItemTab = {
 		opacity: 0,
 		display: 'none',
 		transition: {
-			duration: 0.5,
 			timingFunction: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
 		},
 	},
@@ -58,8 +62,9 @@ const listItemTab = {
 		opacity: 1,
 		display: 'block',
 		transition: {
-			duration: 0.5,
 			timingFunction: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+			staggerChildren: 0.25,
+			delayChildren: 0.25,
 		},
 	},
 };
@@ -149,15 +154,19 @@ const ExperienceSection = () => {
 											</Organization>
 										</PositionContainer>
 
-										<div>
-											{startDate} - {endDate}
-										</div>
+										<WorkDuration variants={listItem}>
+											<StartDate>{startDate}</StartDate>
+											<span style={{ fontSize: '1.5rem' }}>-</span>
+											<EndDate>{endDate}</EndDate>
+										</WorkDuration>
 
-										<ul>
+										<WorkDetailsList>
 											{position_details.map((details, idx) => (
-												<li key={idx}>{details}</li>
+												<WorkDetailsListItem key={idx} variants={listItem}>
+													{details}
+												</WorkDetailsListItem>
 											))}
-										</ul>
+										</WorkDetailsList>
 									</TabPanel>
 								)
 							)}

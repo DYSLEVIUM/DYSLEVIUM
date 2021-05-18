@@ -149,7 +149,7 @@ export const TabPanelsList = styled(motion.div)`
 	}
 
 	@media only screen and (max-width: ${mobileSize}) {
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 	}
 `;
 
@@ -164,23 +164,21 @@ export const PositionContainer = styled(motion.div)`
 	font-weight: 500;
 	font-size: 1.5rem;
 
-	margin-bottom: 1rem;
-
 	@media only screen and (max-width: ${mobileSize}) {
 		min-height: 4rem;
 	}
 `;
 
-export const Position = styled.div`
+export const Position = styled.h3`
 	margin-right: 0.5rem;
 `;
 
-export const Delimiter = styled.span`
+export const Delimiter = styled.h4`
 	margin-right: 0.5rem;
 	color: ${primaryAccentColor};
 `;
 
-export const Organization = styled.div`
+export const Organization = styled.h3`
 	position: relative;
 	color: ${primaryAccentColor};
 
@@ -206,5 +204,37 @@ export const Organization = styled.div`
 		transform-origin: right;
 
 		transition: transform 250ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+`;
+
+export const WorkDuration = styled(motion.div)`
+	margin-bottom: 1rem;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+`;
+
+export const StartDate = styled.h5`
+	margin-right: 1rem;
+`;
+
+export const EndDate = styled.h5`
+	margin-left: 1rem;
+`;
+
+export const WorkDetailsList = styled(motion.ul)`
+	position: relative;
+`;
+
+export const WorkDetailsListItem = styled(motion.li)`
+	padding-left: 2rem;
+	margin-bottom: 1rem;
+	&::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: ${primaryAccentColor};
+		/* background-color: ${primaryAccentColor}; */
 	}
 `;

@@ -36,6 +36,8 @@ body {
 	background-color: ${contrastColor};
 
 	scrollbar-color: ${primaryColor} ${secondaryColor};
+
+	scrollbar-width:thin;
 }
 
 ul {
@@ -49,6 +51,7 @@ h4,
 h5,
 h6 {
 	padding: 1rem 0;
+	font-weight: 500;
 	@media only screen and (max-width: ${mobileSize}) {
 		padding: 0.5rem 0;
 	}
