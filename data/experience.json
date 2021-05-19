@@ -1,80 +1,80 @@
 [
-	{
-		"position": "Full Stack Developer",
-		"position_details": [
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-			"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-			"Contrary to popular belief, Lorem Ipsum is not simply random text."
-		],
-		"organization": "NIT Jamshedpur",
-		"website": "http://www.nitjsr.ac.in/",
-		"startDate": "March 2021",
-		"endDate": "Present",
-		"address": "Jamshedpur, Jharkhand, India"
-	},
-	{
-		"position": "Dummy Position 1",
-		"position_details": [
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-			"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-			"Contrary to popular belief, Lorem Ipsum is not simply random text."
-		],
-		"organization": "Dummy Org 1",
-		"website": "http://www.nitjsr.ac.in/",
-		"startDate": "March 2020",
-		"endDate": "July 2020",
-		"address": "2Jamshedpur, Jharkhand, India"
-	},
-	{
-		"position": "Dummy Position 2",
-		"position_details": [
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-			"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-			"Contrary to popular belief, Lorem Ipsum is not simply random text."
-		],
-		"organization": "Dummy Org 2",
-		"website": "http://www.nitjsr.ac.in/",
-		"startDate": "March 2020",
-		"endDate": "July 2020",
-		"address": "2Jamshedpur, Jharkhand, India"
-	},
-	{
-		"position": "Dummy Position 3",
-		"position_details": [
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-			"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-			"Contrary to popular belief, Lorem Ipsum is not simply random text."
-		],
-		"organization": "Dummy Org 2",
-		"website": "http://www.nitjsr.ac.in/",
-		"startDate": "March 2020",
-		"endDate": "July 2020",
-		"address": "2Jamshedpur, Jharkhand, India"
-	},
-	{
-		"position": "Dummy Position 4",
-		"position_details": [
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-			"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-			"Contrary to popular belief, Lorem Ipsum is not simply random text."
-		],
-		"organization": "Dummy Org 3",
-		"website": "http://www.nitjsr.ac.in/",
-		"startDate": "March 2020",
-		"endDate": "July 2020",
-		"address": "2Jamshedpur, Jharkhand, India"
-	},
-	{
-		"position": "Dummy Position 5",
-		"position_details": [
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-			"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-			"Contrary to popular belief, Lorem Ipsum is not simply random text."
-		],
-		"organization": "Dummy Org 4",
-		"website": "http://www.nitjsr.ac.in/",
-		"startDate": "March 2020",
-		"endDate": "July 2020",
-		"address": "2Jamshedpur, Jharkhand, India"
-	}
+  {
+    "position": "Full Stack Developer",
+    "position_details": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text."
+    ],
+    "organization": "NIT Jamshedpur",
+    "website": "http://www.nitjsr.ac.in/",
+    "startDate": "March 2021",
+    "endDate": "Present",
+    "address": "Jamshedpur, Jharkhand, India"
+  },
+  {
+    "position": "Dummy Position 1",
+    "position_details": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text."
+    ],
+    "organization": "Dummy Org 1",
+    "website": "http://www.nitjsr.ac.in/",
+    "startDate": "March 2020",
+    "endDate": "July 2020",
+    "address": "2Jamshedpur, Jharkhand, India"
+  },
+  {
+    "position": "Dummy Position 2",
+    "position_details": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text."
+    ],
+    "organization": "Dummy Org 2",
+    "website": "http://www.nitjsr.ac.in/",
+    "startDate": "March 2020",
+    "endDate": "July 2020",
+    "address": "2Jamshedpur, Jharkhand, India"
+  },
+  {
+    "position": "Dummy Position 3",
+    "position_details": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text."
+    ],
+    "organization": "Dummy Org 2",
+    "website": "http://www.nitjsr.ac.in/",
+    "startDate": "March 2020",
+    "endDate": "July 2020",
+    "address": "2Jamshedpur, Jharkhand, India"
+  },
+  {
+    "position": "Dummy Position 4",
+    "position_details": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text."
+    ],
+    "organization": "Dummy Org 3",
+    "website": "http://www.nitjsr.ac.in/",
+    "startDate": "March 2020",
+    "endDate": "July 2020",
+    "address": "2Jamshedpur, Jharkhand, India"
+  },
+  {
+    "position": "Dummy Position 5",
+    "position_details": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text."
+    ],
+    "organization": "Dummy Org 4",
+    "website": "http://www.nitjsr.ac.in/",
+    "startDate": "March 2020",
+    "endDate": "July 2020",
+    "address": "2Jamshedpur, Jharkhand, India"
+  }
 ]

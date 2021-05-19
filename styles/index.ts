@@ -1,12 +1,12 @@
-import { createGlobalStyle } from 'styled-components';
-import styled, { css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
+
 import {
-	hamburgerColor,
-	contrastColor,
-	mobileSize,
-	primaryColor,
-	secondaryColor,
-	primaryAccentColor,
+  hamburgerColor,
+  contrastColor,
+  mobileSize,
+  primaryColor,
+  secondaryColor,
+  primaryAccentColor,
 } from './variables';
 
 export const GlobalStyles = createGlobalStyle`
@@ -123,13 +123,13 @@ a {
 `;
 
 export const MainContainer = styled.main`
-	${(props) =>
-		props.isBlur
-			? css`
-					filter: blur(10px);
-					transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
-			  `
-			: css`
-					transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
-			  `}
+  ${(props) =>
+    props.isBlur
+      ? css`
+          filter: blur(10px);
+          transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+        `
+      : css`
+          transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+        `}
 `;

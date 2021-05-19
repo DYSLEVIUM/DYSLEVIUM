@@ -3,13 +3,17 @@ import styled from 'styled-components';
 import { secondaryAccentColor } from '../../../styles/variables';
 
 export const AboutContainer = styled(motion.div)`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-	width: 100%;
+  width: 100%;
 
-	min-height: 100vh;
-	color: ${secondaryAccentColor};
+  min-height: 100vh;
+  color: ${secondaryAccentColor};
+`;
+
+export const AboutSpan = styled(motion.span)`
+  font-size: 2rem;
 `;

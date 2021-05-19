@@ -1,6 +1,6 @@
-import { GlobalStyles, MainContainer } from '../styles';
 import Head from 'next/head';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { GlobalStyles, MainContainer } from '../styles';
 
 import Navbar from '../components/Navbar';
 import Progressbar from '../components/Progressbar';
@@ -12,33 +12,33 @@ import IntroductionSection from '../components/Section/IntroductionSection';
 import ProjectsSection from '../components/Section/ProjectsSection';
 
 export default function App() {
-	const [showBlur, setShowBlur] = useState(false);
-	const toggleBlurContainer = (isClose) => {
-		setShowBlur(!isClose);
-	};
-	return (
-		<>
-			<Head>
-				<title>Pushpakant Behera - Portfolio</title>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			<GlobalStyles />
-			{/* header */}
-			<>
-				<Navbar onSideBarToggle={toggleBlurContainer} />
-				<Progressbar />
-			</>
+  const [showBlur, setShowBlur] = useState(false);
+  const toggleBlurContainer = (isClose) => {
+    setShowBlur(!isClose);
+  };
+  return (
+    <>
+      <Head>
+        <title>Pushpakant Behera - Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <GlobalStyles />
+      {/* header */}
+      <>
+        <Navbar onSideBarToggle={toggleBlurContainer} />
+        <Progressbar />
+      </>
 
-			<MainContainer isBlur={showBlur}>
-				<IntroductionSection />
-				<AboutSection />
-				<ExperienceSection />
-				<ProjectsSection />
-				<ContactSection />
-				<FooterSection />
-			</MainContainer>
-		</>
-	);
+      <MainContainer isBlur={showBlur}>
+        <IntroductionSection />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <ContactSection />
+        <FooterSection />
+      </MainContainer>
+    </>
+  );
 }
 
 // export async function getStaticProps(context) {

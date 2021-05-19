@@ -1,6 +1,6 @@
 import { keyframes } from 'styled-components';
 
-export const bounce = keyframes`
+const bounce = keyframes`
   0%,
   100% {
     transform: translateY(0);
@@ -9,3 +9,5 @@ export const bounce = keyframes`
     transform: translateY(-10px);
   }
 `;
+
+export default bounce;

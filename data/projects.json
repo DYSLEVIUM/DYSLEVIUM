@@ -1,58 +1,58 @@
 [
-	{
-		"html_url": "https://github.com/DYSLEVIUM/Typeracer-Clone",
-		"name": "Typeracer-Clone",
-		"homepage": "https://typeracer-clone-socket.netlify.app/",
-		"description": "A clone of the most famous typing game - Typeracer. This is a multiplayer game which uses sockets. It was made with NodeJS and Angular.",
-		"technologies_and_tools": ["implement later"]
-	},
-	{
-		"html_url": "https://github.com/DYSLEVIUM/Elite-Classroom-Backend",
-		"name": "Elite-Classroom-Backend",
-		"homepage": "homepage2",
-		"description": "Back-end for the app Elite Classroom. A workspace for education designed for students and teachers to manage classes, assignments and discussions.",
-		"technologies_and_tools": ["implement later"]
-	},
-	{
-		"html_url": "https://github.com/DYSLEVIUM/DYSLEVIUM",
-		"name": "Portfolio Website",
-		"homepage": "https://pushpakantbehera.vercel.app",
-		"description": "My portfolio website, made with ReactJs and NextJs.",
-		"technologies_and_tools": ["implement later"]
-	},
-	{
-		"html_url": "https://github.com/DYSLEVIUM/JEE-Management-System",
-		"name": "JEE-Management-System",
-		"homepage": "homepage2",
-		"description": "A simple GUI Student Management System made in Java where students and teachers can login to see their test scores and results.",
-		"technologies_and_tools": ["implement later"]
-	},
-	{
-		"html_url": "https://github.com/DYSLEVIUM/pcon-nodejs-todo",
-		"name": "pcon-nodejs-todo",
-		"homepage": "https://pcon-nodejs-todo.herokuapp.com/",
-		"description": "A simple notes taking app made with nodeJs, mysql and react. This app does not contain any user authentication. This was made to learn the basics of making a server and its interaction with a SQL database.",
-		"technologies_and_tools": ["implement later"]
-	},
-	{
-		"html_url": "https://github.com/DYSLEVIUM/Path-Tracer",
-		"name": "Path-Tracer",
-		"homepage": null,
-		"description": "This project was intended to get familiar with OOPS design and learn some path tracing on the way. This project was made by following the steps mentioned in the book Ray Tracing in One Weekend.",
-		"technologies_and_tools": ["implement later"]
-	},
-	{
-		"html_url": "https://github.com/DYSLEVIUM/social-media-app-server",
-		"name": "social-media-app-server",
-		"homepage": null,
-		"description": "A graphql server for a generic social media app.",
-		"technologies_and_tools": ["implement later"]
-	},
-	{
-		"html_url": "https://github.com/DYSLEVIUM/roleBasedApiAuthentication",
-		"name": "roleBasedApiAuthentication",
-		"homepage": "homepage2",
-		"description": "A simple NodeJs server that authenticates user based on their roles.",
-		"technologies_and_tools": ["implement later"]
-	}
+  {
+    "html_url": "https://github.com/DYSLEVIUM/Typeracer-Clone",
+    "name": "Typeracer-Clone",
+    "homepage": "https://typeracer-clone-socket.netlify.app/",
+    "description": "A clone of the most famous typing game - Typeracer. This is a multiplayer game which uses sockets. It was made with NodeJS and Angular.",
+    "technologies_and_tools": ["implement later"]
+  },
+  {
+    "html_url": "https://github.com/DYSLEVIUM/Elite-Classroom-Backend",
+    "name": "Elite-Classroom-Backend",
+    "homepage": "homepage2",
+    "description": "Back-end for the app Elite Classroom. A workspace for education designed for students and teachers to manage classes, assignments and discussions.",
+    "technologies_and_tools": ["implement later"]
+  },
+  {
+    "html_url": "https://github.com/DYSLEVIUM/DYSLEVIUM",
+    "name": "Portfolio Website",
+    "homepage": "https://pushpakantbehera.vercel.app",
+    "description": "My portfolio website, made with ReactJs and NextJs.",
+    "technologies_and_tools": ["implement later"]
+  },
+  {
+    "html_url": "https://github.com/DYSLEVIUM/JEE-Management-System",
+    "name": "JEE-Management-System",
+    "homepage": "homepage2",
+    "description": "A simple GUI Student Management System made in Java where students and teachers can login to see their test scores and results.",
+    "technologies_and_tools": ["implement later"]
+  },
+  {
+    "html_url": "https://github.com/DYSLEVIUM/pcon-nodejs-todo",
+    "name": "pcon-nodejs-todo",
+    "homepage": "https://pcon-nodejs-todo.herokuapp.com/",
+    "description": "A simple notes taking app made with nodeJs, mysql and react. This app does not contain any user authentication. This was made to learn the basics of making a server and its interaction with a SQL database.",
+    "technologies_and_tools": ["implement later"]
+  },
+  {
+    "html_url": "https://github.com/DYSLEVIUM/Path-Tracer",
+    "name": "Path-Tracer",
+    "homepage": null,
+    "description": "This project was intended to get familiar with OOPS design and learn some path tracing on the way. This project was made by following the steps mentioned in the book Ray Tracing in One Weekend.",
+    "technologies_and_tools": ["implement later"]
+  },
+  {
+    "html_url": "https://github.com/DYSLEVIUM/social-media-app-server",
+    "name": "social-media-app-server",
+    "homepage": null,
+    "description": "A graphql server for a generic social media app.",
+    "technologies_and_tools": ["implement later"]
+  },
+  {
+    "html_url": "https://github.com/DYSLEVIUM/roleBasedApiAuthentication",
+    "name": "roleBasedApiAuthentication",
+    "homepage": "homepage2",
+    "description": "A simple NodeJs server that authenticates user based on their roles.",
+    "technologies_and_tools": ["implement later"]
+  }
 ]
