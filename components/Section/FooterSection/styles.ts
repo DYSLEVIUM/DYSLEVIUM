@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { bounce } from '../../../styles/shared/animations/bounce';
+import bounce from '../../../styles/shared/animations/bounce';
 import {
   secondaryAccentColor,
   primaryAccentColor,
