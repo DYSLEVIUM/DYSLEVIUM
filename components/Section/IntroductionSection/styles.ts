@@ -54,8 +54,8 @@ export const ButtonContainer = styled(motion.div)`
 `;
 
 export const ContactButtonContainer = styled.div`
-  margin-right: 2rem;
+  margin-right: 1rem;
 `;
 export const ResumeButtonContainer = styled.div`
-  margin-left: 2rem;
+  margin-left: 1rem;
 `;
