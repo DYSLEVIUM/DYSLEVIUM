@@ -151,7 +151,14 @@ const ExperienceSection = () => {
 
                     <WorkDuration variants={listItem}>
                       <StartDate>{startDate}</StartDate>
-                      <span style={{ fontSize: '1.5rem' }}>-</span>
+                      <span
+                        style={{
+                          fontSize: '1.5rem',
+                          marginBottom: '1rem',
+                        }}
+                      >
+                        -
+                      </span>
                       <EndDate>{endDate}</EndDate>
                     </WorkDuration>
 

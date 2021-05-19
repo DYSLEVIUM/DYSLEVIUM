@@ -240,6 +240,5 @@ export const WorkDetailsListItem = styled(motion.li)`
     position: absolute;
     left: 0;
     color: ${primaryAccentColor};
-    /* background-color: ${primaryAccentColor}; */
   }
 `;
