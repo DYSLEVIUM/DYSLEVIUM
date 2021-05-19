@@ -72,10 +72,10 @@ const IntroductionSection = () => {
             <Image
               src="/wavingHand.gif"
               alt="Hello GIF"
-              width="50px"
-              height="50px"
+              width={50}
+              height={50}
               layout="intrinsic"
-              quality="100"
+              quality={10}
             />
           </HelloImage>
           <Salutation variants={listItem}>Hi, my name is</Salutation>

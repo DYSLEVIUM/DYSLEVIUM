@@ -89,18 +89,36 @@ export default class GlobalDocument extends Document {
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-        <link
+        {/* using preload only downloads the stylesheet, and doesn't apply it, so we need to include the stylesheet also */}
+
+        {/* removing the stylesheet and getting only the font */}
+        {/* <link
           rel="preload"
           as="style"
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
         />
 
+
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
+        /> */}
+
+        <link
+          rel="prefetch"
+          href="https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2"
+          as="font"
+          crossOrigin="true"
         />
 
-        <link rel="preload" as="image" href="/wavingHand.gif" />
+        <link
+          rel="prefetch"
+          href="https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgVxIIzI.woff2"
+          as="font"
+          crossOrigin="true"
+        />
+
+        <link as="image" href="/wavingHand.gif" />
 
         <body>
           <Main />
