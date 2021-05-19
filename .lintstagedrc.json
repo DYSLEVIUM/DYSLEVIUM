@@ -1,4 +1,14 @@
 {
-  "*ts": "yarn eslint . && yarn prettier .",
-  "*tsx": "yarn eslint . && yarn prettier ."
+  "*ts": [
+    "yarn prettier . --write",
+    " yarn prettier .",
+    "yarn eslint . --fix",
+    "yarn eslint ."
+  ],
+  "*tsx": [
+    "yarn prettier . --write",
+    " yarn prettier .",
+    "yarn eslint . --fix",
+    "yarn eslint ."
+  ]
 }
