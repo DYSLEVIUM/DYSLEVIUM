@@ -50,7 +50,7 @@ h3,
 h4,
 h5,
 h6 {
-	padding: 1rem 0;
+	margin-bottom: 1rem;
 	font-weight: 500;
 	@media only screen and (max-width: ${mobileSize}) {
 		padding: 0.5rem 0;
