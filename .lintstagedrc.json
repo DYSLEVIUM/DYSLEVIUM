@@ -1,3 +1,6 @@
 {
-  "lint": "yarn eslint . && yarn prettier ."
+  "lint-staged": {
+    "*ts": "yarn eslint . && yarn prettier .",
+    "*tsx": "yarn eslint . && yarn prettier ."
+  }
 }
