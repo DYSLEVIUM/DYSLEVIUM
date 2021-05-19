@@ -19,7 +19,7 @@ export const ContactTitle = styled(motion.h2)`
 `;
 
 export const ContactDescription = styled(motion.h3)`
-  font-weight: normal;
+  font-weight: 400;
   color: ${secondaryAccentColor};
   text-align: center;
   margin: 1rem 0;

@@ -21,7 +21,7 @@ export const NavContainer = styled.nav`
   padding: ${sidePaddingMob};
 
   font-family: 'Montserrat';
-  font-weight: bold;
+  font-weight: 500;
 
   width: 100%;
 
