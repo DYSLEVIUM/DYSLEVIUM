@@ -11,6 +11,7 @@ import {
   primaryColor,
   secondaryAccentColor,
   sidePaddingMob,
+  mobileSize,
 } from '../../../styles/variables';
 
 export const ProjectsContainer = styled(motion.div)`
@@ -76,7 +77,11 @@ export const SectionAlt = styled(motion.a)`
 export const ProjectsList = styled.ul`
   display: grid;
   gap: ${sidePaddingMob};
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+  @media only screen and (min-width: ${mobileSize}) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 `;
 
 export const ProjectListItem = styled(motion.li)`

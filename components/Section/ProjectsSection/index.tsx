@@ -54,7 +54,7 @@ const ProjectsSection = () => {
     },
   };
 
-  const MAX_RENDERED_PROJECTS = 4;
+  const MAX_RENDERED_PROJECTS = 6;
   const [showMore, setShowMore] = useState(false);
   const [projects] = useState((projectsData as any).default);
   const [projectsList, setProjectsList] = useState(
