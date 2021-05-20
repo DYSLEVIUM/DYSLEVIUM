@@ -58,7 +58,7 @@ export const ExperienceListContainerWrapper = styled(motion.div)`
 `;
 
 //  moving slider was working weird so added a wrapper cheat 😅
-export const TabListWrapper = styled.div`
+export const TabListWrapper = styled(motion.div)`
   @media only screen and (max-width: ${mobileSize}) {
     width: 100%;
     overflow-x: auto;
