@@ -1,13 +1,22 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-import bounce from '../../../styles/shared/animations/bounce';
 import {
   secondaryAccentColor,
   primaryAccentColor,
   sidePaddingMob,
   mobileSize,
 } from '../../../styles/variables';
+
+const bounce = keyframes`
+  0%,
+  100% {
+    transform: scale(1.25) translateY(0);
+  }
+  50% {
+    transform: scale(1.25) translateY(-10px);
+  }
+`;
 
 export const FooterContainer = styled(motion.div)`
   display: flex;
