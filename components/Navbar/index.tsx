@@ -34,11 +34,19 @@ const Navbar: React.FC<Props> = (props) => {
   const onScroll = () => {
     currentOffset = window.pageYOffset;
 
+    //  if position is anywhere besides 0
+    if (currentOffset !== 0) {
+      setShowShadow(false);
+      setShowNavbar(false);
+    }
+
+    //  moving down
     if (previousOffset < currentOffset) {
       setShowShadow(false);
       setShowNavbar(false);
     }
 
+    //  moving up
     if (previousOffset > currentOffset) {
       setShowNavbar(true);
       setShowShadow(true);
