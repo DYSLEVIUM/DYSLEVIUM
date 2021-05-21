@@ -15,7 +15,8 @@
     "jsx": "preserve",
     "plugins": [
       {
-        "name": "typescript-styled-plugin"
+        "name": "typescript-styled-plugin",
+        "validate": false
       }
     ]
   },
