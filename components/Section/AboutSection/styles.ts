@@ -7,6 +7,7 @@ export const AboutContainer = styled(motion.div)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
 
   width: 100%;
 

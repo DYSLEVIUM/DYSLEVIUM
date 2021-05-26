@@ -154,7 +154,6 @@ const ExperienceSection = () => {
                       <span
                         style={{
                           fontSize: '1.5rem',
-                          marginBottom: '1rem',
                         }}
                       >
                         -

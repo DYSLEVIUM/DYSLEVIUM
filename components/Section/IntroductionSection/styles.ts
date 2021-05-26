@@ -21,6 +21,7 @@ export const SalutationSpan = styled(motion.span)`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1rem;
 `;
 export const HelloImage = styled(motion.div)`
   display: inline;
@@ -32,24 +33,30 @@ export const Salutation = styled(motion.h4)`
   color: ${secondaryFontColor};
   font-weight: 500;
 `;
+
 export const Name = styled(motion.h1)`
   color: ${primaryAccentColor};
   font-weight: 500;
+  margin-bottom: 1rem;
 `;
+
 export const CareerObjective = styled(motion.h2)`
   color: ${secondaryFontColor};
   font-weight: 400;
+  margin-bottom: 1rem;
 `;
+
 export const ShortIntro = styled(motion.h3)`
   color: ${primaryFontColor};
   font-weight: 400;
   line-height: 2rem;
+  margin-bottom: 2rem;
 `;
+
 export const ButtonContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 2rem 0;
   width: 100%;
 `;
 

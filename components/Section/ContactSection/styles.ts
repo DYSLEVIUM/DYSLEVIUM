@@ -8,20 +8,22 @@ import {
 export const ContactContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 2rem 0;
 
   width: 100%;
-  padding: 2rem 0;
 `;
 
 export const ContactTitle = styled(motion.h2)`
   color: ${primaryAccentColor};
+  margin-bottom: 2rem;
 `;
 
 export const ContactDescription = styled(motion.h3)`
   font-weight: 400;
   color: ${secondaryAccentColor};
   text-align: center;
-  margin: 1rem 0;
   line-height: 2rem;
+  margin-bottom: 2rem;
 `;

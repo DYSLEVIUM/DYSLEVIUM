@@ -31,12 +31,13 @@ export const SectionIntro = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
 `;
 
 export const SectionTitle = styled(motion.h2)`
   color: ${primaryAccentColor};
   letter-spacing: 0.05rem;
+
+  margin-bottom: 1rem;
 `;
 
 export const SectionAlt = styled(motion.a)`
@@ -48,6 +49,7 @@ export const SectionAlt = styled(motion.a)`
   font-size: 0.85rem;
   letter-spacing: 0.05rem;
   color: ${primaryFontColor};
+  margin-bottom: 2rem;
 
   &:hover {
     color: ${secondaryFontColor};
@@ -110,6 +112,7 @@ export const ProjectListItem = styled(motion.li)`
 
 export const ProjectTitle = styled(motion.h3)`
   word-break: break-word;
+  margin-bottom: 2rem;
 
   display: flex;
   flex-direction: row;

@@ -14,6 +14,7 @@ export const ExperienceContainer = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
 
   width: 100%;
 
@@ -102,7 +103,6 @@ export const TabButton = styled(motion.div)`
   transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
   &:hover {
-    /* color: ${primaryAccentColor}; */
     background-color: ${`${secondaryAccentColor}10`};
   }
 
@@ -118,7 +118,6 @@ export const TabButton = styled(motion.div)`
     props.isActive
       ? css`
           color: ${primaryAccentColor};
-          /* background-color: ${`${secondaryAccentColor}10`}; */
         `
       : css``};
 `;
@@ -151,10 +150,6 @@ export const TabHighlight = styled(motion.div)`
 export const TabPanelsList = styled(motion.div)`
   @media only screen and (min-width: ${mobileSize}) {
     width: 30rem;
-  }
-
-  @media only screen and (max-width: ${mobileSize}) {
-    margin-top: 0.5rem;
   }
 `;
 

@@ -22,11 +22,15 @@ import {
 import SectionContainer from '../styles';
 import {
   FooterContainer,
-  SocialLinksContainer,
+  FooterDetailsWrapper,
   SocialLinksTitle,
   SocialLinks,
   StyledSocialLink,
   ResumeQRCode,
+  StyledNameContainer,
+  StyledSalutation,
+  SocialLinksContainer,
+  StyledEndMarkContainer,
 } from './styles';
 
 const FooterSection = () => {
@@ -73,61 +77,72 @@ const FooterSection = () => {
         initial="hidden"
         animate={animation}
       >
-        <SocialLinksContainer>
-          <SocialLinksTitle variants={listItem}>Find me at</SocialLinksTitle>
-          <SocialLinks>
-            <motion.li variants={listItem}>
-              <StyledSocialLink
-                href={githubProfile}
-                target="_blank"
-                title="Github"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-              </StyledSocialLink>
-            </motion.li>
-            <motion.li variants={listItem}>
-              <StyledSocialLink
-                href={linkedInProfile}
-                target="_blank"
-                title="LinkedIn"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-              </StyledSocialLink>
-            </motion.li>
-            <motion.li variants={listItem}>
-              <StyledSocialLink
-                href={instagramProfile}
-                target="_blank"
-                title="Instagram"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-              </StyledSocialLink>
-            </motion.li>
-            <motion.li variants={listItem}>
-              <StyledSocialLink
-                href={twitterProfile}
-                target="_blank"
-                title="Twitter"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-              </StyledSocialLink>
-            </motion.li>
-            <motion.li variants={listItem}>
-              <StyledSocialLink
-                href={redditProfile}
-                target="_blank"
-                title="Reddit"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faReddit}></FontAwesomeIcon>
-              </StyledSocialLink>
-            </motion.li>
-          </SocialLinks>
-        </SocialLinksContainer>
+        <FooterDetailsWrapper>
+          <SocialLinksContainer>
+            <SocialLinksTitle variants={listItem}>Find me at</SocialLinksTitle>
+            <SocialLinks>
+              <motion.li variants={listItem}>
+                <StyledSocialLink
+                  href={githubProfile}
+                  target="_blank"
+                  title="Github"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                </StyledSocialLink>
+              </motion.li>
+              <motion.li variants={listItem}>
+                <StyledSocialLink
+                  href={linkedInProfile}
+                  target="_blank"
+                  title="LinkedIn"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+                </StyledSocialLink>
+              </motion.li>
+              <motion.li variants={listItem}>
+                <StyledSocialLink
+                  href={instagramProfile}
+                  target="_blank"
+                  title="Instagram"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+                </StyledSocialLink>
+              </motion.li>
+              <motion.li variants={listItem}>
+                <StyledSocialLink
+                  href={twitterProfile}
+                  target="_blank"
+                  title="Twitter"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                </StyledSocialLink>
+              </motion.li>
+              <motion.li variants={listItem}>
+                <StyledSocialLink
+                  href={redditProfile}
+                  target="_blank"
+                  title="Reddit"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faReddit}></FontAwesomeIcon>
+                </StyledSocialLink>
+              </motion.li>
+            </SocialLinks>
+          </SocialLinksContainer>
+
+          <StyledEndMarkContainer>
+            <StyledNameContainer variants={listItem}>
+              <h3>Pushpakant Behera</h3>
+            </StyledNameContainer>
+            <StyledSalutation variants={listItem}>
+              <h5>Made with ❤ in ReactJs</h5>
+            </StyledSalutation>
+          </StyledEndMarkContainer>
+        </FooterDetailsWrapper>
         <ResumeQRCode>
           <motion.span variants={listItem}>
             <a href={resumeUrl} target="_blank" rel="noreferrer">
