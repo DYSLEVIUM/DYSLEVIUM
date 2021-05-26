@@ -44,6 +44,7 @@ export const FooterDetailsWrapper = styled(motion.div)`
     align-items: center;
     max-width: none;
     width: 100%;
+    max-width: 400px;
   }
 
   display: flex;
