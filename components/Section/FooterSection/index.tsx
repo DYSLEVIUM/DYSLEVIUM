@@ -139,7 +139,9 @@ const FooterSection = () => {
               <h3>Pushpakant Behera</h3>
             </StyledNameContainer>
             <StyledSalutation variants={listItem}>
-              <h5>Made with ❤ in ReactJs</h5>
+              <h5>
+                Made with <span>❤</span> in ReactJs
+              </h5>
             </StyledSalutation>
           </StyledEndMarkContainer>
         </FooterDetailsWrapper>

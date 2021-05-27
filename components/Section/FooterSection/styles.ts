@@ -6,6 +6,7 @@ import {
   primaryAccentColor,
   mobileSize,
   primaryFontColor,
+  secondaryColor,
 } from '../../../styles/variables';
 
 const bounce = keyframes`
@@ -38,22 +39,26 @@ export const FooterContainer = styled(motion.div)`
 `;
 
 export const FooterDetailsWrapper = styled(motion.div)`
-  @media only screen and (max-width: ${mobileSize}) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: none;
-    width: 100%;
-    max-width: 400px;
-  }
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
+  min-height: 250px;
   max-width: 400px;
   width: 60%;
+
+  padding-right: 2rem;
+
+  @media only screen and (max-width: ${mobileSize}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    min-height: 0px;
+    padding-right: 0;
+  }
 `;
 
 export const SocialLinksContainer = styled(motion.div)`
@@ -149,6 +154,10 @@ export const StyledSalutation = styled(motion.div)`
   h5 {
     font-weight: 400;
     color: ${primaryFontColor};
+
+    span {
+      color: ${primaryAccentColor};
+    }
   }
 
   @media only screen and (max-width: ${mobileSize}) {
@@ -163,7 +172,7 @@ export const ResumeQRCode = styled(motion.div)`
   align-items: center;
 
   padding-left: 4rem;
-  border-left: 1px solid $secondaryColor;
+  border-left: 1px solid ${secondaryColor};
 
   a {
     display: flex;
