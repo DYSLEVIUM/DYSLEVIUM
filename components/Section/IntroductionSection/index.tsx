@@ -83,7 +83,7 @@ const IntroductionSection = () => {
 
         <Name variants={listItem}>Pushpakant Behera.</Name>
         <CareerObjective variants={listItem}>
-          I love to build things
+          I love to solve problems and build things
         </CareerObjective>
         <ShortIntro variants={listItem}>
           I am a sophomore at National Institute of Technology Jamshedpur, and

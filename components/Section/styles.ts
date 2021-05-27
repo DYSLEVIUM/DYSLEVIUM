@@ -25,7 +25,7 @@ const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 export default SectionContainer;

@@ -1,9 +1,19 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
+import Image from 'next/image';
 
 import SectionContainer from '../styles';
-import { AboutContainer, AboutSpan } from './styles';
+import {
+  AboutContainer,
+  SectionIntro,
+  SectionTitle,
+  SectionContent,
+  ProfileImageContainer,
+  AboutContentContainer,
+  AboutContent,
+  TechnologyStackContainer,
+} from './styles';
 
 const AboutSection = () => {
   const animation = useAnimation();
@@ -49,8 +59,43 @@ const AboutSection = () => {
         initial="hidden"
         animate={animation}
       >
-        <AboutSpan variants={listItem}>👷‍♂️</AboutSpan>
-        Currently working on building this about section.
+        <SectionIntro>
+          <SectionTitle variants={listItem}>About Me</SectionTitle>
+        </SectionIntro>
+        <SectionContent>
+          <AboutContentContainer>
+            <AboutContent variants={listItem}>
+              <h4>
+                Hello! My name is Pushpakant and I enjoy creating things that
+                run on the web.
+              </h4>
+            </AboutContent>
+
+            <TechnologyStackContainer variants={listItem}>
+              <h4>
+                Here are a few technologies I've been working with recently:
+              </h4>
+
+              <ul>
+                <li>C++</li>
+                <li>ReactJs</li>
+                <li>NodeJs</li>
+                <li>Typescript</li>
+                <li>Angular</li>
+              </ul>
+            </TechnologyStackContainer>
+          </AboutContentContainer>
+          <ProfileImageContainer variants={listItem}>
+            <Image
+              src="/profile.png"
+              alt="Hello GIF"
+              width={300}
+              height={300}
+              layout="intrinsic"
+              quality={10}
+            />
+          </ProfileImageContainer>
+        </SectionContent>
       </AboutContainer>
     </SectionContainer>
   );

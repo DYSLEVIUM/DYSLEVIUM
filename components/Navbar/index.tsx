@@ -151,7 +151,7 @@ const Navbar: React.FC<Props> = (props) => {
           // stopping propagation of clickHandler to current and other children
         >
           <ListItem variants={listItemY}>
-            <a href="#about">About</a>
+            <a href="#about">About Me</a>
           </ListItem>
           <ListItem variants={listItemY}>
             <a href="#experience">Experience</a>
@@ -190,7 +190,7 @@ const Navbar: React.FC<Props> = (props) => {
           // stopping propagation of clickHandler to current and other children
         >
           <ListItemAside variants={listItemX}>
-            <a href="#about">About</a>
+            <a href="#about">About Me</a>
           </ListItemAside>
           <ListItemAside variants={listItemX}>
             <a href="#experience">Experience</a>

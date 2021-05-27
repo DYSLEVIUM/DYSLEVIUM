@@ -67,7 +67,7 @@ export const TabListWrapper = styled(motion.div)`
 `;
 
 export const TabList = styled(motion.div)`
-  margin-right: 1rem;
+  margin-right: 3rem;
   position: relative;
   border-left: 0.2rem solid ${secondaryColor};
 
@@ -98,12 +98,13 @@ const tabWidth = `${12}rem`;
 export const TabButton = styled(motion.div)`
   cursor: pointer;
   height: ${tabHeight};
-  padding: 0 1rem;
+  padding: 0 2rem;
 
   transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
   &:hover {
     background-color: ${`${secondaryAccentColor}10`};
+    color: ${primaryAccentColor};
   }
 
   @media only screen and (max-width: ${mobileSize}) {
@@ -148,6 +149,7 @@ export const TabHighlight = styled(motion.div)`
 `;
 
 export const TabPanelsList = styled(motion.div)`
+  padding-top: 0.75rem;
   @media only screen and (min-width: ${mobileSize}) {
     width: 30rem;
   }

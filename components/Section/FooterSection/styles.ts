@@ -77,9 +77,8 @@ export const SocialLinksContainer = styled(motion.div)`
   width: 100%;
 `;
 
-export const SocialLinksTitle = styled(motion.h3)`
+export const SocialLinksTitle = styled(motion.h2)`
   margin-bottom: 2rem;
-  font-weight: normal;
 
   color: ${primaryAccentColor};
 

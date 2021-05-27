@@ -31,6 +31,7 @@ export const SectionIntro = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 `;
 
 export const SectionTitle = styled(motion.h2)`
@@ -81,6 +82,7 @@ export const ProjectsList = styled.ul`
   display: grid;
   gap: ${sidePaddingMob};
   max-width: 1200px;
+  margin-bottom: 4rem;
 
   @media only screen and (min-width: ${mobileSize}) {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -189,5 +191,5 @@ export const ProjectDescription = styled(motion.h4)`
 `;
 
 export const ShowMore = styled.div`
-  margin: 2rem;
+  margin-bottom: 2rem;
 `;

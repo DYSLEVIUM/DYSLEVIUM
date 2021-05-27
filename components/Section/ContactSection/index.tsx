@@ -56,7 +56,7 @@ const ContactSection = () => {
           Whether you have a question or just want to say hi, my inbox is always
           open. I&apos;ll try my best to get back to you!
         </ContactDescription>
-        <PrimaryButton variants={listItem}>
+        <PrimaryButton variants={listItem} style={{ marginBottom: '2rem' }}>
           <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
             Get in Touch
           </a>

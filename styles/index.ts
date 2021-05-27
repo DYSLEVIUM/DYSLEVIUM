@@ -16,6 +16,10 @@ export const GlobalStyles = createGlobalStyle`
 
 	outline: none;
 	box-sizing: border-box;
+
+	scrollbar-color: ${primaryColor} ${secondaryColor};
+	scrollbar-width:thin;
+	scrollbar-arrow-color: red;
 }
 
 html,
@@ -50,7 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 500;
+	font-weight: 400;
 }
 
 h1 {
@@ -72,7 +76,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.35rem;
+	font-size: 1.15rem;
 	line-height: 1.5rem;
 
 	@media only screen and (max-width: ${mobileSize}) {
@@ -119,6 +123,11 @@ a {
 `;
 
 export const MainContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   ${(props) =>
     props.isBlur
       ? css`

@@ -10,7 +10,6 @@ export const IntroductionContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
 
   min-height: 100vh;
   padding: 2rem 0;
@@ -21,8 +20,9 @@ export const SalutationSpan = styled(motion.span)`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
+
 export const HelloImage = styled(motion.div)`
   display: inline;
   filter: saturate(200%);
@@ -37,13 +37,13 @@ export const Salutation = styled(motion.h4)`
 export const Name = styled(motion.h1)`
   color: ${primaryAccentColor};
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 export const CareerObjective = styled(motion.h2)`
   color: ${secondaryFontColor};
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 export const ShortIntro = styled(motion.h3)`
@@ -51,13 +51,13 @@ export const ShortIntro = styled(motion.h3)`
   font-weight: 400;
   line-height: 2rem;
   margin-bottom: 2rem;
+  max-width: 600px;
 `;
 
 export const ButtonContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 100%;
 `;
 
 export const ContactButtonContainer = styled.div`

@@ -1,9 +1,9 @@
-export const mobileSize = '850px';
+export const mobileSize = '900px';
 export const monitorSize = '1440px';
 
 export const sidePaddingMob = '2rem';
 export const sidePaddingTab = '4rem';
-export const sidePaddingMon = '15rem';
+export const sidePaddingMon = '20rem';
 
 export const hamburgerColor = 'rgb(255, 255, 255)';
 
