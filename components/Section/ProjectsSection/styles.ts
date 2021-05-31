@@ -98,11 +98,12 @@ export const ProjectListItem = styled(motion.li)`
   border-radius: 0.25rem;
   line-height: 1.5rem;
 
+  display: flex;
+  flex-direction: column;
+
   border: 0.2rem solid ${secondaryColor};
 
   transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
-  min-height: 15rem;
 
   &:hover {
     background-color: ${`${secondaryColor}55`};
@@ -183,11 +184,34 @@ export const Homepage = styled(motion.h5)`
   margin-left: 2rem;
 `;
 
+export const Lower = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`;
+
 export const ProjectDescription = styled(motion.h4)`
   word-break: break-word;
   color: ${primaryFontColor};
   font-weight: 400;
   user-select: none;
+
+  margin-bottom: 1rem;
+`;
+
+export const LangToolsAndLibContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-size: 0.75rem;
+  color: ${primaryFontColor};
+`;
+
+export const LangToolsAndLibItem = styled(motion.div)`
+  margin-right: 1rem;
+  padding-right: 0.3rem;
 `;
 
 export const ShowMore = styled.div`

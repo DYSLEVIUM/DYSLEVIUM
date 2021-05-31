@@ -132,7 +132,7 @@ const Navbar: React.FC<Props> = (props) => {
     <NavContainer menu={showMenu} navbar={showNavbar} shadow={showShadow}>
       <motion.div variants={containerY} initial="hidden" animate="visible">
         <motion.a variants={listItemY} href="#intro">
-          Logo
+          PB
         </motion.a>
       </motion.div>
 

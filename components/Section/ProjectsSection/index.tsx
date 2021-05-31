@@ -22,6 +22,9 @@ import {
   SectionAlt,
   SectionTitle,
   ShowMore,
+  LangToolsAndLibContainer,
+  LangToolsAndLibItem,
+  Lower,
 } from './styles';
 
 import * as projectsData from '../../../data/projects.json';
@@ -175,7 +178,14 @@ const ProjectsSection = () => {
                     ) : null}
                   </LinksContainer>
                 </ProjectTitle>
-                <ProjectDescription>{project.description}</ProjectDescription>
+                <Lower>
+                  <ProjectDescription>{project.description}</ProjectDescription>
+                  <LangToolsAndLibContainer>
+                    {project.technologies_and_tools.map((item, id) => (
+                      <LangToolsAndLibItem key={id}>{item}</LangToolsAndLibItem>
+                    ))}
+                  </LangToolsAndLibContainer>
+                </Lower>
               </ProjectListItem>
             ))}
           </AnimatePresence>
