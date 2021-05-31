@@ -73,7 +73,8 @@ const AboutSection = () => {
 
             <TechnologyStackContainer variants={listItem}>
               <h4>
-                Here are a few technologies I've been working with recently:
+                Here are a few technologies I&apos;ve been working with
+                recently:
               </h4>
 
               <ul>
