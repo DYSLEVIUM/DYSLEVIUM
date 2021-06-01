@@ -90,7 +90,7 @@ const AboutSection = () => {
           <ProfileImageContainer variants={listItem}>
             <Image
               src="/profile.png"
-              alt="Hello GIF"
+              alt="Profile Pic"
               width={300}
               height={300}
               layout="intrinsic"
