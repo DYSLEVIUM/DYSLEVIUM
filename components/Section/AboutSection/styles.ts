@@ -19,11 +19,9 @@ export const AboutContainer = styled(motion.div)`
   color: ${secondaryAccentColor};
 `;
 
-export const SectionIntro = styled(motion.div)``;
-
-export const SectionTitle = styled(motion.h2)`
+export const SectionTitle = styled(motion.h1)`
   color: ${primaryAccentColor};
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 `;
 
 export const SectionContent = styled(motion.div)`
@@ -42,8 +40,6 @@ export const SectionContent = styled(motion.div)`
   line-height: 2rem;
 `;
 
-export const AboutContentContainer = styled(motion.div)``;
-
 export const AboutContent = styled(motion.div)`
   margin-bottom: 2rem;
 `;
@@ -51,6 +47,31 @@ export const AboutContent = styled(motion.div)`
 export const TechnologyStackContainer = styled(motion.div)`
   @media only screen and (max-width: ${mobileSize}) {
     margin-bottom: 2rem;
+  }
+`;
+
+export const TechnologyStackPara = styled(motion.h4)`
+  margin-bottom: 1rem;
+`;
+
+export const TechnologyStackList = styled(motion.ul)`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 5rem;
+`;
+
+export const TechnologyStackListItem = styled(motion.li)`
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.25rem;
+
+  min-width: fit-content;
+  &::before {
+    position: absolute;
+    content: '•';
+    left: 0;
+    color: ${primaryAccentColor};
   }
 `;
 

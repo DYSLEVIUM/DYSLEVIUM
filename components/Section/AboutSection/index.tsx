@@ -6,13 +6,14 @@ import Image from 'next/image';
 import SectionContainer from '../styles';
 import {
   AboutContainer,
-  SectionIntro,
   SectionTitle,
   SectionContent,
   ProfileImageContainer,
-  AboutContentContainer,
   AboutContent,
   TechnologyStackContainer,
+  TechnologyStackList,
+  TechnologyStackListItem,
+  TechnologyStackPara,
 } from './styles';
 
 const AboutSection = () => {
@@ -59,11 +60,11 @@ const AboutSection = () => {
         initial="hidden"
         animate={animation}
       >
-        <SectionIntro>
+        <div>
           <SectionTitle variants={listItem}>About Me</SectionTitle>
-        </SectionIntro>
+        </div>
         <SectionContent>
-          <AboutContentContainer>
+          <div>
             <AboutContent variants={listItem}>
               <h4>
                 Hello! My name is Pushpakant and I enjoy creating things that
@@ -72,20 +73,20 @@ const AboutSection = () => {
             </AboutContent>
 
             <TechnologyStackContainer variants={listItem}>
-              <h4>
+              <TechnologyStackPara>
                 Here are a few technologies I&apos;ve been working with
                 recently:
-              </h4>
+              </TechnologyStackPara>
 
-              <ul>
-                <li>C++</li>
-                <li>ReactJs</li>
-                <li>NodeJs</li>
-                <li>Typescript</li>
-                <li>Angular</li>
-              </ul>
+              <TechnologyStackList>
+                <TechnologyStackListItem>C++</TechnologyStackListItem>
+                <TechnologyStackListItem>ReactJs</TechnologyStackListItem>
+                <TechnologyStackListItem>NodeJs</TechnologyStackListItem>
+                <TechnologyStackListItem>Typescript</TechnologyStackListItem>
+                <TechnologyStackListItem>Angular</TechnologyStackListItem>
+              </TechnologyStackList>
             </TechnologyStackContainer>
-          </AboutContentContainer>
+          </div>
           <ProfileImageContainer variants={listItem}>
             <Image
               src="/profile.png"

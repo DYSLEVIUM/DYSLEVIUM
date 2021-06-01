@@ -15,7 +15,7 @@ export const ContactContainer = styled(motion.div)`
   width: 100%;
 `;
 
-export const ContactTitle = styled(motion.h2)`
+export const ContactTitle = styled(motion.h1)`
   color: ${primaryAccentColor};
   margin-bottom: 2rem;
 `;

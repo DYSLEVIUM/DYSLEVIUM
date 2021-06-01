@@ -113,7 +113,7 @@ const ProjectsSection = () => {
         animate={animation}
       >
         <SectionIntro>
-          <SectionTitle variants={listItem}>Some of my projects</SectionTitle>
+          <SectionTitle variants={listItem}>Some of my Projects</SectionTitle>
           <SectionAlt
             variants={listItem}
             href={`${githubProfile}?tab=repositories`}

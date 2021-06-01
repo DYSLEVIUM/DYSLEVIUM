@@ -34,7 +34,7 @@ export const SectionIntro = styled.div`
   margin-bottom: 2rem;
 `;
 
-export const SectionTitle = styled(motion.h2)`
+export const SectionTitle = styled(motion.h1)`
   color: ${primaryAccentColor};
   letter-spacing: 0.05rem;
 
