@@ -63,7 +63,9 @@ export const TechnologyStackList = styled(motion.ul)`
 
 export const TechnologyStackListItem = styled(motion.li)`
   position: relative;
-  padding-left: 2rem;
+
+  padding-left: 1rem;
+
   margin-bottom: 0.25rem;
 
   min-width: fit-content;
