@@ -3723,10 +3723,10 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-typescript-styled-plugin@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.17.0.tgz#00f10d7291b2a359c0c7c054cc89ae41e6f4f4d5"
-  integrity sha512-w0wu8cjQcYDVLwQXDLhXhw6HWsZ6ALaR5nXKyvK0EGQ6ZpkUE2pp0q9/y3CEPiXnB+aCee3qQX59IPrGEG42cQ==
+typescript-styled-plugin@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.18.0.tgz#4e20e99bd7938f693ee37ad20682cc2401d06898"
+  integrity sha512-GopdOs3twyZkuLMU2ActiZQAtCgyibmwmQczULoe47qJ2URIaHSWxtUIDwuv6QhKPLBIrV6jSo/qp+184hlwLg==
   dependencies:
     typescript-template-language-service-decorator "^2.2.0"
     vscode-css-languageservice "^5.1.1"
