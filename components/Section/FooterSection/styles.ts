@@ -78,7 +78,7 @@ export const SocialLinksContainer = styled(motion.div)`
 `;
 
 export const SocialLinksTitle = styled(motion.h1)`
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 
   color: ${primaryAccentColor};
 
@@ -87,6 +87,8 @@ export const SocialLinksTitle = styled(motion.h1)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 3rem;
   }
 `;
 
@@ -97,10 +99,11 @@ export const SocialLinks = styled(motion.ul)`
   justify-content: space-between;
   align-items: flex-start;
 
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 
   @media only screen and (max-width: ${mobileSize}) {
     width: 100%;
+    padding: 0 2rem;
   }
 `;
 
@@ -160,7 +163,7 @@ export const StyledSalutation = styled(motion.div)`
   }
 
   @media only screen and (max-width: ${mobileSize}) {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 `;
 

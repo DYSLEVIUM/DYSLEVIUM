@@ -51,7 +51,9 @@ const ContactSection = () => {
         initial="hidden"
         animate={animation}
       >
-        <ContactTitle variants={listItem}>Get in Touch</ContactTitle>
+        <ContactTitle variants={listItem}>
+          <a href="#contact">Get in Touch</a>
+        </ContactTitle>
         <ContactDescription variants={listItem}>
           Whether you have a question or just want to say hi, my inbox is always
           open. I&apos;ll try my best to get back to you!

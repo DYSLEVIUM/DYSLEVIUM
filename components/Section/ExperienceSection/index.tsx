@@ -96,7 +96,9 @@ const ExperienceSection = () => {
         animate={animation}
       >
         <SectionIntro>
-          <SectionTitle variants={listItem}>Experience</SectionTitle>
+          <SectionTitle variants={listItem}>
+            <a href="#experience">Experience</a>
+          </SectionTitle>
         </SectionIntro>
 
         <ExperienceListContainer>

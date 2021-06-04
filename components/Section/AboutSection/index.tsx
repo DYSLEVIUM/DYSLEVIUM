@@ -61,7 +61,9 @@ const AboutSection = () => {
         animate={animation}
       >
         <div>
-          <SectionTitle variants={listItem}>About Me</SectionTitle>
+          <SectionTitle variants={listItem}>
+            <a href="#about">About Me</a>
+          </SectionTitle>
         </div>
         <SectionContent>
           <div>

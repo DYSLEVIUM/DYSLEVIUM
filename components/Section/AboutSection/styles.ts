@@ -21,7 +21,11 @@ export const AboutContainer = styled(motion.div)`
 
 export const SectionTitle = styled(motion.h1)`
   color: ${primaryAccentColor};
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+
+  @media only screen and (max-width: ${mobileSize}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const SectionContent = styled(motion.div)`
@@ -59,6 +63,8 @@ export const TechnologyStackList = styled(motion.ul)`
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 5rem;
+
+  margin-bottom: 4rem;
 `;
 
 export const TechnologyStackListItem = styled(motion.li)`

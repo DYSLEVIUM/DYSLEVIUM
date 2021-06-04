@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {
   secondaryAccentColor,
   primaryAccentColor,
+  mobileSize,
 } from '../../../styles/variables';
 
 export const ContactContainer = styled(motion.div)`
@@ -17,7 +18,11 @@ export const ContactContainer = styled(motion.div)`
 
 export const ContactTitle = styled(motion.h1)`
   color: ${primaryAccentColor};
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: ${mobileSize}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const ContactDescription = styled(motion.h3)`
@@ -25,5 +30,9 @@ export const ContactDescription = styled(motion.h3)`
   color: ${secondaryAccentColor};
   text-align: center;
   line-height: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: ${mobileSize}) {
+    margin-bottom: 2rem;
+  }
 `;

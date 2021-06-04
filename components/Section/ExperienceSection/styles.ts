@@ -19,6 +19,7 @@ export const ExperienceContainer = styled(motion.div)`
   width: 100%;
 
   min-height: 100vh;
+
   color: ${secondaryAccentColor};
 `;
 
@@ -27,7 +28,11 @@ export const SectionIntro = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: ${mobileSize}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const SectionTitle = styled(motion.h1)`
