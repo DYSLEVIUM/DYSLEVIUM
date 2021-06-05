@@ -25,7 +25,7 @@ export const NavContainer = styled.nav`
 
   width: 100%;
 
-  z-index: 1;
+  z-index: 3;
   transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
   ${(props) =>
@@ -76,7 +76,6 @@ export const HamburgerMenuContainer = styled.div`
   right: ${sidePaddingMob};
 
   align-items: center;
-  z-index: 2;
 
   cursor: pointer;
 
@@ -102,6 +101,7 @@ export const HamburgerMenuContainer = styled.div`
           width: 1.5rem;
           height: 1rem;
         `}
+  z-index: 1;
 `;
 
 export const HamburgerMenu = styled.div`
@@ -322,7 +322,6 @@ export const ListAside = styled(motion.ul)`
 
   list-style: none;
 
-  z-index: 3;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -360,11 +359,20 @@ export const ListItemAside = styled(motion.li)`
     color: ${primaryAccentColor};
   }
 
+  &:first-child {
+    font-size: 2rem;
+    color: ${secondaryFontColor};
+    a {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
   &:last-child {
     a {
       &::before {
         content: none;
-        margin-right: 0;
       }
     }
   }

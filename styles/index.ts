@@ -123,6 +123,8 @@ a {
 `;
 
 export const MainContainer = styled.main`
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,4 +139,6 @@ export const MainContainer = styled.main`
       : css`
           transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
         `}
+
+  z-index: 2;
 `;
