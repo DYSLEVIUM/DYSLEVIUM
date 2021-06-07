@@ -7,6 +7,7 @@ import {
   primaryColor,
   secondaryColor,
   mobileSize,
+  contrastColor,
 } from '../../../styles/variables';
 
 export const ExperienceContainer = styled(motion.div)`
@@ -109,8 +110,9 @@ export const TabButton = styled(motion.div)`
 
   &:hover {
     background-color: ${`${secondaryAccentColor}10`};
-    color: ${primaryAccentColor};
   }
+
+  border-bottom: 1px solid ${contrastColor};
 
   @media only screen and (max-width: ${mobileSize}) {
     display: flex;
@@ -118,12 +120,15 @@ export const TabButton = styled(motion.div)`
     align-items: center;
     margin-bottom: 0.5rem;
     min-width: ${tabWidth};
+    border-bottom: none;
+    border-right: 1px solid ${contrastColor};
   }
 
   ${(props) =>
     props.isActive
       ? css`
           color: ${primaryAccentColor};
+          background-color: ${`${secondaryAccentColor}10`};
         `
       : css``};
 `;
