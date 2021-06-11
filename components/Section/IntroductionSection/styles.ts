@@ -23,7 +23,7 @@ export const SalutationSpan = styled(motion.span)`
   margin-bottom: 2rem;
 `;
 
-export const HelloGIF = styled(motion.div)`
+export const HelloImage = styled(motion.div)`
   display: inline;
   filter: saturate(200%);
   margin-right: 1rem;
