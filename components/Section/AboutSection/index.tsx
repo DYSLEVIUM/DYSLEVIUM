@@ -95,8 +95,6 @@ const AboutSection = () => {
               alt="Profile Pic"
               width={300}
               height={300}
-              layout="intrinsic"
-              quality={10}
             />
           </ProfileImageContainer>
         </SectionContent>
