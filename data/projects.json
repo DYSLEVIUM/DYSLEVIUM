@@ -44,7 +44,7 @@
     "html_url": "https://github.com/DYSLEVIUM/Path-Tracer",
     "name": "Path-Tracer",
     "homepage": null,
-    "description": "TThis project was intended to get familiar with OOPS in C++ and learn some path tracing on the way. This project was made by following the steps mentioned in the book Ray Tracing in One Weekend. This project was made by following the steps mentioned in the book Ray Tracing in One Weekend.",
+    "description": "This project was intended to get familiar with OOPS design and learn some path tracing on the way. This project was made by following the steps mentioned in the book Ray Tracing in One Weekend.",
     "technologies_and_tools": ["C++"]
   },
   {
