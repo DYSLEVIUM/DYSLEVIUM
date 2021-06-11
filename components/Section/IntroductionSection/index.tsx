@@ -1,7 +1,6 @@
 import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
 
 import {
   PrimaryButton,
@@ -13,7 +12,7 @@ import SectionContainer from '../styles';
 import {
   IntroductionContainer,
   SalutationSpan,
-  HelloImage,
+  HelloGIF,
   Salutation,
   Name,
   CareerObjective,
@@ -68,16 +67,11 @@ const IntroductionSection = () => {
         animate={animation}
       >
         <SalutationSpan>
-          <HelloImage variants={listItem}>
-            <Image
-              src="/wavingHand.gif"
-              alt="Hello GIF"
-              width={50}
-              height={50}
-              layout="intrinsic"
-              quality={10}
-            />
-          </HelloImage>
+          <HelloGIF variants={listItem}>
+            <video src="/wavingHand.webm" width={50} height={50} autoPlay loop>
+              Browser Does not support video.
+            </video>
+          </HelloGIF>
           <Salutation variants={listItem}>Hi, my name is</Salutation>
         </SalutationSpan>
 

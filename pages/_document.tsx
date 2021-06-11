@@ -103,8 +103,6 @@ export default class GlobalDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
         />
 
-        <link as="image" href="/wavingHand.gif" />
-
         <body>
           <Main />
           <NextScript />
