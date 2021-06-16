@@ -3,6 +3,8 @@ import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 import Image from 'next/image';
 
+import profilePic from '../../../public/profile.png';
+
 import SectionContainer from '../styles';
 import {
   AboutContainer,
@@ -91,10 +93,11 @@ const AboutSection = () => {
           </div>
           <ProfileImageContainer variants={listItem}>
             <Image
-              src="/profile.png"
+              src={profilePic}
               alt="Profile Pic"
               width={300}
               height={300}
+              placeholder="blur"
             />
           </ProfileImageContainer>
         </SectionContent>

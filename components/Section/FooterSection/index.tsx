@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import {
   faGithub,
   faInstagram,
@@ -11,6 +10,7 @@ import {
   faReddit,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+
 import {
   githubProfile,
   instagramProfile,
