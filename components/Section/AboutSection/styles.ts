@@ -64,7 +64,9 @@ export const TechnologyStackList = styled(motion.ul)`
   flex-wrap: wrap;
   max-height: 5rem;
 
-  margin-bottom: 4rem;
+  @media only screen and (max-width: ${mobileSize}) {
+    margin-bottom: 4rem;
+  }
 `;
 
 export const TechnologyStackListItem = styled(motion.li)`

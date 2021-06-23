@@ -6,10 +6,10 @@ import Circle from '../../styles/shared/classes/circle';
 import Vector from '../../styles/shared/classes/vector';
 
 const canvasMargin = 50;
-const totalObjects = 15;
+const totalObjects = 25;
 const speed = 0.75;
 
-const circleMaxRadius = 35;
+const circleMaxRadius = 50;
 
 let canvasWidth = 0;
 let canvasHeight = 0;
