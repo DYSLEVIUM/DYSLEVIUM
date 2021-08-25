@@ -86,8 +86,7 @@ const IntroductionSection = () => {
           I love to solve problems and build things
         </CareerObjective>
         <ShortIntro variants={listItem}>
-          I am a junior at National Institute of Technology Jamshedpur, and
-          have an avid passion for Software Engineering.
+          I am a junior at National Institute of Technology Jamshedpur, and have an avid passion for Software Engineering.
         </ShortIntro>
 
         <ButtonContainer>
