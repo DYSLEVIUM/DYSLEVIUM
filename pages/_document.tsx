@@ -81,10 +81,6 @@ export default class GlobalDocument extends Document {
           content={this.metaTitle}
           key="ogsitename"
         />
-        <meta
-          name="google-site-verification"
-          content="alWNjXm0mheHWbCTF_mqB2tDOrajjjmOfzFibbwqhio"
-        />
 
         {/* instructs search engine crawler to index the current page and follow any links on it */}
         <meta name="robots" content="index, follow" />
