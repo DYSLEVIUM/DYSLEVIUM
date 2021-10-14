@@ -43,6 +43,10 @@ export default function App() {
     <>
       <Head>
         <title>Pushpakant Behera - Portfolio</title>
+        <meta
+          name="google-site-verification"
+          content="alWNjXm0mheHWbCTF_mqB2tDOrajjjmOfzFibbwqhio"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
