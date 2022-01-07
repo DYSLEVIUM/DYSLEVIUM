@@ -2,7 +2,7 @@
 
 - 🔭 I’m currently working on Competitive Programming and Problem Solving.
 - 🌱 I’m currently learning React.
-- 📫 Contact me : pushpakantbehera@hotmail.com.
+- 📫 Contact me : pushpakantbehera@gmail.com.
 - 🤔 I’m looking for help with Data Structures and Algorithms.
 - ⚡ Fun fact : I like to play basketball.
 - 🔗 Webiste : https://pushpakantbehera.vercel.app
