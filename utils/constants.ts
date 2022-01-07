@@ -1,4 +1,4 @@
-export const email: string = 'pushpakantbehera@gmail.com';
+export const email: string = 'pushpakantbehera@hotmail.com';
 export const githubUsername: string = 'DYSLEVIUM';
 export const githubProfile: string = `https://github.com/${githubUsername}`;
 export const linkedInProfile: string =
