@@ -194,7 +194,7 @@ export const BlurContainer = styled.section`
   ${(props) =>
     props.isHidden
       ? css`
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(5px);
           transform: translateZ(0px);
           will-change: transform;
         `
