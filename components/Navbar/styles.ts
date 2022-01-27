@@ -34,7 +34,7 @@ export const NavContainer = styled.nav`
           backdrop-filter: none;
         `
       : css`
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(5px);
           transform: translateZ(0);
           will-change: transform;
         `}
