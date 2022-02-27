@@ -3,13 +3,24 @@
     "position": "Full Stack Developer",
     "position_details": [
       "Worked on building and maintaining the institute's website",
-      "Made several api endpoints for the frontend",
+      "Made several API endpoints for the frontend",
       "Made responsive layouts on the frontend and consumed REST api from backend"
     ],
     "organization": "NIT Jamshedpur",
     "website": "http://www.nitjsr.ac.in/",
     "startDate": "March 2021",
     "endDate": "Present",
+    "address": "Jamshedpur, Jharkhand, India"
+  },
+  {
+    "position": "Backend Developer",
+    "position_details": [
+      "Worked with a team to make a collaborative workspace for educators and students",
+      "Made several restful APIs",
+    ],
+    "organization": "PCON Mentorship Programme",
+    "startDate": "January 2021",
+    "endDate": "April 2021",
     "address": "Jamshedpur, Jharkhand, India"
   }
 ]
