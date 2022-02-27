@@ -130,7 +130,7 @@ const ExperienceSection = () => {
                     endDate,
                     position_details,
                   },
-                  idx
+                  idx,
                 ) => (
                   <TabPanel
                     key={idx}
@@ -139,16 +139,20 @@ const ExperienceSection = () => {
                   >
                     <PositionContainer variants={listItem}>
                       <Position>{position}</Position>
-                      <Delimiter>@</Delimiter>
-                      <Organization>
-                        <a
-                          href={website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {organization}
-                        </a>
-                      </Organization>
+                      {website && (
+                        <>
+                          <Delimiter>@</Delimiter>
+                          <Organization>
+                            <a
+                              href={website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {organization}
+                            </a>
+                          </Organization>
+                        </>
+                      )}
                     </PositionContainer>
 
                     <WorkDuration variants={listItem}>
@@ -171,7 +175,7 @@ const ExperienceSection = () => {
                       ))}
                     </WorkDetailsList>
                   </TabPanel>
-                )
+                ),
               )}
             </TabPanelsList>
           </ExperienceListContainerWrapper>

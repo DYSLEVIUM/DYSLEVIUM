@@ -42,12 +42,12 @@ const resizeCanvas = (ctx: CanvasRenderingContext2D) => {
         ctx,
         new Vector(
           Math.random() * canvasWidth - canvasMargin - circleMaxRadius,
-          Math.random() * canvasHeight - canvasMargin - circleMaxRadius
+          Math.random() * canvasHeight - canvasMargin - circleMaxRadius,
         ),
         new Vector(dx, dy),
         Math.random() * circleMaxRadius,
-        `${`${secondaryAccentColor}10`}`
-      )
+        `${`${secondaryAccentColor}10`}`,
+      ),
     );
   }
 };

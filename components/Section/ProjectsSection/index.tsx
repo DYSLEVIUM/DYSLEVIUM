@@ -61,7 +61,7 @@ const ProjectsSection = () => {
   const [showMore, setShowMore] = useState(false);
   const [projects] = useState((projectsData as any).default);
   const [projectsList, setProjectsList] = useState(
-    projects.slice(0, MAX_RENDERED_PROJECTS)
+    projects.slice(0, MAX_RENDERED_PROJECTS),
   );
 
   useEffect(() => {

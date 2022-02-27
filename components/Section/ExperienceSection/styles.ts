@@ -165,7 +165,9 @@ export const TabPanelsList = styled(motion.div)`
   }
 `;
 
-export const TabPanel = styled(motion.div)``;
+export const TabPanel = styled(motion.div)`
+  min-height: 30vh;
+`;
 
 export const PositionContainer = styled(motion.div)`
   display: flex;

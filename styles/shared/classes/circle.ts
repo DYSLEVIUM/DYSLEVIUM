@@ -6,7 +6,7 @@ export default class Circle {
     private pos: Vector,
     private speed: Vector,
     private radius: number,
-    private color: string
+    private color: string,
   ) {}
 
   draw(): void {
