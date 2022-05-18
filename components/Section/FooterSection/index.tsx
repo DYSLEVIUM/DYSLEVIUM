@@ -140,7 +140,7 @@ const FooterSection = () => {
             </StyledNameContainer>
             <StyledSalutation variants={listItem}>
               <h5>
-                Made with <span>❤</span> in ReactJs
+                Made with <span>❤</span> in NextJs
               </h5>
             </StyledSalutation>
           </StyledEndMarkContainer>
