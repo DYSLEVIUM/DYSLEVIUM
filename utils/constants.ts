@@ -5,7 +5,7 @@ export const linkedInProfile: string =
   'https://www.linkedin.com/in/pushpakant-behera-466ba4162';
 export const resumeUrl: string = `https://bit.ly/32AZD5B`;
 export const instagramProfile: string =
-  'https://www.instagram.com/_pushpakant_behera_';
+  'https://www.instagram.com/dyslevium';
 export const redditUsername: string = 'Pushpakant';
 export const redditProfile: string = `https://www.reddit.com/user/${redditUsername}`;
 export const twitterUsername: string = 'DYSLEVIUM';
