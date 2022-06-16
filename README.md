@@ -1,10 +1,7 @@
 # <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi"> Hi there
 
 - 🔭 I’m currently working on Competitive Programming and Problem Solving.
-- 🌱 I’m currently learning ReactJS.
 - 📫 Contact me : pushpakantbehera@gmail.com.
-- 🤔 I’m looking for help with Data Structures and Algorithms.
-- ⚡ Fun fact : I like to play basketball.
 - 🔗 Webiste : https://pushpakantbehera.vercel.app
 
 <a href="https://bit.ly/32AZD5B" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/resume.svg" width="250px" alt="Résumé"></img></a>
