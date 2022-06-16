@@ -28,6 +28,8 @@ import {
 } from './styles';
 
 import * as projectsData from '../../../data/projects.json';
+// eslint-disable-next-line import/named
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const ProjectsSection = () => {
   const animation = useAnimation();
@@ -159,7 +161,7 @@ const ProjectsSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FontAwesomeIcon icon={faGithub} />
+                        <FontAwesomeIcon icon={faGithub as IconProp} />
                       </motion.a>
                     </GithubLink>
                     {project.homepage !== '' && project.homepage !== null ? (
@@ -174,7 +176,9 @@ const ProjectsSection = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <FontAwesomeIcon icon={faExternalLinkAlt} />
+                          <FontAwesomeIcon
+                            icon={faExternalLinkAlt as IconProp}
+                          />
                         </a>
                       </Homepage>
                     ) : null}

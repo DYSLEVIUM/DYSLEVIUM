@@ -29,9 +29,11 @@ import {
   ResumeQRCode,
   StyledNameContainer,
   StyledSalutation,
-  SocialLinksContainer,
   StyledEndMarkContainer,
+  SocialLinksContainer,
 } from './styles';
+// eslint-disable-next-line import/named
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const FooterSection = () => {
   const animation = useAnimation();
@@ -88,7 +90,7 @@ const FooterSection = () => {
                   title="Github"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faGithub as IconProp} />
                 </StyledSocialLink>
               </motion.li>
               <motion.li variants={listItem}>
@@ -98,7 +100,7 @@ const FooterSection = () => {
                   title="LinkedIn"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faLinkedin as IconProp} />
                 </StyledSocialLink>
               </motion.li>
               <motion.li variants={listItem}>
@@ -108,7 +110,7 @@ const FooterSection = () => {
                   title="Instagram"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faInstagram as IconProp} />
                 </StyledSocialLink>
               </motion.li>
               <motion.li variants={listItem}>
@@ -118,7 +120,7 @@ const FooterSection = () => {
                   title="Twitter"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faTwitter as IconProp} />
                 </StyledSocialLink>
               </motion.li>
               <motion.li variants={listItem}>
@@ -128,7 +130,7 @@ const FooterSection = () => {
                   title="Reddit"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faReddit}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faReddit as IconProp} />
                 </StyledSocialLink>
               </motion.li>
             </SocialLinks>
