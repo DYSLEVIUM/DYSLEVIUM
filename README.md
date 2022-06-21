@@ -4,7 +4,7 @@
 - 📫 Contact me : pushpakantbehera@gmail.com.
 - 🔗 Webiste : https://pushpakantbehera.vercel.app
 
-<a href="https://bit.ly/32AZD5B" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/resume.svg" width="250px" alt="Résumé"></img></a>
+<a href="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/Pushpakant%20Behera%20Resume.pdf" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/resume.svg" width="250px" alt="Résumé"></img></a>
 
 # Github Stats
 
