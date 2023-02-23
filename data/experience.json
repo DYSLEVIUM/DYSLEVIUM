@@ -4,6 +4,7 @@
     "position_details": [
     ],
     "organization": "Oracle",
+    "website": "https://www.linkedin.com/company/oracle/",
     "startDate": "February 2023",
     "endDate": "Present",
     "address": "Remote"
@@ -16,7 +17,7 @@
       "Made responsive layouts on the frontend and consumed REST api from backend"
     ],
     "organization": "NIT Jamshedpur",
-    "website": "http://www.nitjsr.ac.in/",
+    "website": "https://www.linkedin.com/school/national-institute-of-technology-jamshedpur/",
     "startDate": "March 2021",
     "endDate": "Present",
     "address": "Jamshedpur, Jharkhand, India"
@@ -27,6 +28,7 @@
       "Worked with a team to make a collaborative workspace for educators and students",
       "Made several restful APIs for android application"
     ],
+    "website": "https://www.linkedin.com/company/pconjsr/",
     "organization": "PCON Mentorship",
     "startDate": "January 2021",
     "endDate": "April 2021",
