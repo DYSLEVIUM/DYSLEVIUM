@@ -1,7 +1,7 @@
 # Hi there
 
 - 🔭 I’m currently working on Competitive Programming and Problem Solving.
-- 📫 Contact me : pushpakantbehera@gmail.com.
+- 📫 Contact me : pushpakantbehera@hotmail.com.
 - 🔗 Webiste : https://pushpakantbehera.vercel.app
 
 <a href="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/Pushpakant%20Behera%20Resume.pdf" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/resume.svg" width="250px" alt="Résumé"></img></a>
