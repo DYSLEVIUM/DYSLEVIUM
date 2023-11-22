@@ -86,8 +86,9 @@ const IntroductionSection = () => {
           I love to solve problems and build things
         </CareerObjective>
         <ShortIntro variants={listItem}>
-          I am a final year student at National Institute of Technology
-          Jamshedpur, and have a avid passion for Software Engineering.
+          As a Software Engineer with a profound interest in AI, I'm deeply engaged in leveraging technology to craft innovative solutions.
+          I'm passionate about the intersection of software engineering and artificial intelligence, constantly exploring new avenues to integrate AI into software development.
+          This enthusiasm drives me to create user-centric solutions while staying at the forefront of technological advancements in both fields.
         </ShortIntro>
 
         <ButtonContainer>
