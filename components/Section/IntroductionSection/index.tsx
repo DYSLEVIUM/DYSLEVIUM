@@ -86,8 +86,8 @@ const IntroductionSection = () => {
           I love to solve problems and build things
         </CareerObjective>
         <ShortIntro variants={listItem}>
-          As a Software Engineer with a profound interest in AI, I'm deeply engaged in leveraging technology to craft innovative solutions.
-          I'm passionate about the intersection of software engineering and AI, constantly exploring new avenues to integrate AI into software development.
+          As a Software Engineer with a profound interest in AI, I am deeply engaged in leveraging technology to craft innovative solutions.
+          I am passionate about the intersection of software engineering and AI, constantly exploring new avenues to integrate AI into software development.
           This enthusiasm drives me to create user-centric solutions while staying at the forefront of technological advancements in both fields.
         </ShortIntro>
 
