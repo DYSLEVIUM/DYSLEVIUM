@@ -79,14 +79,4 @@
 
 ## 📊 GitHub Stats
 
-![Pushpakant's GitHub stats](https://github-readme-stats.vercel.app/api?username=DYSLEVIUM&theme=radical&show_icons=true)
-
 ![Top Languages](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=DYSLEVIUM&layout=compact&theme=radical)
-
----
-
-## ⚡ What I Care About
-
-- Performance > Abstraction (when it matters)
-- Systems that **scale and survive**
-- Clean architecture + real-world impact
