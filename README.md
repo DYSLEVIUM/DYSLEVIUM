@@ -1,29 +1,92 @@
-# Hi there
+# Hi, I'm Pushpakant Behera 👋
 
-- 🔭 I’m currently working on Competitive Programming and Problem Solving.
-- 📫 Contact me : pushpakantbehera@hotmail.com.
-- 🔗 Webiste : https://pushpakantbehera.vercel.app
+🚀 Software Engineer @ Oracle | Systems + Distributed Architecture Enthusiast  
+💡 Building high-performance, real-time, and scalable systems  
 
-<a href="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/Pushpakant%20Behera%20Resume.pdf" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/DYSLEVIUM/DYSLEVIUM/main/public/resume.svg" width="250px" alt="Résumé"></img></a>
+---
 
-# Github Stats
+## 🧠 About Me
 
-[![Pushpakant's github stats](https://github-readme-stats.vercel.app/api?username=DYSLEVIUM&theme=radical&show_icons=true)](https://github.com/pushpakant/github-readme-stats)
+- 🔭 Currently working on **real-time systems, AI agents, and distributed architectures**
+- ⚙️ Strong focus on **low-latency systems (C++ SIMD, WebRTC, WASM)**
+- 🌐 Experienced in **microservices, event-driven systems, and cloud-native infra**
+- 🧩 Love solving **complex backend + systems problems at scale**
+- 🏆 Oracle *Brightest Beginner Award* recipient  
 
-# 🛠 Languages and Tools familiar with
+---
 
-<img alt="C++" style="margin:10px" width="30px" height="30px" align="left" title="C++" src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"/>
+## ⚡ Tech Stack
 
-<img alt="Angular" style="margin:10px" width="30px" height="30px" align="left" title="Angular" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"/>
+### 🧠 Languages
+- C/C++ (SIMD, Intrinsics, WebAssembly)
+- Go (Golang)
+- TypeScript
+- Python
+- SQL
 
-<img alt="React" style="margin:10px" width="30px" height="30px" align="left" title="React" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"/>
+### 🏗️ Systems & Architecture
+- Microservices
+- Event-Driven Architecture
+- WebRTC
+- gRPC, Protocol Buffers
+- REST APIs
 
-<img alt="Node Js" style="margin:10px" width="30px" height="30px" align="left" title="Node Js" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"/>
+### ☁️ Infra & DevOps
+- Docker
+- Kubernetes
+- Helm
+- Terraform
+- AWS
 
-<img alt="TypeScript" style="margin:10px" width="30px" height="30px" align="left" title="TypeScript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"/>
+### 🗄️ Data & Streaming
+- Apache Kafka
+- Redis
+- PostgreSQL
+- Vector Databases
 
-<img alt="SASS" style="margin:10px" width="30px" height="30px" align="left" title="SASS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png"/>
+### 🌐 Web & AI
+- React.js
+- Next.js
+- Node.js
+- GraphQL
+- Model Context Protocol (MCP)
 
-<img alt="CSS" style="margin:10px" width="30px" height="30px" align="left" title="CSS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"/>
+---
 
-<img alt="HTML" style="margin:10px" width="30px" height="30px" align="left" title="HTML" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"/>
+## 💼 Experience Highlights
+
+### 🚀 Oracle — Software Engineer
+- Built **SIMD-optimized noise suppression** → reduced latency by **85%**
+- Architected **real-time AI agent framework (MCP-based)**
+- Designed **highly available gRPC systems with retry budgets**
+- Scaled infra using **Kubernetes + Terraform**
+
+### ⚙️ Systems Work
+- Deep work in **WebRTC pipelines, JNI bindings, and real-time streaming**
+- Improved **network reliability + reconnection stability**
+- Designed **low-latency distributed systems**
+
+---
+
+## 📫 Contact
+
+- 📧 pushpakantbehera@hotmail.com  
+- 🌐 https://pushpakantbehera.vercel.app  
+- 💼 https://linkedin.com/in/pushpakantbehera  
+- 🧑‍💻 https://github.com/DYSLEVIUM  
+
+---
+
+## 📊 GitHub Stats
+
+![Pushpakant's GitHub stats](https://github-readme-stats.vercel.app/api?username=DYSLEVIUM&theme=radical&show_icons=true)
+
+![Top Languages](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=DYSLEVIUM&layout=compact&theme=radical)
+
+---
+
+## ⚡ What I Care About
+
+- Performance > Abstraction (when it matters)
+- Systems that **scale and survive**
+- Clean architecture + real-world impact
