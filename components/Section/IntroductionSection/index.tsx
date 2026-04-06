@@ -74,7 +74,6 @@ const IntroductionSection = () => {
               alt="Hello GIF"
               width={50}
               height={50}
-              layout="intrinsic"
               quality={10}
             />
           </HelloImage>
@@ -83,16 +82,14 @@ const IntroductionSection = () => {
 
         <Name variants={listItem}>Pushpakant Behera.</Name>
         <CareerObjective variants={listItem}>
-          I love to solve problems and build things
+          I build low-latency, real-time systems with AI and distributed
+          architecture
         </CareerObjective>
         <ShortIntro variants={listItem}>
-          As a Software Engineer with a profound interest in AI, I am deeply
-          engaged in leveraging technology to craft innovative solutions. I am
-          passionate about the intersection of software engineering and AI,
-          constantly exploring new avenues to integrate AI into software
-          development. This enthusiasm drives me to create user-centric
-          solutions while staying at the forefront of technological advancements
-          in both fields.
+          I am a Software Engineer at Oracle focused on WebRTC, AI agents, and
+          cloud-native systems. My recent work spans SIMD and WebAssembly-based
+          media optimization, resilient gRPC API design, and Kubernetes-backed
+          services that power scalable real-time communication workloads.
         </ShortIntro>
 
         <ButtonContainer>

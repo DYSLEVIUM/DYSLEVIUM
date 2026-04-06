@@ -71,8 +71,8 @@ const AboutSection = () => {
           <div>
             <AboutContent variants={listItem}>
               <h4>
-                Hello! My name is Pushpakant and I enjoy creating things that
-                run on the web.
+                I enjoy solving deep systems problems and building production
+                software that is fast, reliable, and scalable.
               </h4>
             </AboutContent>
 
@@ -83,11 +83,12 @@ const AboutSection = () => {
               </TechnologyStackPara>
 
               <TechnologyStackList>
-                <TechnologyStackListItem>C++</TechnologyStackListItem>
-                <TechnologyStackListItem>ReactJs</TechnologyStackListItem>
-                <TechnologyStackListItem>NodeJs</TechnologyStackListItem>
-                <TechnologyStackListItem>Typescript</TechnologyStackListItem>
-                <TechnologyStackListItem>Angular</TechnologyStackListItem>
+                <TechnologyStackListItem>C/C++</TechnologyStackListItem>
+                <TechnologyStackListItem>Go</TechnologyStackListItem>
+                <TechnologyStackListItem>TypeScript</TechnologyStackListItem>
+                <TechnologyStackListItem>WebRTC</TechnologyStackListItem>
+                <TechnologyStackListItem>gRPC</TechnologyStackListItem>
+                <TechnologyStackListItem>Kubernetes</TechnologyStackListItem>
               </TechnologyStackList>
             </TechnologyStackContainer>
           </div>

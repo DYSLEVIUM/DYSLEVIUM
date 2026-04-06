@@ -1,26 +1,33 @@
 [
   {
-    "position": "Associate Software Developer",
+    "position": "Software Engineer",
     "position_details": [
+      "Engineered a SIMD-optimized noise suppression module using C++ intrinsics and WebAssembly, reducing processing latency from 120ms to 22ms.",
+      "Architected a real-time AI agent framework using Model Context Protocol (MCP) to ingest live streams with adaptive frame throttling.",
+      "Led bootstrapping of the Real-Time Health System (RTHS) Android client and delivered a telemedicine MVP two weeks ahead of schedule.",
+      "Designed idempotent gRPC APIs with retry budgets and exponential backoff to improve availability for stateful agent sessions.",
+      "Containerized microservices with Docker and Kubernetes, and managed signaling-node infrastructure with Terraform."
     ],
-    "organization": "Oracle (Full Time)",
+    "organization": "Oracle",
     "website": "https://www.linkedin.com/company/oracle/",
     "startDate": "August 2023",
     "endDate": "Present",
-    "address": "Bangalore (Hybrid)"
+    "address": "Bangalore, Karnataka"
   },
   {
-    "position": "Project Intern",
+    "position": "Software Engineer Intern",
     "position_details": [
-      "Designed and implemented a fully-integrated WebRTC video conferencing platform that enables real-time video, audio, and messaging communication between users.",
-      "Collaborated with a team of developers to create a user-friendly interface and ensure smooth functionality of the platform.",
-      "Improved the platform's performance and scalability by optimizing its architecture and integrating advanced features such as screen sharing and recording capabilities."
+      "Decoupled audio and video publishing pipelines using Kotlin structured concurrency, reducing reconnection failures by around 60%.",
+      "Built custom JNI bindings to expose deep C++ WebRTC metrics like jitter and RTT to UI surfaces, cutting debugging time by 75%.",
+      "Overhauled Protocol Buffers build automation, eliminating manual merge conflicts and stabilizing CI/CD workflows.",
+      "Architected a dynamic settings module with Jetpack Compose to toggle advanced streaming features such as Dynacast and Simulcast in real time.",
+      "Ran extensive bandwidth tests across diverse network conditions and fixed race conditions behind hard reconnect failures."
     ],
-    "organization": "Oracle (Intern)",
+    "organization": "Oracle",
     "website": "https://www.linkedin.com/company/oracle/",
     "startDate": "February 2023",
-    "endDate": "June 2023",
-    "address": "Remote"
+    "endDate": "July 2023",
+    "address": "Hyderabad, Telangana"
   },
   {
     "position": "Full Stack Developer",

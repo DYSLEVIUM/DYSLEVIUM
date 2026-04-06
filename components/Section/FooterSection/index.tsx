@@ -153,10 +153,9 @@ const FooterSection = () => {
               <Image
                 src="/resume.svg"
                 alt="Résumé"
-                width="250px"
-                height="250px"
-                layout="intrinsic"
-                quality="100"
+                width={250}
+                height={250}
+                quality={100}
                 loading="lazy"
               />
               <motion.span title="Résumé">Résumé</motion.span>
