@@ -3,8 +3,6 @@
 🚀 Software Engineer @ Oracle | Systems + Distributed Architecture Enthusiast  
 💡 Building high-performance, real-time, and scalable systems  
 
----
-
 ## 🧠 About Me
 
 - 🔭 Currently working on **real-time systems, AI agents, and distributed architectures**
@@ -12,8 +10,6 @@
 - 🌐 Experienced in **microservices, event-driven systems, and cloud-native infra**
 - 🧩 Love solving **complex backend + systems problems at scale**
 - 🏆 Oracle *Brightest Beginner Award* recipient  
-
----
 
 ## ⚡ Tech Stack
 
@@ -51,8 +47,6 @@
 - GraphQL
 - Model Context Protocol (MCP)
 
----
-
 ## 💼 Experience Highlights
 
 ### 🚀 Oracle — Software Engineer
@@ -66,16 +60,12 @@
 - Improved **network reliability + reconnection stability**
 - Designed **low-latency distributed systems**
 
----
-
 ## 📫 Contact
 
 - 📧 pushpakantbehera@hotmail.com  
 - 🌐 https://pushpakantbehera.vercel.app  
 - 💼 https://linkedin.com/in/pushpakantbehera  
 - 🧑‍💻 https://github.com/DYSLEVIUM  
-
----
 
 ## 📊 GitHub Stats
 
