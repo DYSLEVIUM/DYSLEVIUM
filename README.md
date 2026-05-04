@@ -1,6 +1,6 @@
 # Hi, I'm Pushpakant Behera 👋
 
-🚀 Software Engineer @ Oracle | Systems + Distributed Architecture Enthusiast  
+🚀 Member of Technical Staff @ Salesforce | Systems + Distributed Architecture Enthusiast  
 💡 Building high-performance, real-time, and scalable systems  
 
 ## 🧠 About Me
